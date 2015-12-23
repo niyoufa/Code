@@ -27,3 +27,10 @@ web : 网站代码
 runserver.js : 网站启动脚本
 document : 技术博客文档
 
+git : 
+echo "# Code" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/niyoufa/Code.git
+git push -u origin master
