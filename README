@@ -1,0 +1,29 @@
+码农社交网站 ： Code.com
+写下一个字符串证明你是码农 : hello world !
+
+技术架构 ： 
+后台 ： node express 
+前台 ： angularjs html css 
+数据存储 ： mongodb
+
+目录结构说明 : 
+Code
+├── api_doc
+├── app
+├── doc
+├── document
+├── README
+└── web
+    ├── api_router.js
+    ├── node_modules
+    ├── package.json
+    └── runserver.js
+
+api_doc : api文档
+app : 基于jQuery Mobile的web app
+doc : 产品设计文档
+README : 产品说明文档
+web : 网站代码
+runserver.js : 网站启动脚本
+document : 技术博客文档
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="api.js"></script>
+
+    <title></title>
+    <script type="text/javascript">
+        if (!library)
+            var library = {};
+
+        library.json = {
+            replacer: function(match, pIndent, pKey, pVal, pEnd) {
+                var key = '<span class=json-key>';
+                var val = '<span class=json-value>';
+                var str = '<span class=json-string>';
+                var r = pIndent || '';
+                if (pKey)
+                    r = r + key + pKey.replace(/[": ]/g, '') + '</span>: ';
+                if (pVal)
+                    r = r + (pVal[0] == '"' ? str : val) + pVal + '</span>';
+                return r + (pEnd || '');
+            },
+            prettyPrint: function(obj) {
+                var jsonLine = /^( *)("[\w]+": )?("[^"]*"|[\w.+-]*)?([,[{])?$/mg;
+                return JSON.stringify(obj, null, 3)
+                        .replace(/&/g, '&amp;').replace(/\\"/g, '&quot;')
+                        .replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                        .replace(jsonLine, library.json.replacer);
+            }
+        };
+
+        $(function(){
+            //
+            var screenHeight = $(window).height()
+            $('#index_nav').css('height',screenHeight-60);
+            $('#api_content').css('height',screenHeight-60);
+            for(var i=0;i<api_data.length;i++){
+                var dataObj = api_data[i]
+                $('#index_nav').append('<li onclick="showApiData('+i+',this)" '+'type='+dataObj.type+'><a href="javascript:void(0)">'+dataObj["name"]+'</a></li>');
+                $('#api_content').html('<h1 style="margin: 100px auto;text-align: center;">协力 API</h1>');
+            }
+            $("#index_nav li[type='undefined']").hide() ;
+            $('#index_nav li[type=0]').dblclick(function(){
+                    var $moduleObjList = $('#index_nav li') ; 
+                    var index_list = [] ; 
+                    var index = 0 ; 
+                    $moduleObjList.each(function(){
+                            var moduleObj = $(this) ; 
+                            if (moduleObj.attr("type") == 0 ){
+                                    index_list.push(index)
+                            }
+                            index ++ ; 
+                    }) ; 
+                    for(var i =0,len=index_list.length;i<len;i++){
+                            if( $(this).index() < index_list[i] ) {
+                                $ToggleObjList = $moduleObjList.slice( index_list[i-1]+1, index_list[i]) ; 
+                                $ToggleObjList.each(function(){
+                                        $(this).toggle() ; 
+                                }) ; 
+                                return ; 
+                            }
+
+                    }
+            }) ; 
+        })
+
+        function showApiData(api_index,obj){
+            $('.item_active').removeClass('item_active')
+            $(obj).addClass('item_active');
+            var apiObject = api_data[api_index];
+            var params = library.json.prettyPrint(apiObject['params'])
+            var response = library.json.prettyPrint(apiObject['response'])
+            var template = $('#api_template').find('.api').clone();
+            template.find('.name_data').text(apiObject['name']);
+            template.find('.url_data').text(apiObject['url']);
+            template.find('.method_data').text(apiObject['method']);
+            template.find('.params_data').html(params);
+            template.find('.response_data').html(response);
+            var note = apiObject['note']
+            for (title in note){
+                template.find('.note_data').append('<tr class="note_line"><td class="title">'+title+'</td><td>'+note[title]+'</td></tr>');
+            }
+            $('#api_content').html(template)
+        }
+
+
+    </script>
+    <style type="text/css">
+        body{
+            font-family: verdana, arial, helvetica;
+        }
+        #index_nav{
+            margin: 0;
+            padding: 0;
+        }
+        #index_nav li{
+            background-color: #f5f5f5;
+            list-style: none;
+            padding:8px 10px;
+            cursor: pointer;
+            margin: 1px;
+        }
+        #index_nav li a{
+            font-size: 13px;
+            text-decoration: none;
+            color: rgba(0, 0, 238, 0.8);
+        }
+        #index_nav li:hover{
+            background-color: #eee;
+        }
+        .note_line{
+            padding: 8px 5px;
+        }
+        .note_line td{
+            padding:5px 10px;
+            font-size: 13px;
+        }
+        .note_line .title{
+            background-color: #eee;
+        }
+        .params_data,.response_data,.url_data,.method_data{
+            padding: 10px;
+            border-radius: 7px;
+            background-color: #eee;
+            line-height: 24px;
+            font-size: 13px;
+        }
+        h2{
+            font-size: 16px;
+            line-height: 25px;
+        }
+        #index_nav .item_active{
+            background-color: #ddd;
+            border-right:2px solid rgba(0, 0, 238, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+<div style="width: 100%;background-color: #eee;margin-bottom: 5px;">
+   <h3 style="margin: 0;padding: 10px;">协力 API</h3>
+</div>
+<div>
+
+<ul id="index_nav" style="background-color: #ddd;width:15%;float:left;overflow: auto">
+
+</ul>
+<div id="api_content" style="width: 84%;border: 1px solid #eee;min-height: 600px;float:left;overflow: auto"></div>
+
+<!-- chookka template -->
+<div id="api_template" style="display: none">
+    <div class="api" style="padding:10px 20px;">
+        <h2>函数名称</h2>
+        <p class="name_data"></p>
+        <h2>请求路径</h2>
+        <p class="url_data"></p>
+        <h2>请求方法</h2>
+        <p class="method_data"></p>
+        <h2>请求参数</h2>
+        <pre class="params_data"></pre>
+        <h2>响应数据</h2>
+        <p>
+        </p>
+        <pre class="response_data" style="word-break: break-all"></pre>
+        <h2>字段详情</h2>
+        <table class="note_data"></table>
+    </div>
+</div>
+</body>
+</html>

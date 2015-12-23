@@ -1,0 +1,8 @@
+{
+	"name" : "Code" , 
+	"version" : "0.1.0" , 
+	"description" : "a Code social platform " , 
+	"dependencies" : {
+		"express" : "latest"  
+	} 
+}

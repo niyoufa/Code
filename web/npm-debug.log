@@ -1,0 +1,231 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'node-inspector' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'node-inspector', null ]
+5 verbose cache add name=undefined spec="node-inspector" args=["node-inspector",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'node-inspector',
+6 verbose parsed url   path: 'node-inspector',
+6 verbose parsed url   href: 'node-inspector' }
+7 silly lockFile 4198ef9e-node-inspector node-inspector
+8 verbose lock node-inspector /home/nyf/.npm/4198ef9e-node-inspector.lock
+9 silly lockFile 4198ef9e-node-inspector node-inspector
+10 silly lockFile 4198ef9e-node-inspector node-inspector
+11 verbose addNamed [ 'node-inspector', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile e68b88da-node-inspector node-inspector@
+14 verbose lock node-inspector@ /home/nyf/.npm/e68b88da-node-inspector.lock
+15 silly addNameRange { name: 'node-inspector', range: '*', hasData: false }
+16 verbose url raw node-inspector
+17 verbose url resolving [ 'https://registry.npmjs.org/', './node-inspector' ]
+18 verbose url resolved https://registry.npmjs.org/node-inspector
+19 info trying registry request attempt 1 at 21:05:45
+20 verbose etag "4PJJD25R8O613MHTQ29VKX82Y"
+21 http GET https://registry.npmjs.org/node-inspector
+22 http 304 https://registry.npmjs.org/node-inspector
+23 silly registry.get cb [ 304,
+23 silly registry.get   { date: 'Wed, 23 Dec 2015 13:05:50 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=300',
+23 silly registry.get     etag: '"4PJJD25R8O613MHTQ29VKX82Y"',
+23 silly registry.get     age: '290',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-nrt6132-NRT',
+23 silly registry.get     'x-cache': 'HIT',
+23 silly registry.get     'x-cache-hits': '2',
+23 silly registry.get     'x-timer': 'S1450875950.767629,VS0,VE0',
+23 silly registry.get     vary: 'Accept' } ]
+24 verbose etag node-inspector from cache
+25 silly addNameRange number 2 { name: 'node-inspector', range: '*', hasData: true }
+26 silly addNameRange versions [ 'node-inspector',
+26 silly addNameRange   [ '0.0.1',
+26 silly addNameRange     '0.0.2',
+26 silly addNameRange     '0.0.3',
+26 silly addNameRange     '0.0.4',
+26 silly addNameRange     '0.1.0',
+26 silly addNameRange     '0.1.1',
+26 silly addNameRange     '0.1.2',
+26 silly addNameRange     '0.1.3',
+26 silly addNameRange     '0.1.4',
+26 silly addNameRange     '0.1.5',
+26 silly addNameRange     '0.1.6',
+26 silly addNameRange     '0.1.7',
+26 silly addNameRange     '0.1.8',
+26 silly addNameRange     '0.1.9',
+26 silly addNameRange     '0.1.10',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.3.1',
+26 silly addNameRange     '0.3.2',
+26 silly addNameRange     '0.3.3',
+26 silly addNameRange     '0.3.4',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.5.0',
+26 silly addNameRange     '0.6.0',
+26 silly addNameRange     '0.6.1',
+26 silly addNameRange     '0.6.2',
+26 silly addNameRange     '0.7.0-1',
+26 silly addNameRange     '0.2.0-beta1',
+26 silly addNameRange     '0.2.0-beta2',
+26 silly addNameRange     '0.2.0-beta3',
+26 silly addNameRange     '0.2.0-beta4',
+26 silly addNameRange     '0.3.0-preview1',
+26 silly addNameRange     '0.7.0-2',
+26 silly addNameRange     '0.7.0',
+26 silly addNameRange     '0.7.1',
+26 silly addNameRange     '0.7.2',
+26 silly addNameRange     '0.7.3',
+26 silly addNameRange     '0.7.4',
+26 silly addNameRange     '0.8.0',
+26 silly addNameRange     '0.8.1',
+26 silly addNameRange     '0.8.3',
+26 silly addNameRange     '0.9.0',
+26 silly addNameRange     '0.9.1',
+26 silly addNameRange     '0.9.2',
+26 silly addNameRange     '0.10.0',
+26 silly addNameRange     '0.10.1',
+26 silly addNameRange     '0.10.2',
+26 silly addNameRange     '0.11.0',
+26 silly addNameRange     '0.11.1',
+26 silly addNameRange     '0.11.2',
+26 silly addNameRange     '0.12.0',
+26 silly addNameRange     '0.12.1',
+26 silly addNameRange     '0.12.2',
+26 silly addNameRange     '0.12.3',
+26 silly addNameRange     '0.12.4',
+26 silly addNameRange     '0.12.5' ] ]
+27 verbose addNamed [ 'node-inspector', '0.12.5' ]
+28 verbose addNamed [ '0.12.5', '0.12.5' ]
+29 silly lockFile 7a4014f4-node-inspector-0-12-5 node-inspector@0.12.5
+30 verbose lock node-inspector@0.12.5 /home/nyf/.npm/7a4014f4-node-inspector-0-12-5.lock
+31 silly lockFile 7a4014f4-node-inspector-0-12-5 node-inspector@0.12.5
+32 silly lockFile 7a4014f4-node-inspector-0-12-5 node-inspector@0.12.5
+33 silly lockFile e68b88da-node-inspector node-inspector@
+34 silly lockFile e68b88da-node-inspector node-inspector@
+35 silly resolved [ { name: 'node-inspector',
+35 silly resolved     version: '0.12.5',
+35 silly resolved     description: 'Web Inspector based nodeJS debugger',
+35 silly resolved     homepage: 'http://github.com/node-inspector/node-inspector',
+35 silly resolved     author: { name: 'Danny Coates', email: 'dannycoates@gmail.com' },
+35 silly resolved     keywords: [ 'debug', 'debugger', 'inspector', 'profiler' ],
+35 silly resolved     repository:
+35 silly resolved      { type: 'git',
+35 silly resolved        url: 'http://github.com/node-inspector/node-inspector.git' },
+35 silly resolved     engines: { node: '>=0.8.0' },
+35 silly resolved     bin:
+35 silly resolved      { 'node-inspector': './bin/inspector.js',
+35 silly resolved        'node-debug': './bin/node-debug.js' },
+35 silly resolved     dependencies:
+35 silly resolved      { async: '~0.9',
+35 silly resolved        'biased-opener': '~0.2.2',
+35 silly resolved        debug: '^2.2.0',
+35 silly resolved        express: '^4.12.3',
+35 silly resolved        glob: '^5.0.5',
+35 silly resolved        'path-is-absolute': '^1.0.0',
+35 silly resolved        rc: '^1.0.1',
+35 silly resolved        semver: '^4.3.4',
+35 silly resolved        'serve-favicon': '^2.1.1',
+35 silly resolved        'strong-data-uri': '^1.0.0',
+35 silly resolved        'v8-debug': '~0.7.0',
+35 silly resolved        'v8-profiler': '~5.5.0',
+35 silly resolved        which: '^1.1.1',
+35 silly resolved        ws: '^0.8.0',
+35 silly resolved        yargs: '^3.9.0' },
+35 silly resolved     devDependencies:
+35 silly resolved      { promise: '^7.0.3',
+35 silly resolved        mocha: '^1.21',
+35 silly resolved        chai: '^2.1',
+35 silly resolved        jshint: '^2.4.4',
+35 silly resolved        'fs-extra': '~0.8.1' },
+35 silly resolved     preferGlobal: true,
+35 silly resolved     scripts:
+35 silly resolved      { pretest: 'jshint .',
+35 silly resolved        test: 'mocha',
+35 silly resolved        'generate-front-end': 'node --harmony tools/generate-front-end' },
+35 silly resolved     contributors:
+35 silly resolved      [ [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object],
+35 silly resolved        [Object] ],
+35 silly resolved     readme: '# Node Inspector\n\n[![Build Status](https://travis-ci.org/node-inspector/node-inspector.png?branch=master)](https://travis-ci.org/node-inspector/node-inspector)\n[![NPM version](https://badge.fury.io/js/node-inspector.png)](http://badge.fury.io/js/node-inspector)\n[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=195817)](https://www.bountysource.com/trackers/195817-node-inspector?utm_source=195817&utm_medium=shield&utm_campaign=TRACKER_BADGE)\n\n[![Join the chat at https://gitter.im/node-inspector/node-inspector](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/node-inspector/node-inspector?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n\n## Overview\n\nNode Inspector is a debugger interface for Node.js applications that uses the\nBlink Developer Tools (formerly WebKit Web Inspector).\n\nThe project maintenance and support is sponsored by\n[StrongLoop](http://strongloop.com).\n\n### Table of Content\n\n * [Quick Start](#quick-start)\n * [Features](#features)\n * [Known Issues](#known-issues)\n * [Troubleshooting](#troubleshooting)\n * [Advanced Use](#advanced-use)\n * [Configuration](#configuration)\n * [Contributing](#contributing-code)\n * [Credits](#credits)\n\n## Quick Start\n\n#### Install\n\n```sh\n$ npm install -g node-inspector\n```\n\n#### Start\n\n```sh\n$ node-debug app.js\n```\n\nwhere ```app.js``` is the name of your main Node application JavaScript file.\n\nSee available configuration options [here](https://github.com/node-inspector/node-inspector#configuration)\n\n#### Debug\n\nThe `node-debug` command will load Node Inspector in your default browser.\n\n> **NOTE:** Node Inspector works in Chrome and Opera only. You have to re-open\nthe inspector page in one of those browsers if another browser\nis your default web browser (e.g. Safari or Internet Explorer).\n\nNode Inspector works almost exactly as the Chrome Developer Tools. Read the\nexcellent\n[DevTools overview](https://developer.chrome.com/devtools/index)\nto get started.\n\nOther useful resources:\n - Documentation specific to Node Inspector provided by StrongLoop:\n  [Debugging with Node Inspector](http://docs.strongloop.com/display/SLC/Debugging+applications)\n - Miroslav\'s talk\n  [How to Debug Node Apps with Node Inspector](https://vimeo.com/77870960)\n - Danny\'s [screencasts](http://www.youtube.com/view_play_list?p=A5216AC29A41EFA8)\n   (most likely outdated by now)\n - [Getting Started from scratch](http://github.com/node-inspector/node-inspector/wiki/Getting-Started---from-scratch)\n   on wiki (most likely outdated by now)\n\n## Features\n\nThe Blink DevTools debugger is a powerful JavaScript debugger interface.\nNode Inspector supports almost all of the debugging features of DevTools, including:\n\n* Navigate in your source files\n* Set breakpoints (and specify trigger conditions)\n* Step over, step in, step out, resume (continue)\n* Inspect scopes, variables, object properties\n* Hover your mouse over an expression in your source to display its value in\n  a tooltip\n* Edit variables and object properties\n* Continue to location\n* Break on exceptions\n* Disable/enable all breakpoints\n* CPU and HEAP profiling\n* Network client requests inspection\n* Console output inspection\n\n### Cool stuff\n* Node Inspector uses WebSockets, so no polling for breaks.\n* Remote debugging\n* [Live edit of running code](http://github.com/node-inspector/node-inspector/wiki/LiveEdit),\n  optionally persisting changes back to the file-system.\n* Set breakpoints in files that are not loaded into V8 yet - useful for\n  debugging module loading/initialization.\n* Embeddable in other applications - see [Embedding HOWTO](docs/embedding.md)\n  for more details.\n\n## Known Issues\n\n* If there are symlink cycles then the [glob](https://github.com/isaacs/node-glob)\n  module may take a long time to return results causing long delays at startup.\n  The workaround is to disable preloading of scripts with `--no-preload`.\n* Be careful about viewing the contents of Buffer objects,\n  each byte is displayed as an individual array element;\n  for most Buffers this will take too long to render.\n* While not stopped at a breakpoint the console doesn\'t always\n  behave as you might expect. See the\n  [issue #146](https://github.com/node-inspector/node-inspector/issues/146).\n* Break on uncaught exceptions does not work in all Node versions,\n  you need at least v0.11.3 (see\n  [node#5713](https://github.com/joyent/node/pull/5713)).\n* Debugging multiple processes (e.g. cluster) is cumbersome.\n  Read the following blog post for instructions:\n  [Debugging Clustered Apps with Node-Inspector](http://strongloop.com/strongblog/whats-new-nodejs-v0-12-debugging-clusters/)\n\n## Troubleshooting\n\n#### My script runs too fast to attach the debugger.\n\nThe debugged process must be started with `--debug-brk`, this way the script is paused on the first line.\n\nNote: `node-debug` adds this option for you by default.\n\n#### I got the UI in a weird state.\n\nWhen in doubt, refresh the page in browser\n\n#### Can I debug remotely?\n\nYes. Node Inspector must be running on the same machine, but your browser can be anywhere.\nJust make sure port 8080 is accessible.\n\n#### How do I specify files to hide?\n\nCreate a JSON-encoded array.  You must escape quote characters when using a command-line option.\n\n```sh\n$ node-inspector --hidden=\'["node_modules/framework"]\'\n```\n\nNote that the array items are interpreted as regular expressions.\n\n#### UI doesn\'t load or doesn\'t work and refresh didn\'t help\n\nMake sure that you have adblock disabled as well as any other content blocking scripts and plugins.\n\n#### How can I (selectively) delete debug session metadata?\n\nYou may want to delete debug session metadata if for example Node Inspector gets in a bad state with some\nwatch variables that were function calls (possibly into some special c-bindings).  In such cases, even restarting\nthe application/debug session may not fix the problem.\n\nNode Inspector stores debug session metadata in the HTML5 local storage.\nYou can inspect the contents of local storage and remove any items as\nneeded. In Google Chrome, you can execute any of the following in the JavaScript console:\n\n```js\n// Remove all\nwindow.localStorage.clear()\n// Or, to list keys so you can selectively remove them with removeItem()\nwindow.localStorage\n// Remove all the watch expressions\nwindow.localStorage.removeItem(\'watchExpressions\')\n// Remove all the breakpoints\nwindow.localStorage.removeItem(\'breakpoints\')\n```\n\nWhen you are done cleaning up, hit refresh in the browser.\n\n#### Node Inspector takes a long time to start up.\n\nTry setting --no-preload to true. This option disables searching disk for *.js at startup.\nCode will still be loaded into Node Inspector at runtime, as modules are required.\n\n#### How do I debug Mocha unit-tests?\n\nYou have to start `_mocha` as the debugged process and make sure\nthe execution pauses on the first line. This way you have enough\ntime to set your breakpoints before the tests are run.\n\n```sh\n$ node-debug _mocha\n```\n\n#### How do I debug Gulp tasks?\n\nIf you are running on a Unix system you can simply run the following command.\nThe `$(which ..)` statement gets replaced with the full path to the gulp-cli.\n\n```sh\n$ node-debug $(which gulp) task\n```\n\nIf you are running on Windows, you have to get the full path of `gulp.js`\nto make an equivalent command:\n\n```sh\n> node-debug %appdata%\\npm\\node_modules\\gulp\\bin\\gulp.js task\n```\n*You can omit the `task` part to run the `default` task.*\n\n## Advanced Use\n\nWhile running `node-debug` is a convenient way to start your debugging\nsession, there may come time when you need to tweak the default setup.\n\nThere are three steps needed to get you up and debugging:\n\n#### 1. Start the Node Inspector server\n\n```sh\n$ node-inspector\n```\n\nYou can leave the server running in background, it\'s possible to debug\nmultiple processes using the same server instance.\n\n#### 2. Enable debug mode in your Node process\n\nYou can either start Node with a debug flag like:\n\n```sh\n$ node --debug your/node/program.js\n```\n\nor, to pause your script on the first line:\n\n```sh\n$ node --debug-brk your/short/node/script.js\n```\n\nOr you can enable debugging on a node that is already running by sending\nit a signal:\n\n1. Get the PID of the node process using your favorite method.\n`pgrep` or `ps -ef` are good\n\n    ```sh\n    $ pgrep -l node\n    2345 node your/node/server.js\n    ```\n\n2. Send it the USR1 signal\n\n    ```sh\n    $ kill -s USR1 2345\n    ```\n\n##### Windows\n\nWindows does not support UNIX signals. To enable debugging, you can use\nan undocumented API function `process._debugProcess(pid)`:\n\n1. Get the PID of the node process using your favorite method, e.g.\n\n    ```sh\n    > tasklist /FI "IMAGENAME eq node.exe"\n\n    Image Name                     PID Session Name        Session#    Mem Usage\n    ========================= ======== ================ =========== ============\n    node.exe                      3084 Console                    1     11,964 K\n    ```\n\n2. Call the API:\n\n    ```sh\n    > node -e "process._debugProcess(3084)"\n    ```\n\n#### 3. Load the debugger UI\n\nOpen http://127.0.0.1:8080/?port=5858 in the Chrome browser.\n\n## Configuration\n\nBoth `node-inspector` and `node-debug` use [rc](https://npmjs.org/package/rc) module\nto manage configuration options.\n\nPlaces for configuration:\n* command line arguments (parsed by [yargs](https://github.com/chevex/yargs))\n* environment variables prefixed with ```node-inspector_```\n* if you passed an option ```--config file``` then from that file\n* a local ```.node-inspectorrc``` or the first found looking in ```./ ../ ../../\n ../../../``` etc.\n* ```$HOME/.node-inspectorrc```\n* ```$HOME/.node-inspector/config```\n* ```$HOME/.config/node-inspector```\n* ```$HOME/.config/node-inspector/config```\n* ```/etc/node-inspectorrc```\n* ```/etc/node-inspector/config```\n\nAll configuration sources that where found will be flattened into one object,\nso that sources earlier in this list override later ones.\n\n### Options\n\n| Option | Alias | Default | Description |\n| :------------------ | :-: | :-----: | :-------- |\n| **general**\n| --help              | -h  |         | Display information about available options.<br/>Use `--help -l` to display full usage info.<br/>Use `--help <option>` to display quick help on `option`.\n| --version           | -v  |         | Display Node Inspector\'s version.\n| --debug-port        | -d  | 5858    | Node/V8 debugger port.<br/>(`node --debug={port}`)\n| --web-host          |     | 0.0.0.0 | Host to listen on for Node Inspector\'s web interface.<br/>`node-debug` listens on `127.0.0.1` by default.\n| --web-port          | -p  | 8080    | Port to listen on for Node Inspector\'s web interface.\n| **node-debug**\n| --debug-brk         | -b  | true    | Break on the first line.<br/>(`node --debug-brk`)\n| --nodejs            |     | []      | Pass NodeJS options to debugged process.<br/>(`node --option={value}`)\n| --script            |     | []      | Pass options to debugged process.<br/>(`node app --option={value}`)\n| --cli               | -c  | false   | CLI mode, do not open browser.\n| **node-inspector**\n| --save-live-edit    |     | false   | Save live edit changes to disk (update the edited files).\n| --preload           |     | true    | Preload *.js files. You can disable this option<br/>to speed up the startup.\n| --inject            |     | true    | Enable injection of debugger extensions into the debugged process. It\'s possible disable only part of injections using subkeys `--no-inject.network`. Allowed keys : `network`, `profiles`, `console`.\n| --hidden            |     | []      | Array of files to hide from the UI,<br/>breakpoints in these files will be ignored.<br/>All paths are interpreted as regular expressions.\n| --stack-trace-limit |     | 50      | Number of stack frames to show on a breakpoint.\n| --ssl-key           |     |         | Path to file containing a valid SSL key.\n| --ssl-cert          |     |         | Path to file containing a valid SSL certificate.\n\n### Usage examples\n\n#### Command line\n##### Format\n```\n$ node-debug [general-options] [node-debug-options] [node-inspector-options] [script]\n```\n\n```\n$ node-inspector [general-options] [node-inspector-options]\n```\n##### Usage\n\nDisplay full usage info:\n```\n$ node-debug --help -l\n```\nSet debug port of debugging process to `5859`:\n```\n$ node-debug -p 5859 app\n```\nPass `--web-host=127.0.0.2` to node-inspector. Start node-inspector to listen on `127.0.0.2`:\n```\n$ node-debug --web-host 127.0.0.2 app\n```\nPass `--option=value` to debugging process:\n```\n$ node-debug app --option value\n```\nStart node-inspector to listen on HTTPS:\n```\n$ node-debug --ssl-key ./ssl/key.pem --ssl-cert ./ssl/cert.pem app\n```\nIgnore breakpoints in files stored in `node_modules` folder or ending in `.test.js`:\n```\n$ node-debug --hidden node_modules/ --hidden \\.test\\.js$ app\n```\nAdd `--harmony` flag to the node process running the debugged script:\n```\n$ node-debug --nodejs --harmony app\n```\nDisable preloading of `.js` files:\n```\n$ node-debug --no-preload app\n```\n\n#### RC Configuration\n\nUse dashed option names in RC files. Sample config file:\n```js\n{\n  "web-port": 8088,\n  "web-host": null,\n  "debug-port": 5858,\n  "save-live-edit": true,\n  "preload": false,\n  "hidden": ["\\.test\\.js$", "node_modules/"],\n  "nodejs": ["--harmony"],\n  "stack-trace-limit": 50,\n  "ssl-key": "./ssl/key.pem",\n  "ssl-cert": "./ssl/cert.pem"\n}\n```\n\n## Contributing Code\n\nMaking Node Inspector the best debugger for node.js cannot be achieved without\nthe help of the community. The following resources should help you to get\nstarted.\n\n* [Contributing](https://github.com/node-inspector/node-inspector/wiki/Contributing)\n* [Developer\'s Guide](https://github.com/node-inspector/node-inspector/wiki/Developer%27s-Guide)\n* [Easy Picks](https://github.com/node-inspector/node-inspector/issues?direction=asc&labels=Easy+Pick&page=1&sort=updated&state=open)\n\n## Credits\n\nMaintainers\n\n - [Danny Coates](https://github.com/dannycoates) - the original author\n   and a sole maintainer for several years.\n - [Miroslav Bajtoš](https://github.com/bajtos) - a current maintainer,\n   sponsored by [StrongLoop](http://strongloop.com).\n - [3y3](https://github.com/3y3) - a current maintainer\n\nBig thanks to the many contributors to the project, see [AUTHORS](AUTHORS).\n',
+35 silly resolved     readmeFilename: 'README.md',
+35 silly resolved     bugs: { url: 'https://github.com/node-inspector/node-inspector/issues' },
+35 silly resolved     _id: 'node-inspector@0.12.5',
+35 silly resolved     _from: 'node-inspector@' } ]
+36 info install node-inspector@0.12.5 into /usr/local/lib
+37 info installOne node-inspector@0.12.5
+38 info /usr/local/lib/node_modules/node-inspector unbuild
+39 verbose tar unpack /home/nyf/.npm/node-inspector/0.12.5/package.tgz
+40 silly lockFile 6e6fbd08--lib-node-modules-node-inspector tar:///usr/local/lib/node_modules/node-inspector
+41 verbose lock tar:///usr/local/lib/node_modules/node-inspector /home/nyf/.npm/6e6fbd08--lib-node-modules-node-inspector.lock
+42 silly lockFile 8dea352d-ode-inspector-0-12-5-package-tgz tar:///home/nyf/.npm/node-inspector/0.12.5/package.tgz
+43 verbose lock tar:///home/nyf/.npm/node-inspector/0.12.5/package.tgz /home/nyf/.npm/8dea352d-ode-inspector-0-12-5-package-tgz.lock
+44 silly gunzTarPerm modes [ '755', '644' ]
+45 error Error: EACCES, mkdir '/usr/local/lib/node_modules/node-inspector'
+45 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/node-inspector']
+45 error   errno: 3,
+45 error   code: 'EACCES',
+45 error   path: '/usr/local/lib/node_modules/node-inspector',
+45 error   fstream_type: 'Directory',
+45 error   fstream_path: '/usr/local/lib/node_modules/node-inspector',
+45 error   fstream_class: 'DirWriter',
+45 error   fstream_stack:
+45 error    [ '/usr/lib/nodejs/fstream/lib/dir-writer.js:36:23',
+45 error      '/usr/lib/nodejs/mkdirp/index.js:37:53',
+45 error      'Object.oncomplete (fs.js:107:15)' ] }
+46 error Please try running this command again as root/Administrator.
+47 error System Linux 3.13.0-24-generic
+48 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "node-inspector"
+49 error cwd /home/nyf/develop/Code/web
+50 error node -v v0.10.25
+51 error npm -v 1.3.10
+52 error path /usr/local/lib/node_modules/node-inspector
+53 error fstream_path /usr/local/lib/node_modules/node-inspector
+54 error fstream_type Directory
+55 error fstream_class DirWriter
+56 error code EACCES
+57 error errno 3
+58 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/node-inspector'
+59 error fstream_stack /usr/lib/nodejs/fstream/lib/dir-writer.js:36:23
+59 error fstream_stack /usr/lib/nodejs/mkdirp/index.js:37:53
+59 error fstream_stack Object.oncomplete (fs.js:107:15)
+60 verbose exit [ 3, true ]
