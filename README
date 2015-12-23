@@ -43,3 +43,15 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/niyoufa/Code.git
 git push -u origin master
+
+
+项目进度安排 : 
+年前 (系统架构+需求分析) : 
+	1. 完成需求分析,完成相关需求文档的编写
+	2. 完成后台表结构设计和api文档编写
+	3. 完成系统架构 : web服务器架构 (路由系统，模板系统，中间件，会话管理等) , 数据存储 , 前端框架  
+
+春节期间 (网站开发) : 
+	1. 完成码农社交平台网页版功能
+	2. 准备码农社交平台app版的开发
+
