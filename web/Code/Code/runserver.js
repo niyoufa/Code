@@ -7,11 +7,12 @@ var port = 8085 ;
 server.listen(port) ; 
 
 //路由配置
-var api_router = require("./api_router") ; 
+var APIRouter = require("./api_router") ; 
 
 //GET请求
-server.get('/',function(request,response){
-	response.send("Hello Code !") ; 
+server.get('/code/:userid',function(req,res){
+	var response = APIRouter(req) ; 
+	res.send(response) ; 
 }) ; 
 
 //POST请求
@@ -21,8 +22,7 @@ server.post('/',function(){
 
 //参数路由
 server.param('param',function(req,res,next,value){
-	result = api_router(req,value) ; 
-	res.send(result)
+	
 }) ; 
 
 console.log("Starting development server at http://127.0.0.1:%s/",port) ; 

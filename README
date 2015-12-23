@@ -14,18 +14,27 @@ Code
 ├── document
 ├── README
 └── web
-    ├── api_router.js
-    ├── node_modules
-    ├── package.json
-    └── runserver.js
+    └── Code
+        ├── Code
+        ├── db_backup
+        ├── script
+        └── views
 
 api_doc : api文档
 app : 基于jQuery Mobile的web app
 doc : 产品设计文档
+document : 技术博客文档
 README : 产品说明文档
 web : 网站代码
+web/Code : 网站项目根目录
+web/Code/Code : 项目配置目录
+web/Code/db_backup : 数据库backup文件目录
+web/Code/script : 脚本文件目录
+web/Code/views : 接口文件目录
+
 runserver.js : 网站启动脚本
-document : 技术博客文档
+api_router.js : url配置文件
+
 
 git : 
 echo "# Code" >> README.md
