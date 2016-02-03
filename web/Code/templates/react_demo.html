@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../static/js/react.js"></script>
+    <script src="../static/js/react-dom.js"></script>
+    <script src="../static/js/browser.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+    <div id="demo4"></div>
+    <div id="demo5"></div>
+    <div id="demo6"></div>
+    <div id="demo7"></div>
+    <div id="demo8"></div>
+    <div id="demo9"></div>
+    <div id="demo10"></div>
+    <div id="demo11"></div>
+
+    <script type="text/babel">
+    //react入门
+    // 参考文档 http://www.ruanyifeng.com/blog/2015/03/react.html 
+    //https://facebook.github.io/react/docs/top-level-api.html#react.children
+    //http://www.cocoachina.com/webapp/20150721/12692.html
+    //http://reactjs.cn/
+
+    //demo1
+    //react并不依赖jQuery，当然我们可以使用jQuery，但是render里面第二个参数必须使用JavaScript原生的getElementByID方法，不能使用jQuery来选取DOM节点。
+      ReactDOM.render(
+        <h1>niyoufa</h1>,
+        document.getElementById('demo1')
+      );
+
+      //demo2
+      // JSX 的基本语法规则 : 遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析。
+      var names = ['Alice', 'Emily', 'Kate'];
+
+      ReactDOM.render(
+        <div>
+        {
+          names.map(function (name) {
+            return <div>Hello, {name}!</div>
+          })
+        }
+        </div>,
+        document.getElementById('demo2')
+      );
+
+      //demo3
+      //JSX 允许直接在模板插入 JavaScript 变量。如果这个变量是一个数组，则会展开这个数组的所有成员
+      var arr = [
+      <h1>Hello world!</h1>,
+      <h2>React is awesome</h2>,
+    ];
+    ReactDOM.render(
+      <div>{arr}</div>,
+      document.getElementById('demo3')
+    );
+
+    //demo4 组件
+    //注 : 1. 组件类名首字母大写 
+    // 2. 组件类必须有render方法
+    // 3. 组件类只能包含一个顶层标签
+    // 4. 组件的属性可以从组件类this.props上获取
+    // 5. 添加组件属性时,class for 为js保留字, 需要写成 className  htmlFor
+    var HelloMessage = React.createClass({
+    render: function() {
+      return <h1>Hello {this.props.name}</h1>;
+    }
+  });
+
+  ReactDOM.render(
+    <HelloMessage name="John" />,
+    document.getElementById('demo4')
+  );
+
+  //demo5 
+  // this.props.children
+  // this.props.children 的值有三种可能：如果当前组件没有子节点，它就是 undefined ;如果有一个子节点，数据类型是 object ；如果有多个子节点，数据类型就是 array 。
+  var NotesList = React.createClass({
+  render: function() {
+    return (
+      <ol>
+      {
+        React.Children.map(this.props.children, function (child) {
+          return <li>{child}</li>;
+        })
+      }
+      </ol>
+    );
+  }
+});
+
+  ReactDOM.render(
+    <NotesList>
+      <span>hello</span>
+      <span>world</span>
+    </NotesList>,
+    document.getElementById('demo5')
+  );
+
+  //demo6 
+  // 组件属性限制
+
+  var MyTitle = React.createClass({
+  propTypes: {
+    title: React.PropTypes.string.isRequired,
+  },
+
+  render: function() {
+     return <h1> {this.props.title} </h1>;
+   }
+});
+
+  var data = 123 ; 
+  ReactDOM.render(
+      <MyTitle title={data} /> , 
+      document.getElementById('demo6')
+  ) ; 
+
+
+//getDefaultProps 方法可以用来设置组件属性的默认值。
+  var MyTitle = React.createClass({
+  getDefaultProps : function () {
+    return {
+      title : 'Hello World'
+    };
+  },
+
+  render: function() {
+     return <h1> {this.props.title} </h1>;
+   }
+});
+
+ReactDOM.render(
+  <MyTitle />,
+  document.getElementById('demo6')
+);
+
+//demo7 
+//组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做虚拟 DOM （virtual DOM）。只有当它插入文档以后，才会变成真实的 DOM 。根据 React 的设计，所有的 DOM 变动，都先在虚拟 DOM 上发生，然后再将实际发生变动的部分，反映在真实 DOM上，这种算法叫做 DOM diff ，它可以极大提高网页的性能表现。
+//从组件获取真实 DOM 的节点
+//由于 this.refs.[refName] 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。
+var MyComponent = React.createClass({
+  handleClick: function() {
+    this.refs.myTextInput.value= "niyoufa";
+  },
+  render: function() {
+    return (
+      <div>
+        <input type="text" ref="myTextInput" />
+        <input type="button" value="Focus the text input" onClick={this.handleClick} />
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(
+  <MyComponent />,
+  document.getElementById('demo7')
+);
+
+// demo8 
+//代码是一个 LikeButton 组件，它的 getInitialState 方法用于定义初始状态，也就是一个对象，这个对象可以通过 this.state 属性读取。当用户点击组件，导致状态变化，this.setState 方法就修改状态值，每次修改以后，自动调用 this.render 方法，再次渲染组件。
+//由于 this.props 和 this.state 都用于描述组件的特性，可能会产生混淆。一个简单的区分方法是，this.props 表示那些一旦定义，就不再改变的特性，而 this.state 是会随着用户互动而产生变化的特性。
+var LikeButton = React.createClass({
+  getInitialState: function() {
+    return {liked: false};
+  },
+  handleClick: function(event) {
+    this.setState({liked: !this.state.liked});
+  },
+  render: function() {
+    var text = this.state.liked ? 'like' : 'haven\'t liked';
+    return (
+      <p onClick={this.handleClick}>
+        You {text} this. Click to toggle.
+      </p>
+    );
+  }
+});
+
+ReactDOM.render(
+  <LikeButton />,
+  document.getElementById('demo8')
+);
+
+//demo9
+//表单
+var Input = React.createClass({
+  getInitialState: function() {
+    return {value: 'Hello!'};
+  },
+  handleChange: function(event) {
+    this.setState({value: event.target.value});
+  },
+  render: function () {
+    var value = this.state.value;
+    return (
+      <div>
+        <input type="text" value={value} onChange={this.handleChange} />
+        <p>{value}</p>
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(<Input/>,document.getElementById("demo9"));
+
+
+//demo10
+//组件的生命周期
+var Hello = React.createClass({
+  getInitialState: function () {
+    return {
+      opacity: 1.0
+    };
+  },
+
+  componentDidMount: function () {
+    this.timer = setInterval(function () {
+      var opacity = this.state.opacity;
+      opacity -= .05;
+      if (opacity < 0.1) {
+        opacity = 1.0;
+      }
+      this.setState({
+        opacity: opacity
+      });
+    }.bind(this), 100);
+  },
+
+  render: function () {
+    return (
+      <div style={{opacity: this.state.opacity,color:this.props.color}}>
+        Hello {this.props.name}
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(
+  <Hello name="world" color="red"/>,
+  document.getElementById("demo10") 
+);
+
+//demo11
+//ajax
+var UserGist = React.createClass({
+  getInitialState: function() {
+    return {
+      username: '',
+      lastGistUrl: ''
+    };
+  },
+
+  componentDidMount: function() {
+    $.get(this.props.source, function(result) {
+      var lastGist = result[0];
+      if (this.isMounted()) {
+        this.setState({
+          username: lastGist.owner.login,
+          lastGistUrl: lastGist.html_url
+        });
+      }
+    }.bind(this));
+  },
+
+  render: function() {
+    return (
+      <div>
+         {this.state.username} is last gist is
+        <a href={this.state.lastGistUrl}>here</a>
+      </div>
+    )
+  }
+});
+
+ReactDOM.render(
+  <UserGist source="https://api.github.com/users/octocat/gists" />,
+  document.getElementById("demo11")
+);
+
+// demo12
+// 组件嵌套
+//
+    </script>
+  </body>
+</html>

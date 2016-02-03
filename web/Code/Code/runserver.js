@@ -3,7 +3,9 @@
 
 var express = require('express') ; 
 var server = express() ; 
-var port = 8085 ; 
+
+var config = require("./config") ; 
+var port = config["server_config"]["port"] ; 
 server.listen(port) ; 
 
 //路由配置
