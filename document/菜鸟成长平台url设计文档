@@ -1,0 +1,22 @@
+菜鸟成长平台url设计文档
+参考极客 : http://geek.csdn.net/ 
+
+1.  我的成长
+/my/collectlist/ 我收藏的文章(链接)
+/my/publishlist/ 我发布的文章(链接)
+/my/sharedlist/ 我分享的文章(链接)
+/my/commentlist/ 我评论的文章(链接)
+/my/likedlist/ 我赞的文章(链接)
+
+2. 搜索
+/search/
+
+3. 链接详情
+/links/id
+
+4. 我关注的
+/forum/id
+
+
+
+
