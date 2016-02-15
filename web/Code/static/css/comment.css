@@ -1,0 +1,58 @@
+.commentBox {
+	/*width:300px;*/
+	border-top:solid 1px;
+	border-bottom:solid 1px;
+	text-align: left;
+	padding : 1px ; 
+	border-color:hsl(35, 23%, 93%);
+}
+.commentList {
+	margin-top:10px;
+	/*border:solid 1px;*/
+	text-align: left;
+}
+.commentForm{
+	margin:1px;
+	border:solid 1px;
+}
+.comment{
+	border-bottom:solid 1px ;
+	padding-bottom: 5px;
+	margin-bottom:10px;
+	border-color : hsl(35, 23%, 93%) ; 
+}
+.comment .commentLeft img{
+	width:30px;
+	height: 30px;
+	border-color:hsl(35, 23%, 93%); 
+	border-radius: 30px;
+}
+.comment .commentLeft{
+	float :left;
+}
+.comment .commentRight {
+	float :left;
+	padding-left:10px;
+	width:250px;
+}
+.comment .commentRight .commentIntr{
+	position: relative; 
+}
+.comment .commentRight .commentIntr .commentAuthor{
+	font-size : 15px;
+	color:hsl(35, 1%, 46%);
+}
+.comment .commentRight .commentIntr .commentTime{
+	font-size : 15px;
+	color:grey;
+	position: absolute;
+    	right: 0px;
+}
+.comment .commentRight .commentContent{
+	margin:0px;
+	padding-bottom: 10px;
+	font-size: 17px;
+}
+.comment .clear {
+	clear : both; 
+}

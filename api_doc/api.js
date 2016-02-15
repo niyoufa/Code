@@ -1508,6 +1508,127 @@ var api_data = [
         }
     },
 
+        //获取评论列表接口
+    {
+        "name": "6.获取评论列表接口(完成)",
+        "url": "http://dev.xielicheng.com:8000/api",
+        "method": "POST",
+        "params": {
+            "action": "get_comment_list",
+            "data": {
+                "user_sha1": "936d3439f9208678de7358eda91c14c7cf1fa965",
+                "behavior_sha1": "" , 
+                "page" : "1" 
+            }
+        },
+        "response": {
+            "info": "OK",
+            "ret": "0001",
+            "data": {
+                "has_next" : "true" , 
+                "comment_count": "",
+                "comment_list": [
+                    {
+                        "creator_sha1" : "" , 
+                        "comment_author_name": "",
+                        "avarta_sha1": "",
+                        "comment_sha1": "",
+                        "comment_time": "",
+                        "comment_info": "",
+                        "image_sha1_list": [],
+                    } ,
+                    {
+                        "creator_sha1" : "" , 
+                        "comment_author_name": "",
+                        "avarta_sha1": "",
+                        "comment_sha1": "",
+                        "comment_time": "",
+                        "comment_info": "",
+                        "image_sha1_list": [],
+                    }
+                ]
+            }
+        },
+        "note": {
+            "请求参数": "-------------",
+            "user_sha1": "用户的sha1",
+            "behavior_sha1": "行为对象的sha1",
+            "page" : "数据标记" , 
+            "返回参数": "-------------",
+            "info": "请求成功或者失败的信息",
+            "ret": "代表请求的信息一些标识",
+            "has_next" : "数据是否加载完毕" , 
+            "comment_count": "总评论条数",
+            "comment_list": "评论列表",
+            "comment_author_name": "评论作者名称",
+            "avarta_sha1": "评论作者头像",
+            "comment_time": "评论时间",
+            "comment_info": "评论内容",
+            "image_sha1_list": "图片sha1列表",
+
+        }
+    },
+
+    //评论接口
+    {
+        "name": "7.评论接口(完成)",
+        "url": "http://dev.xielicheng.com:8000/api",
+        "method": "POST",
+        "params": {
+            "action": "comment_on",
+            "data": {
+                "user_sha1": "936d3439f9208678de7358eda91c14c7cf1fa965",
+                "behavior_sha1": "",
+                "comment_info": "",
+                "image_sha1_list": []
+            }
+        },
+        "response": {
+            "info": "OK",
+            "ret": "0001",
+            "data": {
+                "comment_sha1": ""
+            }
+        },
+        "note": {
+            "请求参数": "-------------",
+            "user_sha1": "用户的sha1",
+            "behavior_sha1": "行为对象的sha1",
+            "comment_info": "评论信息",
+            "image_sha1_list": "图片sha1列表",
+            "返回参数": "-------------",
+            "info": "请求成功或者失败的信息",
+            "ret": "代表请求的信息一些标识",
+            "comment_sha1": "评论sha1",
+        }
+    },
+
+    //删除评论
+    {
+        "name": "8.删除评论(完成)",
+        "url": "http://dev.xielicheng.com:8000/api",
+        "method": "POST",
+        "params": {
+            "action": "delete_comment",
+            "data": {
+                "user_sha1": "936d3439f9208678de7358eda91c14c7cf1fa965",
+                "comment_sha1": ""
+            }
+        },
+        "response": {
+            "info": "OK",
+            "ret": "0001",
+        },
+        "note": {
+            "请求参数": "-------------",
+            "user_sha1": "用户的sha1",
+            "comment_sha1": "评论sha1",
+            "image_sha1_list": "图片sha1列表",
+            "返回参数": "-------------",
+            "info": "请求成功或者失败的信息",
+            "ret": "代表请求的信息一些标识",
+        }
+    },
 
     //状态码
     {

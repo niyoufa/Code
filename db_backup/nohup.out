@@ -1,0 +1,1139 @@
+Thu Feb 11 14:11:27.642 [initandlisten] MongoDB starting : pid=16110 port=27017 dbpath=/var/lib/mongodb/ 64-bit host=nyf-ThinkPad-E550c
+Thu Feb 11 14:11:27.642 [initandlisten] db version v2.4.9
+Thu Feb 11 14:11:27.642 [initandlisten] git version: nogitversion
+Thu Feb 11 14:11:27.642 [initandlisten] build info: Linux orlo 3.2.0-58-generic #88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013 x86_64 BOOST_LIB_VERSION=1_54
+Thu Feb 11 14:11:27.642 [initandlisten] allocator: tcmalloc
+Thu Feb 11 14:11:27.642 [initandlisten] options: { auth: true, dbpath: "/var/lib/mongodb/" }
+Thu Feb 11 14:11:27.681 [initandlisten] journal dir=/var/lib/mongodb/journal
+Thu Feb 11 14:11:27.681 [initandlisten] recover : no journal files present, no recovery needed
+Thu Feb 11 14:11:27.767 [websvr] admin web console waiting for connections on port 28017
+Thu Feb 11 14:11:27.767 [initandlisten] waiting for connections on port 27017
+Thu Feb 11 14:12:01.345 [initandlisten] MongoDB starting : pid=16149 port=27017 dbpath=/var/lib/mongodb/ 64-bit host=nyf-ThinkPad-E550c
+Thu Feb 11 14:12:01.345 [initandlisten] db version v2.4.9
+Thu Feb 11 14:12:01.345 [initandlisten] git version: nogitversion
+Thu Feb 11 14:12:01.345 [initandlisten] build info: Linux orlo 3.2.0-58-generic #88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013 x86_64 BOOST_LIB_VERSION=1_54
+Thu Feb 11 14:12:01.345 [initandlisten] allocator: tcmalloc
+Thu Feb 11 14:12:01.345 [initandlisten] options: { auth: true, dbpath: "/var/lib/mongodb/" }
+Thu Feb 11 14:12:01.390 [initandlisten] journal dir=/var/lib/mongodb/journal
+Thu Feb 11 14:12:01.390 [initandlisten] recover begin
+Thu Feb 11 14:12:01.390 [initandlisten] info no lsn file in journal/ directory
+Thu Feb 11 14:12:01.390 [initandlisten] recover lsn: 0
+Thu Feb 11 14:12:01.390 [initandlisten] recover /var/lib/mongodb/journal/j._0
+Thu Feb 11 14:12:01.421 [initandlisten] recover cleaning up
+Thu Feb 11 14:12:01.421 [initandlisten] removeJournalFiles
+Thu Feb 11 14:12:01.557 [initandlisten] recover done
+Thu Feb 11 14:12:01.557 [initandlisten] preallocating a journal file /var/lib/mongodb/journal/prealloc.0
+Thu Feb 11 14:12:04.046 [initandlisten] 		File Preallocator Progress: 849346560/1073741824	79%
+Thu Feb 11 14:12:13.192 [websvr] admin web console waiting for connections on port 28017
+Thu Feb 11 14:12:13.192 [initandlisten] waiting for connections on port 27017
+Thu Feb 11 14:12:25.822 [initandlisten] connection accepted from 127.0.0.1:42258 #1 (1 connection now open)
+Thu Feb 11 14:12:25.824 [conn1]  authenticate db: admin { authenticate: 1, nonce: "e67530128c244dce", user: "dbadmin", key: "6e18839a89a50046d40903e663063a14" }
+Thu Feb 11 14:12:30.506 [conn1] assertion 16550 not authorized for query on admin.system.users ns:admin.system.users query:{}
+Thu Feb 11 14:12:44.912 [conn1] end connection 127.0.0.1:42258 (0 connections now open)
+Thu Feb 11 14:20:08.713 [initandlisten] connection accepted from 127.0.0.1:42259 #2 (1 connection now open)
+Thu Feb 11 14:20:08.714 [conn2]  authenticate db: admin { authenticate: 1, nonce: "d4f28eebd0e966b5", user: "dbadmin", key: "7c9a27932909ad3b8a9816df01837f13" }
+Thu Feb 11 14:20:24.214 [conn2] assertion 16550 not authorized for query on test.system.users ns:test.system.users query:{}
+Thu Feb 11 14:21:04.972 [FileAllocator] allocating new datafile /var/lib/mongodb/code.ns, filling with zeroes...
+Thu Feb 11 14:21:04.972 [FileAllocator] creating directory /var/lib/mongodb/_tmp
+Thu Feb 11 14:21:05.010 [FileAllocator] done allocating datafile /var/lib/mongodb/code.ns, size: 16MB,  took 0.022 secs
+Thu Feb 11 14:21:05.010 [FileAllocator] allocating new datafile /var/lib/mongodb/code.0, filling with zeroes...
+Thu Feb 11 14:21:05.033 [FileAllocator] done allocating datafile /var/lib/mongodb/code.0, size: 64MB,  took 0.022 secs
+Thu Feb 11 14:21:05.033 [FileAllocator] allocating new datafile /var/lib/mongodb/code.1, filling with zeroes...
+Thu Feb 11 14:21:05.034 [conn2] build index code.user { _id: 1 }
+Thu Feb 11 14:21:05.035 [conn2] build index done.  scanned 0 total records. 0 secs
+Thu Feb 11 14:21:05.073 [FileAllocator] done allocating datafile /var/lib/mongodb/code.1, size: 128MB,  took 0.037 secs
+Thu Feb 11 14:23:15.880 [conn2] dropDatabase code starting
+Thu Feb 11 14:23:15.882 [conn2] removeJournalFiles
+Thu Feb 11 14:23:15.951 [conn2] dropDatabase code finished
+Thu Feb 11 14:23:37.110 [FileAllocator] allocating new datafile /var/lib/mongodb/code.ns, filling with zeroes...
+Thu Feb 11 14:23:37.161 [FileAllocator] done allocating datafile /var/lib/mongodb/code.ns, size: 16MB,  took 0.05 secs
+Thu Feb 11 14:23:37.161 [FileAllocator] allocating new datafile /var/lib/mongodb/code.0, filling with zeroes...
+Thu Feb 11 14:23:37.184 [FileAllocator] done allocating datafile /var/lib/mongodb/code.0, size: 64MB,  took 0.022 secs
+Thu Feb 11 14:23:37.184 [FileAllocator] allocating new datafile /var/lib/mongodb/code.1, filling with zeroes...
+Thu Feb 11 14:23:37.185 [conn2] build index code.user { _id: 1 }
+Thu Feb 11 14:23:37.186 [conn2] build index done.  scanned 0 total records. 0 secs
+Thu Feb 11 14:23:37.249 [FileAllocator] done allocating datafile /var/lib/mongodb/code.1, size: 128MB,  took 0.062 secs
+Thu Feb 11 14:25:53.851 [conn2] command denied: { copydb: 1.0, fromhost: "localhost", fromdb: "code", todb: "code1" }
+Thu Feb 11 14:27:09.830 [conn2] command denied: { copydb: 1.0, fromhost: "", fromdb: "code", todb: "code1" }
+Thu Feb 11 14:27:21.195 [conn2] end connection 127.0.0.1:42259 (0 connections now open)
+Thu Feb 11 14:27:22.891 [initandlisten] connection accepted from 127.0.0.1:42260 #3 (1 connection now open)
+Thu Feb 11 14:27:22.891 [conn3]  authenticate db: admin { authenticate: 1, nonce: "28a9d3a9b8179d21", user: "dbadmin", key: "318f3b3fd67e8bc14c6fe90089f191d2" }
+Thu Feb 11 14:27:26.095 [conn3] command denied: { copydb: 1.0, fromhost: "", fromdb: "code", todb: "code1" }
+Thu Feb 11 14:27:41.993 [conn3]  authenticate db: admin { authenticate: 1, nonce: "df375b265a504c76", user: "useradmin", key: "0a9b396e19bc37a16284c1cad25fd26f" }
+Thu Feb 11 14:27:41.994 [conn3] command denied: { replSetGetStatus: 1.0, forShell: 1.0 }
+Thu Feb 11 14:27:44.555 [conn3] command denied: { copydb: 1.0, fromhost: "", fromdb: "code", todb: "code1" }
+Thu Feb 11 14:27:44.556 [conn3] command denied: { replSetGetStatus: 1.0, forShell: 1.0 }
+Thu Feb 11 14:28:05.862 [conn3]  authenticate db: admin { authenticate: 1, nonce: "b167f8c009ff9b33", user: "dbadmin", key: "d6d9074789588fd9f5fc11fd44439a2c" }
+Thu Feb 11 14:28:08.197 [conn3] command denied: { copydb: 1.0, fromhost: "", fromdb: "code", todb: "code1" }
+Thu Feb 11 14:40:58.971 [conn3] CMD: drop code.user
+Thu Feb 11 14:41:32.294 [conn3] build index code.user { _id: 1 }
+Thu Feb 11 14:41:32.295 [conn3] build index done.  scanned 0 total records. 0 secs
+Thu Feb 11 16:27:36.151 [initandlisten] connection accepted from 127.0.0.1:42374 #4 (2 connections now open)
+Thu Feb 11 16:27:36.153 [initandlisten] connection accepted from 127.0.0.1:42375 #5 (3 connections now open)
+Thu Feb 11 16:27:36.153 [initandlisten] connection accepted from 127.0.0.1:42376 #6 (4 connections now open)
+Thu Feb 11 16:27:36.154 [initandlisten] connection accepted from 127.0.0.1:42377 #7 (5 connections now open)
+Thu Feb 11 16:27:36.154 [initandlisten] connection accepted from 127.0.0.1:42378 #8 (6 connections now open)
+Thu Feb 11 16:27:36.166 [conn4]  authenticate db: testDB { authenticate: 1, user: "dbadmin", nonce: "3d7ebd0cab90a16c", key: "3ddee232fffd2735df0ffb6ef1dae541" }
+Thu Feb 11 16:27:36.167 [conn4] auth: couldn't find user dbadmin@testDB, testDB.system.users
+Thu Feb 11 16:27:36.167 [conn5]  authenticate db: testDB { authenticate: 1, user: "dbadmin", nonce: "ec01a6075addf3f7", key: "1f01126ebabffb0065651bba3309b4dc" }
+Thu Feb 11 16:27:36.167 [conn5] auth: couldn't find user dbadmin@testDB, testDB.system.users
+Thu Feb 11 16:27:36.167 [conn6]  authenticate db: testDB { authenticate: 1, user: "dbadmin", nonce: "5b4bf559b0bbbb07", key: "bd5c24786915a3e10f28a5a6e97b4042" }
+Thu Feb 11 16:27:36.167 [conn6] auth: couldn't find user dbadmin@testDB, testDB.system.users
+Thu Feb 11 16:27:36.167 [conn7]  authenticate db: testDB { authenticate: 1, user: "dbadmin", nonce: "92a5288899e299ca", key: "1cb02cbb985df1c7a6d44c419626276e" }
+Thu Feb 11 16:27:36.167 [conn7] auth: couldn't find user dbadmin@testDB, testDB.system.users
+Thu Feb 11 16:27:36.167 [conn8]  authenticate db: testDB { authenticate: 1, user: "dbadmin", nonce: "35c774c1f4570a06", key: "977917fcc052284b196242449c19fa35" }
+Thu Feb 11 16:27:36.167 [conn8] auth: couldn't find user dbadmin@testDB, testDB.system.users
+Thu Feb 11 16:27:36.169 [conn4] end connection 127.0.0.1:42374 (5 connections now open)
+Thu Feb 11 16:27:36.169 [conn5] end connection 127.0.0.1:42375 (4 connections now open)
+Thu Feb 11 16:27:36.170 [conn6] end connection 127.0.0.1:42376 (3 connections now open)
+Thu Feb 11 16:27:36.170 [conn7] end connection 127.0.0.1:42377 (3 connections now open)
+Thu Feb 11 16:27:36.170 [conn8] end connection 127.0.0.1:42378 (1 connection now open)
+Thu Feb 11 16:27:55.282 [initandlisten] connection accepted from 127.0.0.1:42379 #9 (2 connections now open)
+Thu Feb 11 16:27:55.284 [initandlisten] connection accepted from 127.0.0.1:42380 #10 (3 connections now open)
+Thu Feb 11 16:27:55.284 [initandlisten] connection accepted from 127.0.0.1:42381 #11 (4 connections now open)
+Thu Feb 11 16:27:55.285 [initandlisten] connection accepted from 127.0.0.1:42382 #12 (5 connections now open)
+Thu Feb 11 16:27:55.285 [initandlisten] connection accepted from 127.0.0.1:42383 #13 (6 connections now open)
+Thu Feb 11 16:27:55.298 [conn9]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "e3570bb7f9a4ccc8", key: "2d2078a4a7b1e178fcafaba961ade42c" }
+Thu Feb 11 16:27:55.298 [conn9] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:27:55.298 [conn10]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "fffbe8962e1e8a24", key: "b2425213873ff4c9c0e08ed386e9d032" }
+Thu Feb 11 16:27:55.298 [conn10] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:27:55.298 [conn11]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "6d24f03e67f5274", key: "a98185dde61e34f582c5c5df533a208e" }
+Thu Feb 11 16:27:55.298 [conn11] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:27:55.298 [conn12]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "d7790ae720246818", key: "0f09a82830d11b3b72ab2e9a4584c59c" }
+Thu Feb 11 16:27:55.298 [conn12] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:27:55.298 [conn13]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "7da9cde746879f07", key: "4d9790c855629a48af2859d99273c57b" }
+Thu Feb 11 16:27:55.299 [conn13] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:27:55.300 [conn9] end connection 127.0.0.1:42379 (5 connections now open)
+Thu Feb 11 16:27:55.301 [conn10] end connection 127.0.0.1:42380 (4 connections now open)
+Thu Feb 11 16:27:55.301 [conn11] end connection 127.0.0.1:42381 (3 connections now open)
+Thu Feb 11 16:27:55.301 [conn12] end connection 127.0.0.1:42382 (3 connections now open)
+Thu Feb 11 16:27:55.301 [conn13] end connection 127.0.0.1:42383 (1 connection now open)
+Thu Feb 11 16:28:28.789 [initandlisten] connection accepted from 127.0.0.1:42384 #14 (2 connections now open)
+Thu Feb 11 16:28:28.791 [initandlisten] connection accepted from 127.0.0.1:42385 #15 (3 connections now open)
+Thu Feb 11 16:28:28.791 [initandlisten] connection accepted from 127.0.0.1:42386 #16 (4 connections now open)
+Thu Feb 11 16:28:28.792 [initandlisten] connection accepted from 127.0.0.1:42387 #17 (5 connections now open)
+Thu Feb 11 16:28:28.792 [initandlisten] connection accepted from 127.0.0.1:42388 #18 (6 connections now open)
+Thu Feb 11 16:28:51.177 [conn17] end connection 127.0.0.1:42387 (5 connections now open)
+Thu Feb 11 16:28:51.177 [conn14] end connection 127.0.0.1:42384 (5 connections now open)
+Thu Feb 11 16:28:51.177 [conn18] end connection 127.0.0.1:42388 (5 connections now open)
+Thu Feb 11 16:28:51.177 [conn16] end connection 127.0.0.1:42386 (5 connections now open)
+Thu Feb 11 16:28:51.177 [conn15] end connection 127.0.0.1:42385 (5 connections now open)
+Thu Feb 11 16:28:51.956 [initandlisten] connection accepted from 127.0.0.1:42389 #19 (2 connections now open)
+Thu Feb 11 16:28:51.957 [initandlisten] connection accepted from 127.0.0.1:42390 #20 (3 connections now open)
+Thu Feb 11 16:28:51.958 [initandlisten] connection accepted from 127.0.0.1:42391 #21 (4 connections now open)
+Thu Feb 11 16:28:51.958 [initandlisten] connection accepted from 127.0.0.1:42392 #22 (5 connections now open)
+Thu Feb 11 16:28:51.959 [initandlisten] connection accepted from 127.0.0.1:42393 #23 (6 connections now open)
+Thu Feb 11 16:28:51.971 [conn19]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "c061c52153c9cbf5", key: "38ed1e32694f3db5b6520cd420e77b34" }
+Thu Feb 11 16:28:51.971 [conn19] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:28:51.972 [conn20]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "5307e4ff143998eb", key: "4110b670cd17e1692d29afff171eb66f" }
+Thu Feb 11 16:28:51.972 [conn20] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:28:51.972 [conn21]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "367e491308c4db1e", key: "7cea054aefbd1dcf4f4537ee1a97edba" }
+Thu Feb 11 16:28:51.972 [conn21] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:28:51.972 [conn22]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "72d0aa284613ee5c", key: "e9428f63934bdd3974864e1922967e3d" }
+Thu Feb 11 16:28:51.972 [conn22] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:28:51.972 [conn23]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "3187fe8d3ba703ed", key: "0dcb451b16f4e8ac3ef351e19596eb75" }
+Thu Feb 11 16:28:51.972 [conn23] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:28:51.974 [conn19] end connection 127.0.0.1:42389 (5 connections now open)
+Thu Feb 11 16:28:51.974 [conn20] end connection 127.0.0.1:42390 (4 connections now open)
+Thu Feb 11 16:28:51.974 [conn21] end connection 127.0.0.1:42391 (3 connections now open)
+Thu Feb 11 16:28:51.975 [conn22] end connection 127.0.0.1:42392 (3 connections now open)
+Thu Feb 11 16:28:51.975 [conn23] end connection 127.0.0.1:42393 (1 connection now open)
+Thu Feb 11 16:30:58.718 [initandlisten] connection accepted from 127.0.0.1:42394 #24 (2 connections now open)
+Thu Feb 11 16:30:58.720 [initandlisten] connection accepted from 127.0.0.1:42395 #25 (3 connections now open)
+Thu Feb 11 16:30:58.721 [initandlisten] connection accepted from 127.0.0.1:42396 #26 (4 connections now open)
+Thu Feb 11 16:30:58.721 [initandlisten] connection accepted from 127.0.0.1:42397 #27 (5 connections now open)
+Thu Feb 11 16:30:58.721 [initandlisten] connection accepted from 127.0.0.1:42398 #28 (6 connections now open)
+Thu Feb 11 16:31:19.306 [conn25] end connection 127.0.0.1:42395 (5 connections now open)
+Thu Feb 11 16:31:19.306 [conn27] end connection 127.0.0.1:42397 (5 connections now open)
+Thu Feb 11 16:31:19.306 [conn28] end connection 127.0.0.1:42398 (5 connections now open)
+Thu Feb 11 16:31:19.306 [conn26] end connection 127.0.0.1:42396 (5 connections now open)
+Thu Feb 11 16:31:19.306 [conn24] end connection 127.0.0.1:42394 (3 connections now open)
+Thu Feb 11 16:31:25.636 [initandlisten] connection accepted from 127.0.0.1:42399 #29 (2 connections now open)
+Thu Feb 11 16:31:25.638 [initandlisten] connection accepted from 127.0.0.1:42400 #30 (3 connections now open)
+Thu Feb 11 16:31:25.639 [initandlisten] connection accepted from 127.0.0.1:42401 #31 (4 connections now open)
+Thu Feb 11 16:31:25.639 [initandlisten] connection accepted from 127.0.0.1:42402 #32 (5 connections now open)
+Thu Feb 11 16:31:25.639 [initandlisten] connection accepted from 127.0.0.1:42403 #33 (6 connections now open)
+Thu Feb 11 16:31:25.652 [conn29]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "df81c28f6abd8050", key: "7d53f16ea08f5ca31e0c1fa4f9ecbcf6" }
+Thu Feb 11 16:31:25.652 [conn29] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:31:25.652 [conn30]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "d10852cc5f4450cb", key: "4b8275c5696d0bb5ead3a6861298d00f" }
+Thu Feb 11 16:31:25.652 [conn30] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:31:25.652 [conn31]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "39505643a89b7131", key: "3444b78456661983480a0746dc107d5a" }
+Thu Feb 11 16:31:25.652 [conn31] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:31:25.653 [conn32]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "bf589c9740396b6e", key: "ccacaf4d3408deb17695325d0e9de543" }
+Thu Feb 11 16:31:25.653 [conn32] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:31:25.653 [conn33]  authenticate db: code { authenticate: 1, user: "dbadmin", nonce: "e81608d302f2d035", key: "ba6c4e664ab2c4c596a0574b8c41e361" }
+Thu Feb 11 16:31:25.653 [conn33] auth: couldn't find user dbadmin@code, code.system.users
+Thu Feb 11 16:31:25.655 [conn29] end connection 127.0.0.1:42399 (5 connections now open)
+Thu Feb 11 16:31:25.655 [conn30] end connection 127.0.0.1:42400 (4 connections now open)
+Thu Feb 11 16:31:25.655 [conn31] end connection 127.0.0.1:42401 (3 connections now open)
+Thu Feb 11 16:31:25.655 [conn32] end connection 127.0.0.1:42402 (3 connections now open)
+Thu Feb 11 16:31:25.655 [conn33] end connection 127.0.0.1:42403 (1 connection now open)
+Thu Feb 11 16:32:10.070 [initandlisten] connection accepted from 127.0.0.1:42404 #34 (2 connections now open)
+Thu Feb 11 16:32:10.072 [initandlisten] connection accepted from 127.0.0.1:42405 #35 (3 connections now open)
+Thu Feb 11 16:32:10.072 [initandlisten] connection accepted from 127.0.0.1:42406 #36 (4 connections now open)
+Thu Feb 11 16:32:10.073 [initandlisten] connection accepted from 127.0.0.1:42407 #37 (5 connections now open)
+Thu Feb 11 16:32:10.073 [initandlisten] connection accepted from 127.0.0.1:42408 #38 (6 connections now open)
+Thu Feb 11 16:32:10.085 [conn34]  authenticate db: code { authenticate: 1, user: "admin", nonce: "8219a2ee29f8d229", key: "551e79f9a97562822b7ce9ca742f09f2" }
+Thu Feb 11 16:32:10.086 [conn34] auth: couldn't find user admin@code, code.system.users
+Thu Feb 11 16:32:10.086 [conn35]  authenticate db: code { authenticate: 1, user: "admin", nonce: "d277c6dd755efccb", key: "f257f8ca1672578e470fbacfaf0c81aa" }
+Thu Feb 11 16:32:10.086 [conn35] auth: couldn't find user admin@code, code.system.users
+Thu Feb 11 16:32:10.086 [conn36]  authenticate db: code { authenticate: 1, user: "admin", nonce: "a63a3b192152b649", key: "4689f9d9e9e89523ce980908237ea120" }
+Thu Feb 11 16:32:10.086 [conn36] auth: couldn't find user admin@code, code.system.users
+Thu Feb 11 16:32:10.086 [conn37]  authenticate db: code { authenticate: 1, user: "admin", nonce: "666a378d12af0ff7", key: "b034d0f71711f373fdc4abf45c3a169e" }
+Thu Feb 11 16:32:10.086 [conn37] auth: couldn't find user admin@code, code.system.users
+Thu Feb 11 16:32:10.086 [conn38]  authenticate db: code { authenticate: 1, user: "admin", nonce: "99f7a8e530a1ed66", key: "8f4c6059c4fb85ff2e5f7c2b1769e96a" }
+Thu Feb 11 16:32:10.086 [conn38] auth: couldn't find user admin@code, code.system.users
+Thu Feb 11 16:32:10.088 [conn34] end connection 127.0.0.1:42404 (5 connections now open)
+Thu Feb 11 16:32:10.088 [conn35] end connection 127.0.0.1:42405 (4 connections now open)
+Thu Feb 11 16:32:10.088 [conn36] end connection 127.0.0.1:42406 (3 connections now open)
+Thu Feb 11 16:32:10.088 [conn37] end connection 127.0.0.1:42407 (3 connections now open)
+Thu Feb 11 16:32:10.089 [conn38] end connection 127.0.0.1:42408 (1 connection now open)
+Thu Feb 11 16:33:56.725 [conn3] end connection 127.0.0.1:42260 (0 connections now open)
+Thu Feb 11 16:34:18.716 [initandlisten] connection accepted from 127.0.0.1:42409 #39 (1 connection now open)
+Thu Feb 11 16:34:18.717 [conn39]  authenticate db: admin { authenticate: 1, nonce: "b5efa223debc604a", user: "dbadmin", key: "a80d502eda92a4c60d9d6edfd54383dc" }
+Thu Feb 11 16:34:23.246 [initandlisten] connection accepted from 127.0.0.1:42410 #40 (2 connections now open)
+Thu Feb 11 16:34:23.248 [initandlisten] connection accepted from 127.0.0.1:42411 #41 (3 connections now open)
+Thu Feb 11 16:34:23.248 [initandlisten] connection accepted from 127.0.0.1:42412 #42 (4 connections now open)
+Thu Feb 11 16:34:23.249 [initandlisten] connection accepted from 127.0.0.1:42413 #43 (5 connections now open)
+Thu Feb 11 16:34:23.249 [initandlisten] connection accepted from 127.0.0.1:42414 #44 (6 connections now open)
+Thu Feb 11 16:34:23.262 [conn40]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "ac16ea13a58407f8", key: "bb07bed873d01394d7037577f4abfc88" }
+Thu Feb 11 16:34:23.262 [conn41]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "59c496adcc3a162b", key: "8b9a10073926514e45edbd7f88cc51d1" }
+Thu Feb 11 16:34:23.262 [conn42]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3f4532596878ba79", key: "6aa4623f241aed0b8fe9f09611dec62a" }
+Thu Feb 11 16:34:23.262 [conn43]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3fe797d197d3a23e", key: "ccae81b228c8737ea613f596873a183b" }
+Thu Feb 11 16:34:23.262 [conn44]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "dfc9eae9841c8d51", key: "9817c8ae0c5a795443ee7c5dd56d34b3" }
+Thu Feb 11 16:34:23.265 [conn40] end connection 127.0.0.1:42410 (5 connections now open)
+Thu Feb 11 16:34:23.265 [conn41] end connection 127.0.0.1:42411 (4 connections now open)
+Thu Feb 11 16:34:23.265 [conn42] end connection 127.0.0.1:42412 (3 connections now open)
+Thu Feb 11 16:34:23.266 [conn43] end connection 127.0.0.1:42413 (3 connections now open)
+Thu Feb 11 16:34:23.266 [conn44] end connection 127.0.0.1:42414 (1 connection now open)
+Thu Feb 11 16:55:38.851 [initandlisten] connection accepted from 127.0.0.1:42415 #45 (2 connections now open)
+Thu Feb 11 16:55:38.860 [conn45] end connection 127.0.0.1:42415 (1 connection now open)
+Thu Feb 11 16:55:38.865 [initandlisten] connection accepted from 127.0.0.1:42416 #46 (2 connections now open)
+Thu Feb 11 16:55:38.865 [initandlisten] connection accepted from 127.0.0.1:42417 #47 (3 connections now open)
+Thu Feb 11 16:55:38.866 [initandlisten] connection accepted from 127.0.0.1:42418 #48 (4 connections now open)
+Thu Feb 11 16:55:38.866 [initandlisten] connection accepted from 127.0.0.1:42419 #49 (5 connections now open)
+Thu Feb 11 16:55:38.866 [initandlisten] connection accepted from 127.0.0.1:42420 #50 (6 connections now open)
+Thu Feb 11 16:55:38.871 [conn46]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "cb9ab98870f27e5f", key: "90079a26385d98834f289bc9085a8780" }
+Thu Feb 11 16:55:38.871 [conn47]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a779199f266975aa", key: "7165b829f9ad6e73dbd7c9fd48785899" }
+Thu Feb 11 16:55:38.871 [conn48]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "84de60dbe39be162", key: "1e1823b39d337a82529e3592e4b90140" }
+Thu Feb 11 16:55:38.871 [conn49]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "e16df83cc7fe1616", key: "4797c7771740ce79702e04b2ba4dbb55" }
+Thu Feb 11 16:55:38.871 [conn50]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d135540176baefe8", key: "c3656d6427dcf140ff2d0ec6cfd86b63" }
+Thu Feb 11 16:55:38.877 [conn47] end connection 127.0.0.1:42417 (5 connections now open)
+Thu Feb 11 16:55:38.877 [conn46] end connection 127.0.0.1:42416 (5 connections now open)
+Thu Feb 11 16:55:38.877 [conn48] end connection 127.0.0.1:42418 (5 connections now open)
+Thu Feb 11 16:55:38.877 [conn50] end connection 127.0.0.1:42420 (5 connections now open)
+Thu Feb 11 16:55:38.877 [conn49] end connection 127.0.0.1:42419 (5 connections now open)
+Thu Feb 11 16:56:29.679 [initandlisten] connection accepted from 127.0.0.1:42421 #51 (2 connections now open)
+Thu Feb 11 16:56:29.688 [conn51] end connection 127.0.0.1:42421 (1 connection now open)
+Thu Feb 11 16:56:29.693 [initandlisten] connection accepted from 127.0.0.1:42422 #52 (2 connections now open)
+Thu Feb 11 16:56:29.693 [initandlisten] connection accepted from 127.0.0.1:42423 #53 (3 connections now open)
+Thu Feb 11 16:56:29.693 [initandlisten] connection accepted from 127.0.0.1:42424 #54 (4 connections now open)
+Thu Feb 11 16:56:29.694 [initandlisten] connection accepted from 127.0.0.1:42425 #55 (5 connections now open)
+Thu Feb 11 16:56:29.694 [initandlisten] connection accepted from 127.0.0.1:42426 #56 (6 connections now open)
+Thu Feb 11 16:56:29.698 [conn52]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "fce02c128da5698e", key: "67efd316d749d54c3ef613277dcb583e" }
+Thu Feb 11 16:56:29.699 [conn53]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "394328d7edb6b0f8", key: "abd5615f8b7197721cc2a307b39f0218" }
+Thu Feb 11 16:56:29.699 [conn54]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "525c367e75d174b6", key: "0bf7ee99de7252604e5dcdc7d91ca5b7" }
+Thu Feb 11 16:56:29.699 [conn55]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "45016e6cf016f378", key: "ed3c2fbf675c8268a446a985be5aac4e" }
+Thu Feb 11 16:56:29.699 [conn56]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f8c2669e726cb095", key: "29c34dce23a9d4cd58414d39ddd5de5a" }
+Thu Feb 11 16:56:29.701 [conn52] end connection 127.0.0.1:42422 (5 connections now open)
+Thu Feb 11 16:56:29.701 [conn53] end connection 127.0.0.1:42423 (4 connections now open)
+Thu Feb 11 16:56:29.701 [conn54] end connection 127.0.0.1:42424 (4 connections now open)
+Thu Feb 11 16:56:29.701 [conn56] end connection 127.0.0.1:42426 (2 connections now open)
+Thu Feb 11 16:56:29.701 [conn55] end connection 127.0.0.1:42425 (2 connections now open)
+Thu Feb 11 19:08:19.053 [initandlisten] connection accepted from 127.0.0.1:42427 #57 (2 connections now open)
+Thu Feb 11 19:08:19.062 [conn57] end connection 127.0.0.1:42427 (1 connection now open)
+Thu Feb 11 19:08:19.067 [initandlisten] connection accepted from 127.0.0.1:42428 #58 (2 connections now open)
+Thu Feb 11 19:08:19.067 [initandlisten] connection accepted from 127.0.0.1:42429 #59 (3 connections now open)
+Thu Feb 11 19:08:19.068 [initandlisten] connection accepted from 127.0.0.1:42430 #60 (4 connections now open)
+Thu Feb 11 19:08:19.068 [initandlisten] connection accepted from 127.0.0.1:42431 #61 (5 connections now open)
+Thu Feb 11 19:08:19.068 [initandlisten] connection accepted from 127.0.0.1:42432 #62 (6 connections now open)
+Thu Feb 11 19:08:19.072 [conn58]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "b587a4e7eac6f617", key: "89ed1b615921af6b4c024928b11b0f7a" }
+Thu Feb 11 19:08:19.073 [conn59]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "9c1f6a247ff32585", key: "18f9a46a8d46a058aebe283e4e2202c8" }
+Thu Feb 11 19:08:19.073 [conn60]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "fe10b743b56402c4", key: "bef935ba9c4654708bfb11db5384f8b6" }
+Thu Feb 11 19:08:19.073 [conn61]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4b813f70e5c568df", key: "2a7e8891a31f2fa4139f05d02d7b78d2" }
+Thu Feb 11 19:08:19.073 [conn62]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "26b3e12f21b5bd28", key: "ec8f26559f7de317befac136d72af238" }
+Thu Feb 11 19:08:19.075 [conn58] end connection 127.0.0.1:42428 (5 connections now open)
+Thu Feb 11 19:08:19.075 [conn59] end connection 127.0.0.1:42429 (5 connections now open)
+Thu Feb 11 19:08:19.075 [conn61] end connection 127.0.0.1:42431 (3 connections now open)
+Thu Feb 11 19:08:19.075 [conn62] end connection 127.0.0.1:42432 (3 connections now open)
+Thu Feb 11 19:08:19.075 [conn60] end connection 127.0.0.1:42430 (3 connections now open)
+Thu Feb 11 19:08:52.907 [initandlisten] connection accepted from 127.0.0.1:42433 #63 (2 connections now open)
+Thu Feb 11 19:08:52.916 [conn63] end connection 127.0.0.1:42433 (1 connection now open)
+Thu Feb 11 19:08:52.920 [initandlisten] connection accepted from 127.0.0.1:42434 #64 (2 connections now open)
+Thu Feb 11 19:08:52.921 [initandlisten] connection accepted from 127.0.0.1:42435 #65 (3 connections now open)
+Thu Feb 11 19:08:52.921 [initandlisten] connection accepted from 127.0.0.1:42436 #66 (4 connections now open)
+Thu Feb 11 19:08:52.921 [initandlisten] connection accepted from 127.0.0.1:42437 #67 (5 connections now open)
+Thu Feb 11 19:08:52.922 [initandlisten] connection accepted from 127.0.0.1:42438 #68 (6 connections now open)
+Thu Feb 11 19:08:52.926 [conn64]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "815dda05e08904e6", key: "4d18e458db528ac6dd62c3823b8c8e55" }
+Thu Feb 11 19:08:52.926 [conn65]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "764e9a7996c5da31", key: "5e062fd8de4f6b0cf73cb5914b26f3a7" }
+Thu Feb 11 19:08:52.926 [conn66]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "45ed129bf74dfbbc", key: "8ae162f8784871a80495ab07f370bdef" }
+Thu Feb 11 19:08:52.927 [conn67]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "202b13ef1cc57487", key: "b82b737bcd3474083a571fed44e9eba8" }
+Thu Feb 11 19:08:52.927 [conn68]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "579fe4d1edc231aa", key: "e02dacb2709672f361b7b9e835462df4" }
+Thu Feb 11 19:08:52.955 [conn64] end connection 127.0.0.1:42434 (5 connections now open)
+Thu Feb 11 19:08:52.955 [conn65] end connection 127.0.0.1:42435 (4 connections now open)
+Thu Feb 11 19:08:52.955 [conn66] end connection 127.0.0.1:42436 (4 connections now open)
+Thu Feb 11 19:08:52.955 [conn68] end connection 127.0.0.1:42438 (2 connections now open)
+Thu Feb 11 19:08:52.955 [conn67] end connection 127.0.0.1:42437 (2 connections now open)
+Thu Feb 11 19:12:45.735 [initandlisten] connection accepted from 127.0.0.1:42439 #69 (2 connections now open)
+Thu Feb 11 19:12:45.744 [conn69] end connection 127.0.0.1:42439 (1 connection now open)
+Thu Feb 11 19:12:45.749 [initandlisten] connection accepted from 127.0.0.1:42440 #70 (2 connections now open)
+Thu Feb 11 19:12:45.749 [initandlisten] connection accepted from 127.0.0.1:42441 #71 (3 connections now open)
+Thu Feb 11 19:12:45.750 [initandlisten] connection accepted from 127.0.0.1:42442 #72 (4 connections now open)
+Thu Feb 11 19:12:45.750 [initandlisten] connection accepted from 127.0.0.1:42443 #73 (5 connections now open)
+Thu Feb 11 19:12:45.750 [initandlisten] connection accepted from 127.0.0.1:42444 #74 (6 connections now open)
+Thu Feb 11 19:12:45.754 [conn70]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "8b72637a63f4b9b9", key: "e6f5ad98e27236bf069f98cef8303c81" }
+Thu Feb 11 19:12:45.755 [conn71]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f3d966c6e5460c11", key: "1dd5c14faf0bf3aabaef2e5bfc4d2ca6" }
+Thu Feb 11 19:12:45.755 [conn72]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "eba430131db670f8", key: "a81c0a65e936c215e8f1c65162f262f0" }
+Thu Feb 11 19:12:45.755 [conn73]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "97f2aeadabdcc7f5", key: "07be2c8392e8fac15fb404cfd06a9ee7" }
+Thu Feb 11 19:12:45.755 [conn74]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6ccb7476ef512eb3", key: "33b2e11bdab6122103f0c6f93140f918" }
+Thu Feb 11 19:12:45.757 [conn70] end connection 127.0.0.1:42440 (5 connections now open)
+Thu Feb 11 19:12:45.757 [conn71] end connection 127.0.0.1:42441 (5 connections now open)
+Thu Feb 11 19:12:45.757 [conn72] end connection 127.0.0.1:42442 (5 connections now open)
+Thu Feb 11 19:12:45.757 [conn73] end connection 127.0.0.1:42443 (2 connections now open)
+Thu Feb 11 19:12:45.757 [conn74] end connection 127.0.0.1:42444 (1 connection now open)
+Thu Feb 11 19:14:46.533 [initandlisten] connection accepted from 127.0.0.1:42445 #75 (2 connections now open)
+Thu Feb 11 19:14:46.542 [conn75] end connection 127.0.0.1:42445 (1 connection now open)
+Thu Feb 11 19:14:46.547 [initandlisten] connection accepted from 127.0.0.1:42446 #76 (2 connections now open)
+Thu Feb 11 19:14:46.547 [initandlisten] connection accepted from 127.0.0.1:42447 #77 (3 connections now open)
+Thu Feb 11 19:14:46.547 [initandlisten] connection accepted from 127.0.0.1:42448 #78 (4 connections now open)
+Thu Feb 11 19:14:46.548 [initandlisten] connection accepted from 127.0.0.1:42449 #79 (5 connections now open)
+Thu Feb 11 19:14:46.548 [initandlisten] connection accepted from 127.0.0.1:42450 #80 (6 connections now open)
+Thu Feb 11 19:14:46.552 [conn76]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "895d2927c69b2adc", key: "271ea8f10cdebbfef71e174a297c0347" }
+Thu Feb 11 19:14:46.552 [conn77]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f2ae64389afed033", key: "4473b5fea1fa43a3f84a7364cea27b27" }
+Thu Feb 11 19:14:46.553 [conn78]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6e3935ac68df0bdf", key: "b40371953f96f3e6cd63bd134d3a9d74" }
+Thu Feb 11 19:14:46.553 [conn79]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "143235e7c56c4ad3", key: "9bb069243551e9ad88a20b266803d8e8" }
+Thu Feb 11 19:14:46.553 [conn80]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "44dd92878c8e92b1", key: "12fc3fca1a7ae72f0b61f1ee6bf7571f" }
+Thu Feb 11 19:14:46.555 [conn76] end connection 127.0.0.1:42446 (5 connections now open)
+Thu Feb 11 19:14:46.555 [conn77] end connection 127.0.0.1:42447 (4 connections now open)
+Thu Feb 11 19:14:46.555 [conn78] end connection 127.0.0.1:42448 (4 connections now open)
+Thu Feb 11 19:14:46.555 [conn79] end connection 127.0.0.1:42449 (2 connections now open)
+Thu Feb 11 19:14:46.555 [conn80] end connection 127.0.0.1:42450 (2 connections now open)
+Thu Feb 11 19:15:33.374 [initandlisten] connection accepted from 127.0.0.1:42451 #81 (2 connections now open)
+Thu Feb 11 19:15:33.384 [conn81] end connection 127.0.0.1:42451 (1 connection now open)
+Thu Feb 11 19:15:33.388 [initandlisten] connection accepted from 127.0.0.1:42452 #82 (2 connections now open)
+Thu Feb 11 19:15:33.388 [initandlisten] connection accepted from 127.0.0.1:42453 #83 (3 connections now open)
+Thu Feb 11 19:15:33.389 [initandlisten] connection accepted from 127.0.0.1:42454 #84 (4 connections now open)
+Thu Feb 11 19:15:33.389 [initandlisten] connection accepted from 127.0.0.1:42455 #85 (5 connections now open)
+Thu Feb 11 19:15:33.389 [initandlisten] connection accepted from 127.0.0.1:42456 #86 (6 connections now open)
+Thu Feb 11 19:15:33.394 [conn82]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "18cb07f4b863673e", key: "f73d8245ee33f5d9c3e201f1afec8297" }
+Thu Feb 11 19:15:33.394 [conn83]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5f86959ada9fa0a9", key: "a0c3cca1073a579c128bfa22562e332c" }
+Thu Feb 11 19:15:33.394 [conn84]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "50e61ade751ad981", key: "31222a84255bd701d98bdf85496045ba" }
+Thu Feb 11 19:15:33.394 [conn85]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "7437d02f3b69d326", key: "93982688ad05c07d89970ae41b77878c" }
+Thu Feb 11 19:15:33.395 [conn86]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "ff6cee2e383dd8fc", key: "26c61ba94d522d621cc571fceab2d2b9" }
+Thu Feb 11 19:15:33.396 [conn82] end connection 127.0.0.1:42452 (5 connections now open)
+Thu Feb 11 19:15:33.396 [conn83] end connection 127.0.0.1:42453 (5 connections now open)
+Thu Feb 11 19:15:33.396 [conn84] end connection 127.0.0.1:42454 (4 connections now open)
+Thu Feb 11 19:15:33.396 [conn85] end connection 127.0.0.1:42455 (2 connections now open)
+Thu Feb 11 19:15:33.396 [conn86] end connection 127.0.0.1:42456 (2 connections now open)
+Thu Feb 11 19:17:16.437 [initandlisten] connection accepted from 127.0.0.1:42457 #87 (2 connections now open)
+Thu Feb 11 19:17:16.446 [conn87] end connection 127.0.0.1:42457 (1 connection now open)
+Thu Feb 11 19:17:16.450 [initandlisten] connection accepted from 127.0.0.1:42458 #88 (2 connections now open)
+Thu Feb 11 19:17:16.451 [initandlisten] connection accepted from 127.0.0.1:42459 #89 (3 connections now open)
+Thu Feb 11 19:17:16.451 [initandlisten] connection accepted from 127.0.0.1:42460 #90 (4 connections now open)
+Thu Feb 11 19:17:16.452 [initandlisten] connection accepted from 127.0.0.1:42461 #91 (5 connections now open)
+Thu Feb 11 19:17:16.452 [initandlisten] connection accepted from 127.0.0.1:42462 #92 (6 connections now open)
+Thu Feb 11 19:17:16.456 [conn88]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "420557ae1e1b659", key: "9d7448cdf9f58710f047be65de3db235" }
+Thu Feb 11 19:17:16.456 [conn89]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "cf2c02d2e6e62535", key: "41d49c2a65237890af2c86db09b3a722" }
+Thu Feb 11 19:17:16.456 [conn90]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "1b144a0e318c9ee4", key: "f16797f9830f568ffe8e633324e01610" }
+Thu Feb 11 19:17:16.457 [conn91]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f6f115a0f75e5faf", key: "c1d4213b6586df44600fb99076a5a94a" }
+Thu Feb 11 19:17:16.457 [conn92]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "804c0c7f5d1ecbc4", key: "6c14c18a1a8a5afa7d30faefbf7b879c" }
+Thu Feb 11 19:17:16.482 [conn88] end connection 127.0.0.1:42458 (5 connections now open)
+Thu Feb 11 19:17:16.483 [conn89] end connection 127.0.0.1:42459 (5 connections now open)
+Thu Feb 11 19:17:16.483 [conn91] end connection 127.0.0.1:42461 (3 connections now open)
+Thu Feb 11 19:17:16.483 [conn90] end connection 127.0.0.1:42460 (2 connections now open)
+Thu Feb 11 19:17:16.483 [conn92] end connection 127.0.0.1:42462 (2 connections now open)
+Thu Feb 11 19:17:29.029 [initandlisten] connection accepted from 127.0.0.1:42463 #93 (2 connections now open)
+Thu Feb 11 19:17:29.038 [conn93] end connection 127.0.0.1:42463 (1 connection now open)
+Thu Feb 11 19:17:29.042 [initandlisten] connection accepted from 127.0.0.1:42464 #94 (2 connections now open)
+Thu Feb 11 19:17:29.043 [initandlisten] connection accepted from 127.0.0.1:42465 #95 (3 connections now open)
+Thu Feb 11 19:17:29.043 [initandlisten] connection accepted from 127.0.0.1:42466 #96 (4 connections now open)
+Thu Feb 11 19:17:29.044 [initandlisten] connection accepted from 127.0.0.1:42467 #97 (5 connections now open)
+Thu Feb 11 19:17:29.044 [initandlisten] connection accepted from 127.0.0.1:42468 #98 (6 connections now open)
+Thu Feb 11 19:17:29.048 [conn94]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d889676291a8d559", key: "72ca501648635cc61b688742cb53ffb7" }
+Thu Feb 11 19:17:29.048 [conn95]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a27202bd4002796e", key: "d8ff3b684f42f58e5150a356e989c2de" }
+Thu Feb 11 19:17:29.049 [conn96]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "ee859af31d6c70d4", key: "26abfc81da7ada28c828b9a0ccce0bf2" }
+Thu Feb 11 19:17:29.049 [conn97]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "9ef0c9f82ee7e373", key: "1965e2c524ce36729c407f0f080b237f" }
+Thu Feb 11 19:17:29.049 [conn98]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "814a160cd0242258", key: "2f503107c6c4b53cd0a740430047bdcc" }
+Thu Feb 11 19:17:29.075 [conn94] end connection 127.0.0.1:42464 (5 connections now open)
+Thu Feb 11 19:17:29.075 [conn95] end connection 127.0.0.1:42465 (5 connections now open)
+Thu Feb 11 19:17:29.075 [conn96] end connection 127.0.0.1:42466 (3 connections now open)
+Thu Feb 11 19:17:29.075 [conn97] end connection 127.0.0.1:42467 (2 connections now open)
+Thu Feb 11 19:17:29.075 [conn98] end connection 127.0.0.1:42468 (2 connections now open)
+Thu Feb 11 19:18:03.866 [initandlisten] connection accepted from 127.0.0.1:42469 #99 (2 connections now open)
+Thu Feb 11 19:18:03.876 [conn99] end connection 127.0.0.1:42469 (1 connection now open)
+Thu Feb 11 19:18:03.880 [initandlisten] connection accepted from 127.0.0.1:42470 #100 (2 connections now open)
+Thu Feb 11 19:18:03.880 [initandlisten] connection accepted from 127.0.0.1:42471 #101 (3 connections now open)
+Thu Feb 11 19:18:03.881 [initandlisten] connection accepted from 127.0.0.1:42472 #102 (4 connections now open)
+Thu Feb 11 19:18:03.881 [initandlisten] connection accepted from 127.0.0.1:42473 #103 (5 connections now open)
+Thu Feb 11 19:18:03.881 [initandlisten] connection accepted from 127.0.0.1:42474 #104 (6 connections now open)
+Thu Feb 11 19:18:03.886 [conn100]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "848836bdfa07935e", key: "e15eff94c4d75e9219d0a95458a73301" }
+Thu Feb 11 19:18:03.886 [conn101]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "77daee7aa58b57cf", key: "6096fb67251ddf405fb7b1586a95d7fc" }
+Thu Feb 11 19:18:03.886 [conn102]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f4ec3206cc6fb6e9", key: "0f41e85f63f04447862f1bd37e84f859" }
+Thu Feb 11 19:18:03.886 [conn103]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "efa17149fdcccd9a", key: "408cae3fd72650e71cad4f6b62277931" }
+Thu Feb 11 19:18:03.886 [conn104]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3596d703345d2b18", key: "6d1639fe4ec85760c42f09ad3471787d" }
+Thu Feb 11 19:18:03.912 [conn100] end connection 127.0.0.1:42470 (5 connections now open)
+Thu Feb 11 19:18:03.912 [conn101] end connection 127.0.0.1:42471 (5 connections now open)
+Thu Feb 11 19:18:03.913 [conn102] end connection 127.0.0.1:42472 (3 connections now open)
+Thu Feb 11 19:18:03.913 [conn103] end connection 127.0.0.1:42473 (2 connections now open)
+Thu Feb 11 19:18:03.913 [conn104] end connection 127.0.0.1:42474 (2 connections now open)
+Thu Feb 11 19:19:20.179 [initandlisten] connection accepted from 127.0.0.1:42475 #105 (2 connections now open)
+Thu Feb 11 19:19:20.188 [conn105] end connection 127.0.0.1:42475 (1 connection now open)
+Thu Feb 11 19:19:20.192 [initandlisten] connection accepted from 127.0.0.1:42476 #106 (2 connections now open)
+Thu Feb 11 19:19:20.193 [initandlisten] connection accepted from 127.0.0.1:42477 #107 (3 connections now open)
+Thu Feb 11 19:19:20.193 [initandlisten] connection accepted from 127.0.0.1:42478 #108 (4 connections now open)
+Thu Feb 11 19:19:20.194 [initandlisten] connection accepted from 127.0.0.1:42479 #109 (5 connections now open)
+Thu Feb 11 19:19:20.194 [initandlisten] connection accepted from 127.0.0.1:42480 #110 (6 connections now open)
+Thu Feb 11 19:19:20.198 [conn106]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4c1264b7ca66aff4", key: "cfb514e83dbf0482f1ca93377867fa04" }
+Thu Feb 11 19:19:20.198 [conn107]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f306ba0f9871f302", key: "cac48e2f9182159056db16e2bb5004ab" }
+Thu Feb 11 19:19:20.198 [conn108]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "882c2cc26b014f9c", key: "98292bfdfe3024205d8f8ade09cbe150" }
+Thu Feb 11 19:19:20.199 [conn109]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6d95fee209bfb830", key: "ba21b689a50005f54dfdda8c4e37ae3e" }
+Thu Feb 11 19:19:20.199 [conn110]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2cd7339146bc04e4", key: "300b3a3d5fc2b815a5e4628961860e48" }
+Thu Feb 11 19:19:20.200 [conn106] end connection 127.0.0.1:42476 (5 connections now open)
+Thu Feb 11 19:19:20.200 [conn107] end connection 127.0.0.1:42477 (4 connections now open)
+Thu Feb 11 19:19:20.200 [conn108] end connection 127.0.0.1:42478 (4 connections now open)
+Thu Feb 11 19:19:20.201 [conn110] end connection 127.0.0.1:42480 (2 connections now open)
+Thu Feb 11 19:19:20.201 [conn109] end connection 127.0.0.1:42479 (2 connections now open)
+Thu Feb 11 19:19:29.651 [initandlisten] connection accepted from 127.0.0.1:42481 #111 (2 connections now open)
+Thu Feb 11 19:19:29.660 [conn111] end connection 127.0.0.1:42481 (1 connection now open)
+Thu Feb 11 19:19:29.665 [initandlisten] connection accepted from 127.0.0.1:42482 #112 (2 connections now open)
+Thu Feb 11 19:19:29.665 [initandlisten] connection accepted from 127.0.0.1:42483 #113 (3 connections now open)
+Thu Feb 11 19:19:29.666 [initandlisten] connection accepted from 127.0.0.1:42484 #114 (4 connections now open)
+Thu Feb 11 19:19:29.666 [initandlisten] connection accepted from 127.0.0.1:42485 #115 (5 connections now open)
+Thu Feb 11 19:19:29.666 [initandlisten] connection accepted from 127.0.0.1:42486 #116 (6 connections now open)
+Thu Feb 11 19:19:29.670 [conn112]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5aae42380b329dbc", key: "e2adae83c3b7392fc8135d2d1f851b7f" }
+Thu Feb 11 19:19:29.671 [conn113]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "741cdc2197e8be45", key: "7967ef475928fd9f6634693c35da9ce4" }
+Thu Feb 11 19:19:29.671 [conn114]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "9318a76a5a5c357a", key: "1f4719ae5409edc235dac68ad8b37dcf" }
+Thu Feb 11 19:19:29.671 [conn115]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "909e39fdc50bf2d3", key: "84b3e8052dc7abe0e23ca8d1f97b6ef5" }
+Thu Feb 11 19:19:29.671 [conn116]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "42da27a3c3bf5c7b", key: "5f7daf9b0a773f405a27eb614e534152" }
+Thu Feb 11 19:19:29.692 [conn112] end connection 127.0.0.1:42482 (5 connections now open)
+Thu Feb 11 19:19:29.692 [conn113] end connection 127.0.0.1:42483 (5 connections now open)
+Thu Feb 11 19:19:29.693 [conn114] end connection 127.0.0.1:42484 (3 connections now open)
+Thu Feb 11 19:19:29.693 [conn115] end connection 127.0.0.1:42485 (3 connections now open)
+Thu Feb 11 19:19:29.693 [conn116] end connection 127.0.0.1:42486 (3 connections now open)
+Thu Feb 11 19:21:01.059 [initandlisten] connection accepted from 127.0.0.1:42487 #117 (2 connections now open)
+Thu Feb 11 19:21:01.068 [conn117] end connection 127.0.0.1:42487 (1 connection now open)
+Thu Feb 11 19:21:01.073 [initandlisten] connection accepted from 127.0.0.1:42488 #118 (2 connections now open)
+Thu Feb 11 19:21:01.073 [initandlisten] connection accepted from 127.0.0.1:42489 #119 (3 connections now open)
+Thu Feb 11 19:21:01.073 [initandlisten] connection accepted from 127.0.0.1:42490 #120 (4 connections now open)
+Thu Feb 11 19:21:01.074 [initandlisten] connection accepted from 127.0.0.1:42491 #121 (5 connections now open)
+Thu Feb 11 19:21:01.074 [initandlisten] connection accepted from 127.0.0.1:42492 #122 (6 connections now open)
+Thu Feb 11 19:21:01.078 [conn118]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3e262b1c7bed0862", key: "e7a6af4f4a4c9e32ad44dcb797fbb3d4" }
+Thu Feb 11 19:21:01.078 [conn119]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4cdab85e007c530d", key: "7043cf28de97d710ad82d42d4daaacf2" }
+Thu Feb 11 19:21:01.078 [conn120]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "daa2f02d16e03ba3", key: "e855fb2489fdcec9d870925c76bf2443" }
+Thu Feb 11 19:21:01.079 [conn121]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "e48a823991fc492b", key: "c779c3fcf27e336d69156647bd0d978c" }
+Thu Feb 11 19:21:01.079 [conn122]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "cb1da794613c482d", key: "838fd1c22378782878d7971becbdccc0" }
+Thu Feb 11 19:21:01.099 [conn118] end connection 127.0.0.1:42488 (5 connections now open)
+Thu Feb 11 19:21:01.099 [conn120] end connection 127.0.0.1:42490 (5 connections now open)
+Thu Feb 11 19:21:01.099 [conn122] end connection 127.0.0.1:42492 (3 connections now open)
+Thu Feb 11 19:21:01.099 [conn121] end connection 127.0.0.1:42491 (3 connections now open)
+Thu Feb 11 19:21:01.099 [conn119] end connection 127.0.0.1:42489 (5 connections now open)
+Thu Feb 11 19:22:08.555 [initandlisten] connection accepted from 127.0.0.1:42493 #123 (2 connections now open)
+Thu Feb 11 19:22:08.565 [conn123] end connection 127.0.0.1:42493 (1 connection now open)
+Thu Feb 11 19:22:08.569 [initandlisten] connection accepted from 127.0.0.1:42494 #124 (2 connections now open)
+Thu Feb 11 19:22:08.569 [initandlisten] connection accepted from 127.0.0.1:42495 #125 (3 connections now open)
+Thu Feb 11 19:22:08.570 [initandlisten] connection accepted from 127.0.0.1:42496 #126 (4 connections now open)
+Thu Feb 11 19:22:08.570 [initandlisten] connection accepted from 127.0.0.1:42497 #127 (5 connections now open)
+Thu Feb 11 19:22:08.570 [initandlisten] connection accepted from 127.0.0.1:42498 #128 (6 connections now open)
+Thu Feb 11 19:22:08.575 [conn124]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6f28b8ac71d13ec7", key: "7fee5078d34e91b3cf4ce61bffa049dc" }
+Thu Feb 11 19:22:08.575 [conn125]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "e6ae0522af75680f", key: "cc9458d463922ded4644edd4d1f71a21" }
+Thu Feb 11 19:22:08.575 [conn126]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c0310e822f15fd5b", key: "a8eec1fe7ed6a2da6f663bc8f817f1dc" }
+Thu Feb 11 19:22:08.575 [conn127]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d79e5dc2a91e2955", key: "d454fd308b2ba92439f9ac561daefba9" }
+Thu Feb 11 19:22:08.576 [conn128]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d5e72f28a0d10e7d", key: "386dc3e5a21e1f481f09d5f974e672cb" }
+Thu Feb 11 19:22:08.596 [conn124] end connection 127.0.0.1:42494 (5 connections now open)
+Thu Feb 11 19:22:08.597 [conn126] end connection 127.0.0.1:42496 (4 connections now open)
+Thu Feb 11 19:22:08.597 [conn127] end connection 127.0.0.1:42497 (4 connections now open)
+Thu Feb 11 19:22:08.597 [conn125] end connection 127.0.0.1:42495 (4 connections now open)
+Thu Feb 11 19:22:08.597 [conn128] end connection 127.0.0.1:42498 (1 connection now open)
+Thu Feb 11 19:24:46.324 [initandlisten] connection accepted from 127.0.0.1:42499 #129 (2 connections now open)
+Thu Feb 11 19:24:46.333 [conn129] end connection 127.0.0.1:42499 (1 connection now open)
+Thu Feb 11 19:24:46.338 [initandlisten] connection accepted from 127.0.0.1:42500 #130 (2 connections now open)
+Thu Feb 11 19:24:46.339 [initandlisten] connection accepted from 127.0.0.1:42501 #131 (3 connections now open)
+Thu Feb 11 19:24:46.339 [initandlisten] connection accepted from 127.0.0.1:42502 #132 (4 connections now open)
+Thu Feb 11 19:24:46.339 [initandlisten] connection accepted from 127.0.0.1:42503 #133 (5 connections now open)
+Thu Feb 11 19:24:46.339 [initandlisten] connection accepted from 127.0.0.1:42504 #134 (6 connections now open)
+Thu Feb 11 19:24:46.344 [conn130]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "987c04ed87a5621e", key: "b74d4ce2c4acb4afa52ad2ca87cc41c2" }
+Thu Feb 11 19:24:46.344 [conn131]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5965a4fb79cdd8fd", key: "33e9bf73ca772741701e3224bec41f26" }
+Thu Feb 11 19:24:46.344 [conn132]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "1c44b0c4134abd6c", key: "38d3661a8576e69a4b1f16b87bd48eeb" }
+Thu Feb 11 19:24:46.344 [conn133]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "850880848cd7a8c9", key: "5a59d6a4b44c3420bb5aacf0c52c933c" }
+Thu Feb 11 19:24:46.344 [conn134]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "b581c911f7556ea1", key: "b95cdbc8ae810cb621b9152485a2f9f2" }
+Thu Feb 11 19:24:46.349 [conn132] build index admin.user { _id: 1 }
+Thu Feb 11 19:24:46.350 [conn132] build index done.  scanned 0 total records. 0 secs
+Thu Feb 11 19:24:46.366 [conn130] end connection 127.0.0.1:42500 (5 connections now open)
+Thu Feb 11 19:24:46.366 [conn131] end connection 127.0.0.1:42501 (5 connections now open)
+Thu Feb 11 19:24:46.366 [conn132] end connection 127.0.0.1:42502 (3 connections now open)
+Thu Feb 11 19:24:46.366 [conn133] end connection 127.0.0.1:42503 (3 connections now open)
+Thu Feb 11 19:24:46.366 [conn134] end connection 127.0.0.1:42504 (3 connections now open)
+Thu Feb 11 19:25:12.283 [conn39] end connection 127.0.0.1:42409 (0 connections now open)
+Thu Feb 11 19:25:13.430 [initandlisten] connection accepted from 127.0.0.1:42505 #135 (1 connection now open)
+Thu Feb 11 19:25:13.431 [conn135]  authenticate db: admin { authenticate: 1, nonce: "4d3fdd6d16045bad", user: "dbadmin", key: "5650369c04d2af62097a513179ace832" }
+Thu Feb 11 19:26:21.346 [initandlisten] connection accepted from 127.0.0.1:42506 #136 (2 connections now open)
+Thu Feb 11 19:26:21.355 [conn136] end connection 127.0.0.1:42506 (1 connection now open)
+Thu Feb 11 19:26:21.359 [initandlisten] connection accepted from 127.0.0.1:42507 #137 (2 connections now open)
+Thu Feb 11 19:26:21.360 [initandlisten] connection accepted from 127.0.0.1:42508 #138 (3 connections now open)
+Thu Feb 11 19:26:21.360 [initandlisten] connection accepted from 127.0.0.1:42509 #139 (4 connections now open)
+Thu Feb 11 19:26:21.361 [initandlisten] connection accepted from 127.0.0.1:42510 #140 (5 connections now open)
+Thu Feb 11 19:26:21.361 [initandlisten] connection accepted from 127.0.0.1:42511 #141 (6 connections now open)
+Thu Feb 11 19:26:21.365 [conn137]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "32116c4c29e26035", key: "ebcf4a9f511488d7894e557059acf005" }
+Thu Feb 11 19:26:21.365 [conn138]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "86bbcb49337495ec", key: "76c135c9e4046e0cdef18cee67896181" }
+Thu Feb 11 19:26:21.366 [conn139]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "10f76c64e2cd40d8", key: "149d82cb2d54f0382c79f2186f5f78f3" }
+Thu Feb 11 19:26:21.366 [conn140]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "9ac3ee50f2ab7de9", key: "e4c483743578054ce3b51c3dfccde854" }
+Thu Feb 11 19:26:21.366 [conn141]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "1d229e49ffc45121", key: "5be89b69ec88bb5f7f21896685abca38" }
+Thu Feb 11 19:26:21.386 [conn137] end connection 127.0.0.1:42507 (5 connections now open)
+Thu Feb 11 19:26:21.386 [conn138] end connection 127.0.0.1:42508 (5 connections now open)
+Thu Feb 11 19:26:21.386 [conn139] end connection 127.0.0.1:42509 (5 connections now open)
+Thu Feb 11 19:26:21.386 [conn140] end connection 127.0.0.1:42510 (2 connections now open)
+Thu Feb 11 19:26:21.386 [conn141] end connection 127.0.0.1:42511 (2 connections now open)
+Thu Feb 11 19:26:29.777 [initandlisten] connection accepted from 127.0.0.1:42512 #142 (2 connections now open)
+Thu Feb 11 19:26:29.787 [conn142] end connection 127.0.0.1:42512 (1 connection now open)
+Thu Feb 11 19:26:29.791 [initandlisten] connection accepted from 127.0.0.1:42513 #143 (2 connections now open)
+Thu Feb 11 19:26:29.792 [initandlisten] connection accepted from 127.0.0.1:42514 #144 (3 connections now open)
+Thu Feb 11 19:26:29.792 [initandlisten] connection accepted from 127.0.0.1:42515 #145 (4 connections now open)
+Thu Feb 11 19:26:29.793 [initandlisten] connection accepted from 127.0.0.1:42516 #146 (5 connections now open)
+Thu Feb 11 19:26:29.793 [initandlisten] connection accepted from 127.0.0.1:42517 #147 (6 connections now open)
+Thu Feb 11 19:26:29.797 [conn143]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "105ff81b6adb9ab8", key: "4cfba78101667d824b2dd17c7195d3c9" }
+Thu Feb 11 19:26:29.797 [conn144]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5336cd50761d78bd", key: "5cace978bb544321b00d3394baaa274c" }
+Thu Feb 11 19:26:29.798 [conn145]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "e32dbde2538a5d56", key: "7c48cf7e2ce21ca21b673635f72ba9c1" }
+Thu Feb 11 19:26:29.798 [conn146]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "8b225ca4a7fb1e21", key: "1cc7072336f03a85fbb85490f7f52270" }
+Thu Feb 11 19:26:29.798 [conn147]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d10d8e91aa2b60e9", key: "bb12c583d80fac64dd6c018d8f89e69e" }
+Thu Feb 11 19:26:29.819 [conn143] end connection 127.0.0.1:42513 (5 connections now open)
+Thu Feb 11 19:26:29.819 [conn144] end connection 127.0.0.1:42514 (5 connections now open)
+Thu Feb 11 19:26:29.819 [conn146] end connection 127.0.0.1:42516 (3 connections now open)
+Thu Feb 11 19:26:29.819 [conn145] end connection 127.0.0.1:42515 (2 connections now open)
+Thu Feb 11 19:26:29.820 [conn147] end connection 127.0.0.1:42517 (1 connection now open)
+Thu Feb 11 19:27:07.355 [initandlisten] connection accepted from 127.0.0.1:42518 #148 (2 connections now open)
+Thu Feb 11 19:27:07.366 [conn148] end connection 127.0.0.1:42518 (1 connection now open)
+Thu Feb 11 19:27:07.370 [initandlisten] connection accepted from 127.0.0.1:42519 #149 (2 connections now open)
+Thu Feb 11 19:27:07.371 [initandlisten] connection accepted from 127.0.0.1:42520 #150 (3 connections now open)
+Thu Feb 11 19:27:07.371 [initandlisten] connection accepted from 127.0.0.1:42521 #151 (4 connections now open)
+Thu Feb 11 19:27:07.371 [initandlisten] connection accepted from 127.0.0.1:42522 #152 (5 connections now open)
+Thu Feb 11 19:27:07.372 [initandlisten] connection accepted from 127.0.0.1:42523 #153 (6 connections now open)
+Thu Feb 11 19:27:07.376 [conn149]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "1c50c69094f5419a", key: "c308f028556f70cdbcab5ee3e3d2618f" }
+Thu Feb 11 19:27:07.376 [conn150]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c0e7c4da987ce0aa", key: "7326bce15459dcda5793176b3a805bea" }
+Thu Feb 11 19:27:07.376 [conn151]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a5ce7c86c9d85a67", key: "1fe33903eb3daa8f412da93f52959d5a" }
+Thu Feb 11 19:27:07.377 [conn152]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "59a845d5f34b047a", key: "ec26613c5d0cb410ced9718fb0d28f6b" }
+Thu Feb 11 19:27:07.377 [conn153]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "bcd815c8630bd2d0", key: "eab8d066aaace8fe9c7a9887e195c2a4" }
+Thu Feb 11 19:27:07.396 [conn149] end connection 127.0.0.1:42519 (5 connections now open)
+Thu Feb 11 19:27:07.396 [conn150] end connection 127.0.0.1:42520 (5 connections now open)
+Thu Feb 11 19:27:07.396 [conn151] end connection 127.0.0.1:42521 (5 connections now open)
+Thu Feb 11 19:27:07.396 [conn152] end connection 127.0.0.1:42522 (2 connections now open)
+Thu Feb 11 19:27:07.396 [conn153] end connection 127.0.0.1:42523 (2 connections now open)
+Thu Feb 11 19:28:32.480 [initandlisten] connection accepted from 127.0.0.1:42524 #154 (2 connections now open)
+Thu Feb 11 19:28:32.489 [conn154] end connection 127.0.0.1:42524 (1 connection now open)
+Thu Feb 11 19:28:32.494 [initandlisten] connection accepted from 127.0.0.1:42525 #155 (2 connections now open)
+Thu Feb 11 19:28:32.494 [initandlisten] connection accepted from 127.0.0.1:42526 #156 (3 connections now open)
+Thu Feb 11 19:28:32.495 [initandlisten] connection accepted from 127.0.0.1:42527 #157 (4 connections now open)
+Thu Feb 11 19:28:32.495 [initandlisten] connection accepted from 127.0.0.1:42528 #158 (5 connections now open)
+Thu Feb 11 19:28:32.495 [initandlisten] connection accepted from 127.0.0.1:42529 #159 (6 connections now open)
+Thu Feb 11 19:28:32.499 [conn155]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "b82020023eb04626", key: "842f68c772a6f3d81e1cb2ce56e31e46" }
+Thu Feb 11 19:28:32.500 [conn156]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "ec6c979a041dfed2", key: "24641e9fcdfd056f538cb1f6fd4198a5" }
+Thu Feb 11 19:28:32.500 [conn157]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "e2e038f74f9f5cf1", key: "b61f898fa297248a3f6e1b42c4ba8f30" }
+Thu Feb 11 19:28:32.500 [conn158]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2f6eaf81c26f0324", key: "eb201b523691b57d9bc54f7a8e03d17e" }
+Thu Feb 11 19:28:32.500 [conn159]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a0d584aa29796d8e", key: "6cc18f8dd52f84c26b381b80482cd2da" }
+Thu Feb 11 19:28:32.522 [conn155] end connection 127.0.0.1:42525 (5 connections now open)
+Thu Feb 11 19:28:32.522 [conn156] end connection 127.0.0.1:42526 (5 connections now open)
+Thu Feb 11 19:28:32.522 [conn158] end connection 127.0.0.1:42528 (3 connections now open)
+Thu Feb 11 19:28:32.522 [conn157] end connection 127.0.0.1:42527 (3 connections now open)
+Thu Feb 11 19:28:32.522 [conn159] end connection 127.0.0.1:42529 (1 connection now open)
+Thu Feb 11 19:29:01.988 [initandlisten] connection accepted from 127.0.0.1:42530 #160 (2 connections now open)
+Thu Feb 11 19:29:01.998 [conn160] end connection 127.0.0.1:42530 (1 connection now open)
+Thu Feb 11 19:29:02.002 [initandlisten] connection accepted from 127.0.0.1:42531 #161 (2 connections now open)
+Thu Feb 11 19:29:02.003 [initandlisten] connection accepted from 127.0.0.1:42532 #162 (3 connections now open)
+Thu Feb 11 19:29:02.003 [initandlisten] connection accepted from 127.0.0.1:42533 #163 (4 connections now open)
+Thu Feb 11 19:29:02.003 [initandlisten] connection accepted from 127.0.0.1:42534 #164 (5 connections now open)
+Thu Feb 11 19:29:02.004 [initandlisten] connection accepted from 127.0.0.1:42535 #165 (6 connections now open)
+Thu Feb 11 19:29:02.008 [conn161]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "42d6dffa474f94ed", key: "4a8211c9cfd80133bdf324976d7bcf36" }
+Thu Feb 11 19:29:02.008 [conn162]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "12455457c85a8533", key: "58d549bd9b6baf1aeb9115a552f02641" }
+Thu Feb 11 19:29:02.008 [conn163]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "7fe93d55825e7d60", key: "0d2fb4ffa3ea4281f3c7540e3448f12f" }
+Thu Feb 11 19:29:02.008 [conn164]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f32443c116e4aec6", key: "26bbf66c4b400f4118dde60116cbfdc3" }
+Thu Feb 11 19:29:02.009 [conn165]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "17d1a3cff74a4c32", key: "808487aa29c839d8e09fa0bd7c6a474c" }
+Thu Feb 11 19:29:02.029 [conn164] command denied: { count: "user", query: { username: "xiaofafa" }, fields: null }
+Thu Feb 11 19:29:02.030 [conn161] end connection 127.0.0.1:42531 (5 connections now open)
+Thu Feb 11 19:29:02.030 [conn162] end connection 127.0.0.1:42532 (4 connections now open)
+Thu Feb 11 19:29:02.030 [conn164] end connection 127.0.0.1:42534 (3 connections now open)
+Thu Feb 11 19:29:02.030 [conn163] end connection 127.0.0.1:42533 (3 connections now open)
+Thu Feb 11 19:29:02.030 [conn165] end connection 127.0.0.1:42535 (1 connection now open)
+Thu Feb 11 19:30:18.926 [initandlisten] connection accepted from 127.0.0.1:42536 #166 (2 connections now open)
+Thu Feb 11 19:30:18.936 [conn166] end connection 127.0.0.1:42536 (1 connection now open)
+Thu Feb 11 19:30:18.940 [initandlisten] connection accepted from 127.0.0.1:42537 #167 (2 connections now open)
+Thu Feb 11 19:30:18.941 [initandlisten] connection accepted from 127.0.0.1:42538 #168 (3 connections now open)
+Thu Feb 11 19:30:18.941 [initandlisten] connection accepted from 127.0.0.1:42539 #169 (4 connections now open)
+Thu Feb 11 19:30:18.941 [initandlisten] connection accepted from 127.0.0.1:42540 #170 (5 connections now open)
+Thu Feb 11 19:30:18.942 [initandlisten] connection accepted from 127.0.0.1:42541 #171 (6 connections now open)
+Thu Feb 11 19:30:18.946 [conn167]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6aabd0984914bf71", key: "8b3f544f4cdf53d1bf399d0263daeb43" }
+Thu Feb 11 19:30:18.946 [conn168]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "1ac7f897d77894c0", key: "5da9fbe94e8f0e6484be66a6f6b998ca" }
+Thu Feb 11 19:30:18.946 [conn169]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "8d7e4e258f8c2bce", key: "2458af709f116482e600e1dca86d42fd" }
+Thu Feb 11 19:30:18.946 [conn170]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "dfd3162b870271d1", key: "e40837d38489745f788482d202a638e9" }
+Thu Feb 11 19:30:18.947 [conn171]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d2c0ac90dc71caac", key: "f13061dd8365f3d5e2aed50e4bba4c81" }
+Thu Feb 11 19:30:18.967 [conn170] command denied: { count: "user", query: { username: "xiaofafa" }, fields: null }
+Thu Feb 11 19:30:18.968 [conn167] end connection 127.0.0.1:42537 (5 connections now open)
+Thu Feb 11 19:30:18.968 [conn168] end connection 127.0.0.1:42538 (5 connections now open)
+Thu Feb 11 19:30:18.968 [conn169] end connection 127.0.0.1:42539 (3 connections now open)
+Thu Feb 11 19:30:18.968 [conn170] end connection 127.0.0.1:42540 (3 connections now open)
+Thu Feb 11 19:30:18.968 [conn171] end connection 127.0.0.1:42541 (1 connection now open)
+Thu Feb 11 19:30:51.793 [initandlisten] connection accepted from 127.0.0.1:42542 #172 (2 connections now open)
+Thu Feb 11 19:30:51.802 [conn172] end connection 127.0.0.1:42542 (1 connection now open)
+Thu Feb 11 19:30:51.807 [initandlisten] connection accepted from 127.0.0.1:42543 #173 (2 connections now open)
+Thu Feb 11 19:30:51.807 [initandlisten] connection accepted from 127.0.0.1:42544 #174 (3 connections now open)
+Thu Feb 11 19:30:51.808 [initandlisten] connection accepted from 127.0.0.1:42545 #175 (4 connections now open)
+Thu Feb 11 19:30:51.808 [initandlisten] connection accepted from 127.0.0.1:42546 #176 (5 connections now open)
+Thu Feb 11 19:30:51.808 [initandlisten] connection accepted from 127.0.0.1:42547 #177 (6 connections now open)
+Thu Feb 11 19:30:51.812 [conn173]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "19aa9f7b6acbe583", key: "88242d608fca9f0dd25364d109ccc30f" }
+Thu Feb 11 19:30:51.812 [conn174]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "bd0fcf3dff642cf1", key: "e3e69438854a4900dca5d6a530c08aa9" }
+Thu Feb 11 19:30:51.813 [conn175]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "e09bdf3623af56b2", key: "2c99a6ce0681a29b0d8774f7f510799f" }
+Thu Feb 11 19:30:51.813 [conn176]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5223a4648d8458ff", key: "c84b745e3d129b80eebc5ecd5e0a926c" }
+Thu Feb 11 19:30:51.813 [conn177]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5f231679d3170e3b", key: "e0b9c4d586c223b0e4ee9b5797fec9f4" }
+Thu Feb 11 19:30:51.833 [conn176] command denied: { count: "user", query: { username: "xiaofafa" }, fields: null }
+Thu Feb 11 19:30:51.834 [conn173] end connection 127.0.0.1:42543 (5 connections now open)
+Thu Feb 11 19:30:51.834 [conn174] end connection 127.0.0.1:42544 (4 connections now open)
+Thu Feb 11 19:30:51.834 [conn175] end connection 127.0.0.1:42545 (3 connections now open)
+Thu Feb 11 19:30:51.834 [conn176] end connection 127.0.0.1:42546 (2 connections now open)
+Thu Feb 11 19:30:51.834 [conn177] end connection 127.0.0.1:42547 (2 connections now open)
+Thu Feb 11 19:32:49.236 [initandlisten] connection accepted from 127.0.0.1:42548 #178 (2 connections now open)
+Thu Feb 11 19:32:49.245 [conn178] end connection 127.0.0.1:42548 (1 connection now open)
+Thu Feb 11 19:32:49.250 [initandlisten] connection accepted from 127.0.0.1:42549 #179 (2 connections now open)
+Thu Feb 11 19:32:49.250 [initandlisten] connection accepted from 127.0.0.1:42550 #180 (3 connections now open)
+Thu Feb 11 19:32:49.250 [initandlisten] connection accepted from 127.0.0.1:42551 #181 (4 connections now open)
+Thu Feb 11 19:32:49.251 [initandlisten] connection accepted from 127.0.0.1:42552 #182 (5 connections now open)
+Thu Feb 11 19:32:49.251 [initandlisten] connection accepted from 127.0.0.1:42553 #183 (6 connections now open)
+Thu Feb 11 19:32:49.255 [conn179]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "8bd93bab851f7eae", key: "66fb2a6307cdd17860c2d531e6bd0160" }
+Thu Feb 11 19:32:49.255 [conn180]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2751fb07da5b4f4e", key: "38a1fa992136e9e3907165be75854de3" }
+Thu Feb 11 19:32:49.256 [conn181]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "9188b84aea68eb6c", key: "5244f503264a0d8bb7a76231e407ba61" }
+Thu Feb 11 19:32:49.256 [conn182]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "15b02e610dc94b8e", key: "bdcc1f2c1dc6883e7fbe12c829cb8e0b" }
+Thu Feb 11 19:32:49.256 [conn183]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5c3a2dc4a264be11", key: "8b280f8a7b132bf0d47aafbec4317d5b" }
+Thu Feb 11 19:32:49.278 [conn179] end connection 127.0.0.1:42549 (5 connections now open)
+Thu Feb 11 19:32:49.278 [conn180] end connection 127.0.0.1:42550 (4 connections now open)
+Thu Feb 11 19:32:49.278 [conn181] end connection 127.0.0.1:42551 (4 connections now open)
+Thu Feb 11 19:32:49.279 [conn182] end connection 127.0.0.1:42552 (2 connections now open)
+Thu Feb 11 19:32:49.279 [conn183] end connection 127.0.0.1:42553 (1 connection now open)
+Thu Feb 11 19:33:08.965 [initandlisten] connection accepted from 127.0.0.1:42554 #184 (2 connections now open)
+Thu Feb 11 19:33:08.975 [conn184] end connection 127.0.0.1:42554 (1 connection now open)
+Thu Feb 11 19:33:08.979 [initandlisten] connection accepted from 127.0.0.1:42555 #185 (2 connections now open)
+Thu Feb 11 19:33:08.980 [initandlisten] connection accepted from 127.0.0.1:42556 #186 (3 connections now open)
+Thu Feb 11 19:33:08.980 [initandlisten] connection accepted from 127.0.0.1:42557 #187 (4 connections now open)
+Thu Feb 11 19:33:08.980 [initandlisten] connection accepted from 127.0.0.1:42558 #188 (5 connections now open)
+Thu Feb 11 19:33:08.981 [initandlisten] connection accepted from 127.0.0.1:42559 #189 (6 connections now open)
+Thu Feb 11 19:33:08.985 [conn185]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "99d311697a2afe03", key: "f328d63d5bd96151c20b6e877eadc80b" }
+Thu Feb 11 19:33:08.985 [conn186]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "348442aae6e3cbc6", key: "995edfde6abdc481db4ac0459d03419d" }
+Thu Feb 11 19:33:08.985 [conn187]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c721e82ff12439f2", key: "c28ecafea8eec011709f3594389139e0" }
+Thu Feb 11 19:33:08.985 [conn188]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a1b6062e86579c5e", key: "8198cd1b5ca8d563bfaac587dd336e1f" }
+Thu Feb 11 19:33:08.986 [conn189]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "b965eee3b264434d", key: "289cd22998f0955deba11998cee87dd0" }
+Thu Feb 11 19:33:08.995 [conn185] end connection 127.0.0.1:42555 (5 connections now open)
+Thu Feb 11 19:33:08.995 [conn187] end connection 127.0.0.1:42557 (5 connections now open)
+Thu Feb 11 19:33:08.996 [conn189] end connection 127.0.0.1:42559 (3 connections now open)
+Thu Feb 11 19:33:08.996 [conn188] end connection 127.0.0.1:42558 (2 connections now open)
+Thu Feb 11 19:33:08.996 [conn186] end connection 127.0.0.1:42556 (1 connection now open)
+Thu Feb 11 19:33:32.843 [initandlisten] connection accepted from 127.0.0.1:42560 #190 (2 connections now open)
+Thu Feb 11 19:33:32.852 [conn190] end connection 127.0.0.1:42560 (1 connection now open)
+Thu Feb 11 19:33:32.857 [initandlisten] connection accepted from 127.0.0.1:42561 #191 (2 connections now open)
+Thu Feb 11 19:33:32.857 [initandlisten] connection accepted from 127.0.0.1:42562 #192 (3 connections now open)
+Thu Feb 11 19:33:32.857 [initandlisten] connection accepted from 127.0.0.1:42563 #193 (4 connections now open)
+Thu Feb 11 19:33:32.858 [initandlisten] connection accepted from 127.0.0.1:42564 #194 (5 connections now open)
+Thu Feb 11 19:33:32.858 [initandlisten] connection accepted from 127.0.0.1:42565 #195 (6 connections now open)
+Thu Feb 11 19:33:32.862 [conn191]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4200d677591391ca", key: "521433b1e2ea8a6f4e5ad81e8fc8a6eb" }
+Thu Feb 11 19:33:32.863 [conn192]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c4a9cfe629423a12", key: "41c8d212a1901931b1af009e846a50db" }
+Thu Feb 11 19:33:32.863 [conn193]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "ee2bf782b709293d", key: "88d82c720cd54e9acd7ded01999736e3" }
+Thu Feb 11 19:33:32.863 [conn194]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "aa5244625752e20e", key: "623386c93776049f4a15e7c93fc57340" }
+Thu Feb 11 19:33:32.863 [conn195]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5657eabbd04fef0b", key: "18dba041ea4d758ba3155906b223f24e" }
+Thu Feb 11 19:33:32.873 [conn191] end connection 127.0.0.1:42561 (5 connections now open)
+Thu Feb 11 19:33:32.873 [conn192] end connection 127.0.0.1:42562 (5 connections now open)
+Thu Feb 11 19:33:32.873 [conn193] end connection 127.0.0.1:42563 (4 connections now open)
+Thu Feb 11 19:33:32.873 [conn194] end connection 127.0.0.1:42564 (3 connections now open)
+Thu Feb 11 19:33:32.873 [conn195] end connection 127.0.0.1:42565 (1 connection now open)
+Thu Feb 11 19:34:14.590 [initandlisten] connection accepted from 127.0.0.1:42566 #196 (2 connections now open)
+Thu Feb 11 19:34:14.600 [conn196] end connection 127.0.0.1:42566 (1 connection now open)
+Thu Feb 11 19:34:14.604 [initandlisten] connection accepted from 127.0.0.1:42567 #197 (2 connections now open)
+Thu Feb 11 19:34:14.605 [initandlisten] connection accepted from 127.0.0.1:42568 #198 (3 connections now open)
+Thu Feb 11 19:34:14.605 [initandlisten] connection accepted from 127.0.0.1:42569 #199 (4 connections now open)
+Thu Feb 11 19:34:14.605 [initandlisten] connection accepted from 127.0.0.1:42570 #200 (5 connections now open)
+Thu Feb 11 19:34:14.606 [initandlisten] connection accepted from 127.0.0.1:42571 #201 (6 connections now open)
+Thu Feb 11 19:34:14.610 [conn197]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "31987736b2afa8b9", key: "72bc72c9b948f77cf7a4937d40228458" }
+Thu Feb 11 19:34:14.610 [conn198]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3b702629ffbb7a05", key: "484b2def36215f348e0d34684760e183" }
+Thu Feb 11 19:34:14.610 [conn199]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "387c8b1146c1c2ff", key: "06661efc7fd730adc1a82dc7ea4d6659" }
+Thu Feb 11 19:34:14.610 [conn200]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "325c69a183ce3271", key: "b581abbb88b55bc5c6cfc06965bb53f1" }
+Thu Feb 11 19:34:14.611 [conn201]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4f77ece1a5045b7c", key: "d1cd651faa434d8f0d01ceb05d0ca622" }
+Thu Feb 11 19:34:18.326 [conn197] end connection 127.0.0.1:42567 (5 connections now open)
+Thu Feb 11 19:34:18.327 [conn200] end connection 127.0.0.1:42570 (4 connections now open)
+Thu Feb 11 19:34:18.327 [conn199] end connection 127.0.0.1:42569 (3 connections now open)
+Thu Feb 11 19:34:18.326 [conn198] end connection 127.0.0.1:42568 (5 connections now open)
+Thu Feb 11 19:34:18.327 [conn201] end connection 127.0.0.1:42571 (1 connection now open)
+Thu Feb 11 19:34:21.359 [initandlisten] connection accepted from 127.0.0.1:42572 #202 (2 connections now open)
+Thu Feb 11 19:34:21.368 [conn202] end connection 127.0.0.1:42572 (1 connection now open)
+Thu Feb 11 19:34:21.372 [initandlisten] connection accepted from 127.0.0.1:42573 #203 (2 connections now open)
+Thu Feb 11 19:34:21.373 [initandlisten] connection accepted from 127.0.0.1:42574 #204 (3 connections now open)
+Thu Feb 11 19:34:21.373 [initandlisten] connection accepted from 127.0.0.1:42575 #205 (4 connections now open)
+Thu Feb 11 19:34:21.374 [initandlisten] connection accepted from 127.0.0.1:42576 #206 (5 connections now open)
+Thu Feb 11 19:34:21.374 [initandlisten] connection accepted from 127.0.0.1:42577 #207 (6 connections now open)
+Thu Feb 11 19:34:21.378 [conn203]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5ef3a706564686f3", key: "c1933570a49416a7b643a1c859efee44" }
+Thu Feb 11 19:34:21.378 [conn204]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6cc3e05c39397223", key: "14f523ee1a250282f2ec362a30d168b7" }
+Thu Feb 11 19:34:21.378 [conn205]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6cfb0255e94890c6", key: "58e81100e17a6dd8ab7ed81d6edafeb8" }
+Thu Feb 11 19:34:21.378 [conn206]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3cae15ed2bf99561", key: "af52e1b1c37292c2056de8bd7e915daf" }
+Thu Feb 11 19:34:21.379 [conn207]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d3bf27923a6fb9fd", key: "21b522324a3ba8fc6ccbabe8915a4e6a" }
+Thu Feb 11 19:34:22.168 [conn205] end connection 127.0.0.1:42575 (5 connections now open)
+Thu Feb 11 19:34:22.168 [conn204] end connection 127.0.0.1:42574 (5 connections now open)
+Thu Feb 11 19:34:22.168 [conn206] end connection 127.0.0.1:42576 (5 connections now open)
+Thu Feb 11 19:34:22.168 [conn207] end connection 127.0.0.1:42577 (2 connections now open)
+Thu Feb 11 19:34:22.168 [conn203] end connection 127.0.0.1:42573 (5 connections now open)
+Thu Feb 11 19:35:24.121 [initandlisten] connection accepted from 127.0.0.1:42578 #208 (2 connections now open)
+Thu Feb 11 19:35:24.130 [conn208] end connection 127.0.0.1:42578 (1 connection now open)
+Thu Feb 11 19:35:24.134 [initandlisten] connection accepted from 127.0.0.1:42579 #209 (2 connections now open)
+Thu Feb 11 19:35:24.135 [initandlisten] connection accepted from 127.0.0.1:42580 #210 (3 connections now open)
+Thu Feb 11 19:35:24.135 [initandlisten] connection accepted from 127.0.0.1:42581 #211 (4 connections now open)
+Thu Feb 11 19:35:24.136 [initandlisten] connection accepted from 127.0.0.1:42582 #212 (5 connections now open)
+Thu Feb 11 19:35:24.136 [initandlisten] connection accepted from 127.0.0.1:42583 #213 (6 connections now open)
+Thu Feb 11 19:35:24.140 [conn209]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4853b44f544b81b9", key: "4cbc238b1bfb992fb5dde71759fcc6d1" }
+Thu Feb 11 19:35:24.140 [conn210]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a9de001b53757d70", key: "7fe27e3f033f4fe1afefdaf8cf8cc4b7" }
+Thu Feb 11 19:35:24.140 [conn211]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "644f1946cfd6d1da", key: "a331c37074d58f1a936bf64b89d1037b" }
+Thu Feb 11 19:35:24.140 [conn212]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2029c46fda166b18", key: "7e3995f6e402d6ff5937232c6e7566c1" }
+Thu Feb 11 19:35:24.141 [conn213]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c65dae597fa5b6d2", key: "1713c47671537c596d0fc4ad4eea5cc6" }
+Thu Feb 11 19:35:24.150 [conn210] end connection 127.0.0.1:42580 (5 connections now open)
+Thu Feb 11 19:35:24.150 [conn213] end connection 127.0.0.1:42583 (5 connections now open)
+Thu Feb 11 19:35:24.150 [conn211] end connection 127.0.0.1:42581 (5 connections now open)
+Thu Feb 11 19:35:24.150 [conn209] end connection 127.0.0.1:42579 (5 connections now open)
+Thu Feb 11 19:35:24.150 [conn212] end connection 127.0.0.1:42582 (1 connection now open)
+Thu Feb 11 19:35:37.451 [initandlisten] connection accepted from 127.0.0.1:42584 #214 (2 connections now open)
+Thu Feb 11 19:35:37.461 [conn214] end connection 127.0.0.1:42584 (1 connection now open)
+Thu Feb 11 19:35:37.465 [initandlisten] connection accepted from 127.0.0.1:42585 #215 (2 connections now open)
+Thu Feb 11 19:35:37.466 [initandlisten] connection accepted from 127.0.0.1:42586 #216 (3 connections now open)
+Thu Feb 11 19:35:37.466 [initandlisten] connection accepted from 127.0.0.1:42587 #217 (4 connections now open)
+Thu Feb 11 19:35:37.466 [initandlisten] connection accepted from 127.0.0.1:42588 #218 (5 connections now open)
+Thu Feb 11 19:35:37.467 [initandlisten] connection accepted from 127.0.0.1:42589 #219 (6 connections now open)
+Thu Feb 11 19:35:37.471 [conn215]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "31d43d39cfe2753f", key: "50f89f948a17e66e9c546ee6682abacc" }
+Thu Feb 11 19:35:37.471 [conn216]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f61ec6035efc14ff", key: "86f0a519f7a44e5e62c598d2673ada46" }
+Thu Feb 11 19:35:37.471 [conn217]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "67945a914c8c95bc", key: "dc74ea6d7767f09966a52cd6e61fab13" }
+Thu Feb 11 19:35:37.471 [conn218]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4a0ca8f040aa24ab", key: "76af72bac7d43be7eea6b3c06354a47f" }
+Thu Feb 11 19:35:37.472 [conn219]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3866f644e08a07aa", key: "2512d55ae884f4c0b8d51ba0b0ae4109" }
+Thu Feb 11 19:35:37.480 [conn217] end connection 127.0.0.1:42587 (5 connections now open)
+Thu Feb 11 19:35:37.480 [conn215] end connection 127.0.0.1:42585 (5 connections now open)
+Thu Feb 11 19:35:37.480 [conn218] end connection 127.0.0.1:42588 (5 connections now open)
+Thu Feb 11 19:35:37.480 [conn216] end connection 127.0.0.1:42586 (5 connections now open)
+Thu Feb 11 19:35:37.481 [conn219] end connection 127.0.0.1:42589 (1 connection now open)
+Thu Feb 11 19:35:42.687 [initandlisten] connection accepted from 127.0.0.1:42590 #220 (2 connections now open)
+Thu Feb 11 19:35:42.696 [conn220] end connection 127.0.0.1:42590 (1 connection now open)
+Thu Feb 11 19:35:42.701 [initandlisten] connection accepted from 127.0.0.1:42591 #221 (2 connections now open)
+Thu Feb 11 19:35:42.701 [initandlisten] connection accepted from 127.0.0.1:42592 #222 (3 connections now open)
+Thu Feb 11 19:35:42.701 [initandlisten] connection accepted from 127.0.0.1:42593 #223 (4 connections now open)
+Thu Feb 11 19:35:42.702 [initandlisten] connection accepted from 127.0.0.1:42594 #224 (5 connections now open)
+Thu Feb 11 19:35:42.702 [initandlisten] connection accepted from 127.0.0.1:42595 #225 (6 connections now open)
+Thu Feb 11 19:35:42.706 [conn221]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "ef20527779c106b8", key: "17e43310a18e405e0f41d4a81aa77ae1" }
+Thu Feb 11 19:35:42.706 [conn222]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "31a8a837a52fc7c8", key: "3888e6bad64bd854580df5cd782bda18" }
+Thu Feb 11 19:35:42.707 [conn223]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "fac8363bc967528a", key: "c72c647d93ebb19f1996cf3127366e2e" }
+Thu Feb 11 19:35:42.707 [conn224]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c956d661cd1c577", key: "6f088864e87744056ace574192e79113" }
+Thu Feb 11 19:35:42.707 [conn225]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "1d354b1d413bfa74", key: "b47320997b107abb7da0dcf05f542c69" }
+Thu Feb 11 19:35:42.717 [conn224] end connection 127.0.0.1:42594 (5 connections now open)
+Thu Feb 11 19:35:42.717 [conn223] end connection 127.0.0.1:42593 (5 connections now open)
+Thu Feb 11 19:35:42.717 [conn225] end connection 127.0.0.1:42595 (4 connections now open)
+Thu Feb 11 19:35:42.717 [conn221] end connection 127.0.0.1:42591 (5 connections now open)
+Thu Feb 11 19:35:42.717 [conn222] end connection 127.0.0.1:42592 (5 connections now open)
+Thu Feb 11 19:36:31.258 [initandlisten] connection accepted from 127.0.0.1:42596 #226 (2 connections now open)
+Thu Feb 11 19:36:31.268 [conn226] end connection 127.0.0.1:42596 (1 connection now open)
+Thu Feb 11 19:36:31.272 [initandlisten] connection accepted from 127.0.0.1:42597 #227 (2 connections now open)
+Thu Feb 11 19:36:31.273 [initandlisten] connection accepted from 127.0.0.1:42598 #228 (3 connections now open)
+Thu Feb 11 19:36:31.273 [initandlisten] connection accepted from 127.0.0.1:42599 #229 (4 connections now open)
+Thu Feb 11 19:36:31.273 [initandlisten] connection accepted from 127.0.0.1:42600 #230 (5 connections now open)
+Thu Feb 11 19:36:31.273 [initandlisten] connection accepted from 127.0.0.1:42601 #231 (6 connections now open)
+Thu Feb 11 19:36:31.278 [conn227]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "442b700403a2c74c", key: "da51edd8c443cb82fac448e4d864a6db" }
+Thu Feb 11 19:36:31.278 [conn228]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "8553c0445556791a", key: "86a2eb071ae256c2c518644b978c2498" }
+Thu Feb 11 19:36:31.278 [conn229]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2480c184b4f1be3c", key: "e396cea9a0fa62c0ea6a3b441fe91879" }
+Thu Feb 11 19:36:31.278 [conn230]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "b694e50869371fba", key: "32cd8031b0974da9d59fdc14307bcc6b" }
+Thu Feb 11 19:36:31.279 [conn231]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c86f814dcb0dc535", key: "471ad9a8947204f388c156f33f47c1fb" }
+Thu Feb 11 19:37:12.054 [conn135] end connection 127.0.0.1:42505 (5 connections now open)
+Thu Feb 11 19:37:12.699 [initandlisten] connection accepted from 127.0.0.1:42602 #232 (6 connections now open)
+Thu Feb 11 19:37:12.699 [conn232]  authenticate db: admin { authenticate: 1, nonce: "dedeaed6e48f4440", user: "dbadmin", key: "78b8fdd6b6b2fce580c21a04e6320369" }
+Thu Feb 11 19:38:56.755 [conn229] end connection 127.0.0.1:42599 (5 connections now open)
+Thu Feb 11 19:38:56.755 [conn231] end connection 127.0.0.1:42601 (4 connections now open)
+Thu Feb 11 19:38:56.755 [conn228] end connection 127.0.0.1:42598 (3 connections now open)
+Thu Feb 11 19:38:56.755 [conn230] end connection 127.0.0.1:42600 (5 connections now open)
+Thu Feb 11 19:38:56.755 [conn227] end connection 127.0.0.1:42597 (5 connections now open)
+Thu Feb 11 19:38:58.333 [initandlisten] connection accepted from 127.0.0.1:42603 #233 (2 connections now open)
+Thu Feb 11 19:38:58.348 [conn233] end connection 127.0.0.1:42603 (1 connection now open)
+Thu Feb 11 19:38:58.352 [initandlisten] connection accepted from 127.0.0.1:42604 #234 (2 connections now open)
+Thu Feb 11 19:38:58.353 [initandlisten] connection accepted from 127.0.0.1:42605 #235 (3 connections now open)
+Thu Feb 11 19:38:58.353 [initandlisten] connection accepted from 127.0.0.1:42606 #236 (4 connections now open)
+Thu Feb 11 19:38:58.353 [initandlisten] connection accepted from 127.0.0.1:42607 #237 (5 connections now open)
+Thu Feb 11 19:38:58.354 [initandlisten] connection accepted from 127.0.0.1:42608 #238 (6 connections now open)
+Thu Feb 11 19:38:58.358 [conn234]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2d4bdb7defa7655d", key: "ca6683d6f48ca7a0cd0a12af3ce94d64" }
+Thu Feb 11 19:38:58.358 [conn235]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "af552b5d7e10d76", key: "121b7a3f5ed82f2791430ad0c5e98d57" }
+Thu Feb 11 19:38:58.358 [conn236]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f70982ce79b1442e", key: "ae0de58a9d066a2ee3e2b782a60b12c3" }
+Thu Feb 11 19:38:58.359 [conn237]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "85f89379b79cc13c", key: "8148987f39084cc453112e654c4a6fde" }
+Thu Feb 11 19:38:58.359 [conn238]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "b1b80ca451c20049", key: "bce3c011e312de8db3de0b9e1c75f192" }
+Thu Feb 11 20:09:11.154 [conn232] end connection 127.0.0.1:42602 (5 connections now open)
+Thu Feb 11 20:09:14.278 [initandlisten] connection accepted from 127.0.0.1:42609 #239 (6 connections now open)
+Thu Feb 11 20:09:14.279 [conn239]  authenticate db: admin { authenticate: 1, nonce: "89582c93ebed1e32", user: "dbadmin", key: "7a705f624527ff9869eb07f462f6208c" }
+Thu Feb 11 20:17:19.284 [conn235] end connection 127.0.0.1:42605 (5 connections now open)
+Thu Feb 11 20:17:19.284 [conn238] end connection 127.0.0.1:42608 (5 connections now open)
+Thu Feb 11 20:17:19.284 [conn237] end connection 127.0.0.1:42607 (3 connections now open)
+Thu Feb 11 20:17:19.285 [conn236] end connection 127.0.0.1:42606 (2 connections now open)
+Thu Feb 11 20:17:19.285 [conn234] end connection 127.0.0.1:42604 (1 connection now open)
+Thu Feb 11 20:19:15.636 [conn239] build index code.comment { _id: 1 }
+Thu Feb 11 20:19:15.636 [conn239] build index done.  scanned 0 total records. 0 secs
+Thu Feb 11 20:20:10.580 [conn239] end connection 127.0.0.1:42609 (0 connections now open)
+Thu Feb 11 20:20:12.567 [initandlisten] connection accepted from 127.0.0.1:42610 #240 (1 connection now open)
+Thu Feb 11 20:20:12.568 [conn240]  authenticate db: admin { authenticate: 1, nonce: "942613945326a4fb", user: "dbadmin", key: "d6e2eba1c835a41788b309751dbb0fe0" }
+Thu Feb 11 20:22:07.197 [conn240] end connection 127.0.0.1:42610 (0 connections now open)
+Thu Feb 11 20:22:08.820 [initandlisten] connection accepted from 127.0.0.1:42611 #241 (1 connection now open)
+Thu Feb 11 20:22:08.821 [conn241]  authenticate db: admin { authenticate: 1, nonce: "8170e974299cec23", user: "dbadmin", key: "1953174f39d20c75711360f47314b39c" }
+Thu Feb 11 20:25:57.413 [conn241] end connection 127.0.0.1:42611 (0 connections now open)
+Thu Feb 11 20:25:59.050 [initandlisten] connection accepted from 127.0.0.1:42612 #242 (1 connection now open)
+Thu Feb 11 20:25:59.051 [conn242]  authenticate db: admin { authenticate: 1, nonce: "ae408f9d562b352", user: "dbadmin", key: "f89922409fcbc0ea799fba946bad8488" }
+Thu Feb 11 20:33:08.188 [initandlisten] connection accepted from 127.0.0.1:42613 #243 (2 connections now open)
+Thu Feb 11 20:33:08.199 [conn243] end connection 127.0.0.1:42613 (1 connection now open)
+Thu Feb 11 20:33:08.203 [initandlisten] connection accepted from 127.0.0.1:42614 #244 (2 connections now open)
+Thu Feb 11 20:33:08.204 [initandlisten] connection accepted from 127.0.0.1:42615 #245 (3 connections now open)
+Thu Feb 11 20:33:08.204 [initandlisten] connection accepted from 127.0.0.1:42616 #246 (4 connections now open)
+Thu Feb 11 20:33:08.204 [initandlisten] connection accepted from 127.0.0.1:42617 #247 (5 connections now open)
+Thu Feb 11 20:33:08.205 [initandlisten] connection accepted from 127.0.0.1:42618 #248 (6 connections now open)
+Thu Feb 11 20:33:08.209 [conn244]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2e171a6f137be2a2", key: "7e5e8424ce03df370093bb2e1c45b7fb" }
+Thu Feb 11 20:33:08.209 [conn245]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "7491abc9b2ac1f02", key: "c4cb1286f45efc1affc9fa1737418bb5" }
+Thu Feb 11 20:33:08.209 [conn246]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "bc6f1ef031c8c072", key: "8986fe711d8ec2923ee7dbbb73278d2f" }
+Thu Feb 11 20:33:08.210 [conn247]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "cc6ed32978f986cd", key: "11e345578e3fbb9a8d7a96349dd96c32" }
+Thu Feb 11 20:33:08.210 [conn248]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a8ee0f6736ae6478", key: "14e3fb4652d3a142a9fad12b00c83f8f" }
+Thu Feb 11 20:33:08.215 [conn246] build index admin.comment { _id: 1 }
+Thu Feb 11 20:33:08.215 [conn246] build index done.  scanned 0 total records. 0 secs
+Thu Feb 11 20:38:49.108 [conn244] end connection 127.0.0.1:42614 (5 connections now open)
+Thu Feb 11 20:38:49.108 [conn245] end connection 127.0.0.1:42615 (4 connections now open)
+Thu Feb 11 20:38:49.108 [conn246] end connection 127.0.0.1:42616 (3 connections now open)
+Thu Feb 11 20:38:49.108 [conn247] end connection 127.0.0.1:42617 (2 connections now open)
+Thu Feb 11 20:38:49.108 [conn248] end connection 127.0.0.1:42618 (1 connection now open)
+Thu Feb 11 21:38:27.059 [initandlisten] connection accepted from 127.0.0.1:42619 #249 (2 connections now open)
+Thu Feb 11 21:38:27.068 [conn249] end connection 127.0.0.1:42619 (1 connection now open)
+Thu Feb 11 21:38:27.072 [initandlisten] connection accepted from 127.0.0.1:42620 #250 (2 connections now open)
+Thu Feb 11 21:38:27.073 [initandlisten] connection accepted from 127.0.0.1:42621 #251 (3 connections now open)
+Thu Feb 11 21:38:27.073 [initandlisten] connection accepted from 127.0.0.1:42622 #252 (4 connections now open)
+Thu Feb 11 21:38:27.074 [initandlisten] connection accepted from 127.0.0.1:42623 #253 (5 connections now open)
+Thu Feb 11 21:38:27.074 [initandlisten] connection accepted from 127.0.0.1:42624 #254 (6 connections now open)
+Thu Feb 11 21:38:27.078 [conn250]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "430ba760009d2345", key: "4ef6338a966fa50abd90586eb93393b5" }
+Thu Feb 11 21:38:27.078 [conn251]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "dfe8a20e8447bea1", key: "b812ed2a8fc956ccf7845db902ef6b56" }
+Thu Feb 11 21:38:27.078 [conn252]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2cbce786219bcfba", key: "5668f0e9b08b724997e3382b9ad319a6" }
+Thu Feb 11 21:38:27.079 [conn253]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "cbf0099550289dee", key: "f3bc79a4aebfdb923d45ce0c0fd645e3" }
+Thu Feb 11 21:38:27.079 [conn254]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "42ce65fe9d31bba6", key: "47026cd5aa536b28ee8bd57d5bae6f39" }
+Thu Feb 11 21:38:32.120 [conn250] end connection 127.0.0.1:42620 (5 connections now open)
+Thu Feb 11 21:38:32.120 [conn251] end connection 127.0.0.1:42621 (5 connections now open)
+Thu Feb 11 21:38:32.120 [conn254] end connection 127.0.0.1:42624 (4 connections now open)
+Thu Feb 11 21:38:32.120 [conn253] end connection 127.0.0.1:42623 (5 connections now open)
+Thu Feb 11 21:38:32.120 [conn252] end connection 127.0.0.1:42622 (1 connection now open)
+Thu Feb 11 21:39:01.392 [initandlisten] connection accepted from 127.0.0.1:42625 #255 (2 connections now open)
+Thu Feb 11 21:39:01.401 [conn255] end connection 127.0.0.1:42625 (1 connection now open)
+Thu Feb 11 21:39:01.406 [initandlisten] connection accepted from 127.0.0.1:42626 #256 (2 connections now open)
+Thu Feb 11 21:39:01.406 [initandlisten] connection accepted from 127.0.0.1:42627 #257 (3 connections now open)
+Thu Feb 11 21:39:01.407 [initandlisten] connection accepted from 127.0.0.1:42628 #258 (4 connections now open)
+Thu Feb 11 21:39:01.407 [initandlisten] connection accepted from 127.0.0.1:42629 #259 (5 connections now open)
+Thu Feb 11 21:39:01.407 [initandlisten] connection accepted from 127.0.0.1:42630 #260 (6 connections now open)
+Thu Feb 11 21:39:01.411 [conn256]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "83ea98e8006c4dd1", key: "69eb1f4e83618a77a1662bfeb1a52de4" }
+Thu Feb 11 21:39:01.412 [conn257]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3fcf789fb98fa34c", key: "68d9ce0288c52d5c5dbf38b32b1b5398" }
+Thu Feb 11 21:39:01.412 [conn258]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "af070f6c792cbf22", key: "8ed48a625929999f0982add57e2c3a76" }
+Thu Feb 11 21:39:01.412 [conn259]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a9c3c9dbe6963bc", key: "b5a0cfc90c1c5a888f2b68db6b2872a2" }
+Thu Feb 11 21:39:01.412 [conn260]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "7713318326494338", key: "a407c7e2c966607f78aa762d62a52321" }
+Thu Feb 11 21:39:01.418 [conn256] end connection 127.0.0.1:42626 (5 connections now open)
+Thu Feb 11 21:39:01.418 [conn257] end connection 127.0.0.1:42627 (5 connections now open)
+Thu Feb 11 21:39:01.418 [conn259] end connection 127.0.0.1:42629 (3 connections now open)
+Thu Feb 11 21:39:01.418 [conn258] end connection 127.0.0.1:42628 (3 connections now open)
+Thu Feb 11 21:39:01.418 [conn260] end connection 127.0.0.1:42630 (1 connection now open)
+Thu Feb 11 21:39:41.790 [initandlisten] connection accepted from 127.0.0.1:42631 #261 (2 connections now open)
+Thu Feb 11 21:39:41.799 [conn261] end connection 127.0.0.1:42631 (1 connection now open)
+Thu Feb 11 21:39:41.804 [initandlisten] connection accepted from 127.0.0.1:42632 #262 (2 connections now open)
+Thu Feb 11 21:39:41.804 [initandlisten] connection accepted from 127.0.0.1:42633 #263 (3 connections now open)
+Thu Feb 11 21:39:41.805 [initandlisten] connection accepted from 127.0.0.1:42634 #264 (4 connections now open)
+Thu Feb 11 21:39:41.805 [initandlisten] connection accepted from 127.0.0.1:42635 #265 (5 connections now open)
+Thu Feb 11 21:39:41.805 [initandlisten] connection accepted from 127.0.0.1:42636 #266 (6 connections now open)
+Thu Feb 11 21:39:41.810 [conn262]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "399d97f3d577f6f3", key: "69dfcfa5455071b1e7352b5eeaa15b72" }
+Thu Feb 11 21:39:41.810 [conn263]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "22a5db1511be2290", key: "fc0753d4f25ea2a38da0d4b712f05666" }
+Thu Feb 11 21:39:41.810 [conn264]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d2d376c60b0be4a9", key: "dcefd28d9c57b3a8073ff06154b524e7" }
+Thu Feb 11 21:39:41.810 [conn265]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d253f15fec8e1f19", key: "707fec811fee934856e037c5679002cd" }
+Thu Feb 11 21:39:41.811 [conn266]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "af8fbc58cf321820", key: "a36de95e181567020351ac29092974f3" }
+Thu Feb 11 21:39:41.831 [conn262] end connection 127.0.0.1:42632 (5 connections now open)
+Thu Feb 11 21:39:41.831 [conn264] end connection 127.0.0.1:42634 (4 connections now open)
+Thu Feb 11 21:39:41.831 [conn265] end connection 127.0.0.1:42635 (4 connections now open)
+Thu Feb 11 21:39:41.831 [conn263] end connection 127.0.0.1:42633 (4 connections now open)
+Thu Feb 11 21:39:41.831 [conn266] end connection 127.0.0.1:42636 (4 connections now open)
+Thu Feb 11 21:40:08.830 [initandlisten] connection accepted from 127.0.0.1:42637 #267 (2 connections now open)
+Thu Feb 11 21:40:08.839 [conn267] end connection 127.0.0.1:42637 (1 connection now open)
+Thu Feb 11 21:40:08.844 [initandlisten] connection accepted from 127.0.0.1:42638 #268 (2 connections now open)
+Thu Feb 11 21:40:08.844 [initandlisten] connection accepted from 127.0.0.1:42639 #269 (3 connections now open)
+Thu Feb 11 21:40:08.845 [initandlisten] connection accepted from 127.0.0.1:42640 #270 (4 connections now open)
+Thu Feb 11 21:40:08.845 [initandlisten] connection accepted from 127.0.0.1:42641 #271 (5 connections now open)
+Thu Feb 11 21:40:08.845 [initandlisten] connection accepted from 127.0.0.1:42642 #272 (6 connections now open)
+Thu Feb 11 21:40:08.849 [conn268]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "dc8f0377483bf048", key: "301c6d26a8b40a05621cfc2d0bf2bf81" }
+Thu Feb 11 21:40:08.850 [conn269]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "dbc9e699123dd292", key: "e78f4b03c70b3d44d95013283f310601" }
+Thu Feb 11 21:40:08.850 [conn270]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3a7cd7292b624e5c", key: "420e729e1aa11c7ad13eab4d43ab6d7a" }
+Thu Feb 11 21:40:08.850 [conn271]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "8b3f13277aec748d", key: "3293332db2768bb61be3340030908c9b" }
+Thu Feb 11 21:40:08.850 [conn272]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "35d41215cc384f2d", key: "71b7a71e4b105372b8fcba7dc0fa4b8b" }
+Thu Feb 11 21:40:08.869 [conn268] end connection 127.0.0.1:42638 (5 connections now open)
+Thu Feb 11 21:40:08.869 [conn270] end connection 127.0.0.1:42640 (5 connections now open)
+Thu Feb 11 21:40:08.869 [conn271] end connection 127.0.0.1:42641 (5 connections now open)
+Thu Feb 11 21:40:08.869 [conn272] end connection 127.0.0.1:42642 (3 connections now open)
+Thu Feb 11 21:40:08.869 [conn269] end connection 127.0.0.1:42639 (5 connections now open)
+Thu Feb 11 21:45:22.061 [initandlisten] connection accepted from 127.0.0.1:42643 #273 (2 connections now open)
+Thu Feb 11 21:45:22.071 [conn273] end connection 127.0.0.1:42643 (1 connection now open)
+Thu Feb 11 21:45:22.075 [initandlisten] connection accepted from 127.0.0.1:42644 #274 (2 connections now open)
+Thu Feb 11 21:45:22.076 [initandlisten] connection accepted from 127.0.0.1:42645 #275 (3 connections now open)
+Thu Feb 11 21:45:22.076 [initandlisten] connection accepted from 127.0.0.1:42646 #276 (4 connections now open)
+Thu Feb 11 21:45:22.076 [initandlisten] connection accepted from 127.0.0.1:42647 #277 (5 connections now open)
+Thu Feb 11 21:45:22.077 [initandlisten] connection accepted from 127.0.0.1:42648 #278 (6 connections now open)
+Thu Feb 11 21:45:22.081 [conn274]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4745bed32d51580c", key: "2240eab0d5eda8e9c7e5990acd451e55" }
+Thu Feb 11 21:45:22.081 [conn275]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "e0e8fd55b5669f0a", key: "999b948cdddc9efff4bc9cdcbe417c5f" }
+Thu Feb 11 21:45:22.081 [conn276]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "25ff0412f59d17ab", key: "73c65627f292b16e04c8ee2abb62342d" }
+Thu Feb 11 21:45:22.081 [conn277]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "549bbf8dbc0ee88", key: "805c3b1c7a71fbe931fb2924426688a8" }
+Thu Feb 11 21:45:22.082 [conn278]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "227faed2352b9de8", key: "77854cf2ac858efe65c48750e303ba68" }
+Thu Feb 11 21:45:22.101 [conn274] end connection 127.0.0.1:42644 (5 connections now open)
+Thu Feb 11 21:45:22.101 [conn275] end connection 127.0.0.1:42645 (5 connections now open)
+Thu Feb 11 21:45:22.101 [conn276] end connection 127.0.0.1:42646 (3 connections now open)
+Thu Feb 11 21:45:22.101 [conn277] end connection 127.0.0.1:42647 (3 connections now open)
+Thu Feb 11 21:45:22.101 [conn278] end connection 127.0.0.1:42648 (1 connection now open)
+Thu Feb 11 21:46:11.655 [initandlisten] connection accepted from 127.0.0.1:42649 #279 (2 connections now open)
+Thu Feb 11 21:46:11.665 [conn279] end connection 127.0.0.1:42649 (1 connection now open)
+Thu Feb 11 21:46:11.669 [initandlisten] connection accepted from 127.0.0.1:42650 #280 (2 connections now open)
+Thu Feb 11 21:46:11.669 [initandlisten] connection accepted from 127.0.0.1:42651 #281 (3 connections now open)
+Thu Feb 11 21:46:11.670 [initandlisten] connection accepted from 127.0.0.1:42652 #282 (4 connections now open)
+Thu Feb 11 21:46:11.670 [initandlisten] connection accepted from 127.0.0.1:42653 #283 (5 connections now open)
+Thu Feb 11 21:46:11.670 [initandlisten] connection accepted from 127.0.0.1:42654 #284 (6 connections now open)
+Thu Feb 11 21:46:11.674 [conn280]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2ab85f9ccfd3a7a9", key: "2fdfbc06f87db4a681c9ccf470d67296" }
+Thu Feb 11 21:46:11.675 [conn281]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c557557909b1e927", key: "d7019b736bc0525227c147e9a9973ded" }
+Thu Feb 11 21:46:11.675 [conn282]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "bf185eb202bdf869", key: "04d1f818d797c3b64a2985313089b44d" }
+Thu Feb 11 21:46:11.675 [conn283]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c9894dd31742d977", key: "4c5c9abd71b758fd041dafae457841d5" }
+Thu Feb 11 21:46:11.675 [conn284]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2f0268261e165a78", key: "bb686541054eaeab1ecddc3d8aaa23c2" }
+Thu Feb 11 21:46:11.694 [conn280] end connection 127.0.0.1:42650 (5 connections now open)
+Thu Feb 11 21:46:11.694 [conn281] end connection 127.0.0.1:42651 (5 connections now open)
+Thu Feb 11 21:46:11.694 [conn282] end connection 127.0.0.1:42652 (3 connections now open)
+Thu Feb 11 21:46:11.694 [conn283] end connection 127.0.0.1:42653 (2 connections now open)
+Thu Feb 11 21:46:11.694 [conn284] end connection 127.0.0.1:42654 (1 connection now open)
+Thu Feb 11 21:48:19.584 [initandlisten] connection accepted from 127.0.0.1:42655 #285 (2 connections now open)
+Thu Feb 11 21:48:19.594 [conn285] end connection 127.0.0.1:42655 (1 connection now open)
+Thu Feb 11 21:48:19.598 [initandlisten] connection accepted from 127.0.0.1:42656 #286 (2 connections now open)
+Thu Feb 11 21:48:19.599 [initandlisten] connection accepted from 127.0.0.1:42657 #287 (3 connections now open)
+Thu Feb 11 21:48:19.599 [initandlisten] connection accepted from 127.0.0.1:42658 #288 (4 connections now open)
+Thu Feb 11 21:48:19.599 [initandlisten] connection accepted from 127.0.0.1:42659 #289 (5 connections now open)
+Thu Feb 11 21:48:19.600 [initandlisten] connection accepted from 127.0.0.1:42660 #290 (6 connections now open)
+Thu Feb 11 21:48:19.604 [conn286]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c7a2c4915ac0d955", key: "a886d2f8d6c4f06cd596a0a2c3f89fec" }
+Thu Feb 11 21:48:19.604 [conn287]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "8c1323d6ecd5fa93", key: "e2126aa71b8934a110918d4d0e1a28a7" }
+Thu Feb 11 21:48:19.605 [conn288]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4d79f9ec1252e42c", key: "4c2668166d930fd58e9a064a8e7d1825" }
+Thu Feb 11 21:48:19.605 [conn289]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c6001c56515833e5", key: "f411d545004c1c05854f2a87b31b2310" }
+Thu Feb 11 21:48:19.605 [conn290]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "bc2d841c867217bb", key: "b3a6f4dc5997096a83a752f460fd5e5c" }
+Thu Feb 11 21:48:35.674 [conn286] end connection 127.0.0.1:42656 (5 connections now open)
+Thu Feb 11 21:48:35.674 [conn287] end connection 127.0.0.1:42657 (4 connections now open)
+Thu Feb 11 21:48:35.674 [conn289] end connection 127.0.0.1:42659 (4 connections now open)
+Thu Feb 11 21:48:35.674 [conn290] end connection 127.0.0.1:42660 (2 connections now open)
+Thu Feb 11 21:48:35.674 [conn288] end connection 127.0.0.1:42658 (4 connections now open)
+Thu Feb 11 21:48:48.520 [initandlisten] connection accepted from 127.0.0.1:42661 #291 (2 connections now open)
+Thu Feb 11 21:48:48.529 [conn291] end connection 127.0.0.1:42661 (1 connection now open)
+Thu Feb 11 21:48:48.534 [initandlisten] connection accepted from 127.0.0.1:42662 #292 (2 connections now open)
+Thu Feb 11 21:48:48.534 [initandlisten] connection accepted from 127.0.0.1:42663 #293 (3 connections now open)
+Thu Feb 11 21:48:48.535 [initandlisten] connection accepted from 127.0.0.1:42664 #294 (4 connections now open)
+Thu Feb 11 21:48:48.535 [initandlisten] connection accepted from 127.0.0.1:42665 #295 (5 connections now open)
+Thu Feb 11 21:48:48.535 [initandlisten] connection accepted from 127.0.0.1:42666 #296 (6 connections now open)
+Thu Feb 11 21:48:48.540 [conn292]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5830afd9a3d6dcd6", key: "150c532b8af2d28cf69fa6106f1cddec" }
+Thu Feb 11 21:48:48.540 [conn293]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a971909a200e2881", key: "beb71aff1a19360027e145007701065f" }
+Thu Feb 11 21:48:48.540 [conn294]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3165bd1d16185b72", key: "ee79ab54c2205611890db8cbb54c4e9f" }
+Thu Feb 11 21:48:48.540 [conn295]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6569bfb364d416e4", key: "7c62e8bf8d6ccab2912d61550af45d01" }
+Thu Feb 11 21:48:48.541 [conn296]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "9ca2969cefe701a8", key: "0735c1186dde91a2d7c8af476fc47310" }
+Thu Feb 11 21:48:48.552 [conn292] end connection 127.0.0.1:42662 (5 connections now open)
+Thu Feb 11 21:48:48.552 [conn293] end connection 127.0.0.1:42663 (4 connections now open)
+Thu Feb 11 21:48:48.552 [conn294] end connection 127.0.0.1:42664 (4 connections now open)
+Thu Feb 11 21:48:48.552 [conn295] end connection 127.0.0.1:42665 (2 connections now open)
+Thu Feb 11 21:48:48.552 [conn296] end connection 127.0.0.1:42666 (2 connections now open)
+Thu Feb 11 21:49:16.007 [initandlisten] connection accepted from 127.0.0.1:42667 #297 (2 connections now open)
+Thu Feb 11 21:49:16.016 [conn297] end connection 127.0.0.1:42667 (1 connection now open)
+Thu Feb 11 21:49:16.021 [initandlisten] connection accepted from 127.0.0.1:42668 #298 (2 connections now open)
+Thu Feb 11 21:49:16.021 [initandlisten] connection accepted from 127.0.0.1:42669 #299 (3 connections now open)
+Thu Feb 11 21:49:16.021 [initandlisten] connection accepted from 127.0.0.1:42670 #300 (4 connections now open)
+Thu Feb 11 21:49:16.022 [initandlisten] connection accepted from 127.0.0.1:42671 #301 (5 connections now open)
+Thu Feb 11 21:49:16.022 [initandlisten] connection accepted from 127.0.0.1:42672 #302 (6 connections now open)
+Thu Feb 11 21:49:16.026 [conn298]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3af6d07e32e53692", key: "c7f4e669a27c9ffb5d9ca28ab2c20f64" }
+Thu Feb 11 21:49:16.027 [conn299]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "28c1d9284f121f1b", key: "a99761916273f6e636709d72d8683791" }
+Thu Feb 11 21:49:16.027 [conn300]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "16befda8dd679539", key: "c27ede0f8a1e468f6ef7144ae5ecd50e" }
+Thu Feb 11 21:49:16.027 [conn301]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f4f815d7d2b65c03", key: "48e8d523bc1ad7ac113d377f230b5bff" }
+Thu Feb 11 21:49:16.027 [conn302]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "93b30847412131c", key: "6b341ab54bd28aac7c7ab1cb770ddee1" }
+Thu Feb 11 21:49:16.039 [conn298] end connection 127.0.0.1:42668 (5 connections now open)
+Thu Feb 11 21:49:16.039 [conn299] end connection 127.0.0.1:42669 (5 connections now open)
+Thu Feb 11 21:49:16.039 [conn300] end connection 127.0.0.1:42670 (4 connections now open)
+Thu Feb 11 21:49:16.039 [conn301] end connection 127.0.0.1:42671 (2 connections now open)
+Thu Feb 11 21:49:16.039 [conn302] end connection 127.0.0.1:42672 (1 connection now open)
+Thu Feb 11 22:05:48.912 [initandlisten] connection accepted from 127.0.0.1:42722 #303 (2 connections now open)
+Thu Feb 11 22:05:48.932 [conn303] end connection 127.0.0.1:42722 (1 connection now open)
+Thu Feb 11 22:05:48.938 [initandlisten] connection accepted from 127.0.0.1:42723 #304 (2 connections now open)
+Thu Feb 11 22:05:48.939 [initandlisten] connection accepted from 127.0.0.1:42724 #305 (3 connections now open)
+Thu Feb 11 22:05:48.939 [initandlisten] connection accepted from 127.0.0.1:42725 #306 (4 connections now open)
+Thu Feb 11 22:05:48.939 [initandlisten] connection accepted from 127.0.0.1:42726 #307 (5 connections now open)
+Thu Feb 11 22:05:48.940 [initandlisten] connection accepted from 127.0.0.1:42727 #308 (6 connections now open)
+Thu Feb 11 22:05:48.948 [conn304]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a0f86350f832beef", key: "dca0941865c7ffd2e6d1735352a02eb0" }
+Thu Feb 11 22:05:48.948 [conn305]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "85a7ae39de79e8df", key: "1bfc4fe54447fbc880001f3ad0c1e6ea" }
+Thu Feb 11 22:05:48.948 [conn306]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "404475d6f9da157c", key: "54cf5b4d10b42f7cf2678fdc38a7f95b" }
+Thu Feb 11 22:05:48.948 [conn307]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c88474466373fa8e", key: "549b1b835c53c960196a1275296b9e79" }
+Thu Feb 11 22:05:48.948 [conn308]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "86725b83f6b03317", key: "5327051eeef7ead971431424441c4418" }
+Thu Feb 11 22:06:27.586 [conn305] end connection 127.0.0.1:42724 (5 connections now open)
+Thu Feb 11 22:06:27.586 [conn307] end connection 127.0.0.1:42726 (5 connections now open)
+Thu Feb 11 22:06:27.586 [conn306] end connection 127.0.0.1:42725 (5 connections now open)
+Thu Feb 11 22:06:27.586 [conn304] end connection 127.0.0.1:42723 (5 connections now open)
+Thu Feb 11 22:06:27.586 [conn308] end connection 127.0.0.1:42727 (5 connections now open)
+Thu Feb 11 22:06:47.091 [initandlisten] connection accepted from 127.0.0.1:42729 #309 (2 connections now open)
+Thu Feb 11 22:06:47.101 [conn309] end connection 127.0.0.1:42729 (1 connection now open)
+Thu Feb 11 22:06:47.107 [initandlisten] connection accepted from 127.0.0.1:42730 #310 (2 connections now open)
+Thu Feb 11 22:06:47.108 [initandlisten] connection accepted from 127.0.0.1:42731 #311 (3 connections now open)
+Thu Feb 11 22:06:47.108 [initandlisten] connection accepted from 127.0.0.1:42732 #312 (4 connections now open)
+Thu Feb 11 22:06:47.109 [initandlisten] connection accepted from 127.0.0.1:42733 #313 (5 connections now open)
+Thu Feb 11 22:06:47.109 [initandlisten] connection accepted from 127.0.0.1:42734 #314 (6 connections now open)
+Thu Feb 11 22:06:47.116 [conn310]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f60cbd9b12f6546f", key: "fea49e88ea352dbefbce68b66efe2114" }
+Thu Feb 11 22:06:47.117 [conn311]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6ac23f5204e6a97a", key: "42e1e8c1c19894823b378e37bd53a2aa" }
+Thu Feb 11 22:06:47.117 [conn312]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a63ab7a801844e6", key: "ab12fb44c6ded6c7813b347b4e329475" }
+Thu Feb 11 22:06:47.117 [conn313]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "86a0d5c5f882dfac", key: "fe1bb6c5272954cd1c097712ad7f7d03" }
+Thu Feb 11 22:06:47.117 [conn314]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "eb5f0a799131c10d", key: "72051b2a8285560633d80cb3f646aaf6" }
+Thu Feb 11 22:07:03.917 [conn313] end connection 127.0.0.1:42733 (5 connections now open)
+Thu Feb 11 22:07:03.917 [conn310] end connection 127.0.0.1:42730 (5 connections now open)
+Thu Feb 11 22:07:03.917 [conn314] end connection 127.0.0.1:42734 (5 connections now open)
+Thu Feb 11 22:07:03.917 [conn312] end connection 127.0.0.1:42732 (5 connections now open)
+Thu Feb 11 22:07:03.917 [conn311] end connection 127.0.0.1:42731 (5 connections now open)
+Thu Feb 11 22:07:50.163 [initandlisten] connection accepted from 127.0.0.1:42736 #315 (2 connections now open)
+Thu Feb 11 22:07:50.174 [conn315] end connection 127.0.0.1:42736 (1 connection now open)
+Thu Feb 11 22:07:50.179 [initandlisten] connection accepted from 127.0.0.1:42737 #316 (2 connections now open)
+Thu Feb 11 22:07:50.180 [initandlisten] connection accepted from 127.0.0.1:42738 #317 (3 connections now open)
+Thu Feb 11 22:07:50.180 [initandlisten] connection accepted from 127.0.0.1:42739 #318 (4 connections now open)
+Thu Feb 11 22:07:50.181 [initandlisten] connection accepted from 127.0.0.1:42740 #319 (5 connections now open)
+Thu Feb 11 22:07:50.182 [initandlisten] connection accepted from 127.0.0.1:42741 #320 (6 connections now open)
+Thu Feb 11 22:07:50.187 [conn316]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "c4603ac51cd9c2d2", key: "23c27332e3b41782198c3687affcbba3" }
+Thu Feb 11 22:07:50.188 [conn317]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "adff5e361ad901dd", key: "328257214ea629787c2a44e77b27b4be" }
+Thu Feb 11 22:07:50.188 [conn318]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "13d5b75bfd4a1d6d", key: "173c1128127f1805c97869b1850c27d1" }
+Thu Feb 11 22:07:50.188 [conn319]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "859b61564749d806", key: "29c16c20cab241e7211bfba5ce9bac01" }
+Thu Feb 11 22:07:50.188 [conn320]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "9bc456f4d2a05b1a", key: "f947f5e4559961a8ce4f1a8775d52193" }
+Thu Feb 11 22:07:52.568 [conn318] end connection 127.0.0.1:42739 (5 connections now open)
+Thu Feb 11 22:07:52.568 [conn316] end connection 127.0.0.1:42737 (5 connections now open)
+Thu Feb 11 22:07:52.568 [conn320] end connection 127.0.0.1:42741 (5 connections now open)
+Thu Feb 11 22:07:52.568 [conn317] end connection 127.0.0.1:42738 (2 connections now open)
+Thu Feb 11 22:07:52.572 [conn319] end connection 127.0.0.1:42740 (1 connection now open)
+Thu Feb 11 22:08:09.591 [initandlisten] connection accepted from 127.0.0.1:42743 #321 (2 connections now open)
+Thu Feb 11 22:08:09.601 [conn321] end connection 127.0.0.1:42743 (1 connection now open)
+Thu Feb 11 22:08:09.607 [initandlisten] connection accepted from 127.0.0.1:42744 #322 (2 connections now open)
+Thu Feb 11 22:08:09.607 [initandlisten] connection accepted from 127.0.0.1:42745 #323 (3 connections now open)
+Thu Feb 11 22:08:09.608 [initandlisten] connection accepted from 127.0.0.1:42746 #324 (4 connections now open)
+Thu Feb 11 22:08:09.608 [initandlisten] connection accepted from 127.0.0.1:42747 #325 (5 connections now open)
+Thu Feb 11 22:08:09.608 [initandlisten] connection accepted from 127.0.0.1:42748 #326 (6 connections now open)
+Thu Feb 11 22:08:09.615 [conn322]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "71a479c49b916203", key: "fbd1598604ce844217f614080d6d9c61" }
+Thu Feb 11 22:08:09.615 [conn323]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "cfef483cd957d50b", key: "58f55f81ede0824081a61d63c9c2e138" }
+Thu Feb 11 22:08:09.615 [conn324]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "809bac85fb1b8d5c", key: "558ba812a2690d4856a7bd485d62c8c0" }
+Thu Feb 11 22:08:09.616 [conn325]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "48bd12332451057f", key: "333fce43941222a21a89991fc121f4f2" }
+Thu Feb 11 22:08:09.616 [conn326]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "66c39b9eeaa822a3", key: "8c4f9698e3456864f8aaa81a53436ff2" }
+Thu Feb 11 22:08:55.909 [conn322] end connection 127.0.0.1:42744 (5 connections now open)
+Thu Feb 11 22:08:55.909 [conn323] end connection 127.0.0.1:42745 (4 connections now open)
+Thu Feb 11 22:08:55.909 [conn324] end connection 127.0.0.1:42746 (3 connections now open)
+Thu Feb 11 22:08:55.909 [conn325] end connection 127.0.0.1:42747 (2 connections now open)
+Thu Feb 11 22:08:55.909 [conn326] end connection 127.0.0.1:42748 (2 connections now open)
+Thu Feb 11 22:09:10.801 [initandlisten] connection accepted from 127.0.0.1:42750 #327 (2 connections now open)
+Thu Feb 11 22:09:10.811 [conn327] end connection 127.0.0.1:42750 (1 connection now open)
+Thu Feb 11 22:09:10.816 [initandlisten] connection accepted from 127.0.0.1:42751 #328 (2 connections now open)
+Thu Feb 11 22:09:10.817 [initandlisten] connection accepted from 127.0.0.1:42752 #329 (3 connections now open)
+Thu Feb 11 22:09:10.818 [initandlisten] connection accepted from 127.0.0.1:42753 #330 (4 connections now open)
+Thu Feb 11 22:09:10.818 [initandlisten] connection accepted from 127.0.0.1:42754 #331 (5 connections now open)
+Thu Feb 11 22:09:10.819 [initandlisten] connection accepted from 127.0.0.1:42755 #332 (6 connections now open)
+Thu Feb 11 22:09:10.825 [conn328]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "1a5520c638b14058", key: "e680ad327f25fd51f1526a8c04505614" }
+Thu Feb 11 22:09:10.825 [conn329]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "98dafbbb7e895197", key: "76e59576a44aed75ed1d40eea6f0f0a1" }
+Thu Feb 11 22:09:10.825 [conn330]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "f14088ca467b42b7", key: "4e2d655bf56b89f5b4bf1343fd1bf615" }
+Thu Feb 11 22:09:10.826 [conn331]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3e62baebd5bbc841", key: "ad7913c54333eb540871e300f5ee60c3" }
+Thu Feb 11 22:09:10.826 [conn332]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d004c1ae342f58d", key: "5f842be04aa4bdfc38e5be61658a8572" }
+Thu Feb 11 22:09:11.564 [conn328] end connection 127.0.0.1:42751 (5 connections now open)
+Thu Feb 11 22:09:11.564 [conn330] end connection 127.0.0.1:42753 (5 connections now open)
+Thu Feb 11 22:09:11.564 [conn331] end connection 127.0.0.1:42754 (3 connections now open)
+Thu Feb 11 22:09:11.564 [conn329] end connection 127.0.0.1:42752 (5 connections now open)
+Thu Feb 11 22:09:11.564 [conn332] end connection 127.0.0.1:42755 (5 connections now open)
+Thu Feb 11 22:09:50.005 [conn242] end connection 127.0.0.1:42612 (0 connections now open)
+Thu Feb 11 22:09:52.987 [initandlisten] connection accepted from 127.0.0.1:42756 #333 (1 connection now open)
+Thu Feb 11 22:09:52.988 [conn333]  authenticate db: admin { authenticate: 1, nonce: "4a16215bf9b6b268", user: "dbadmin", key: "6835f5bca75dcade466fbc18ecfa3918" }
+Thu Feb 11 22:11:16.988 [initandlisten] connection accepted from 127.0.0.1:42758 #334 (2 connections now open)
+Thu Feb 11 22:11:16.998 [conn334] end connection 127.0.0.1:42758 (1 connection now open)
+Thu Feb 11 22:11:17.002 [initandlisten] connection accepted from 127.0.0.1:42759 #335 (2 connections now open)
+Thu Feb 11 22:11:17.004 [initandlisten] connection accepted from 127.0.0.1:42760 #336 (3 connections now open)
+Thu Feb 11 22:11:17.005 [initandlisten] connection accepted from 127.0.0.1:42761 #337 (4 connections now open)
+Thu Feb 11 22:11:17.006 [initandlisten] connection accepted from 127.0.0.1:42762 #338 (5 connections now open)
+Thu Feb 11 22:11:17.007 [initandlisten] connection accepted from 127.0.0.1:42763 #339 (6 connections now open)
+Thu Feb 11 22:11:17.014 [conn335]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6b944133ffb96af4", key: "fc2110eb4ad34c2ab736d5a5567ee710" }
+Thu Feb 11 22:11:17.014 [conn336]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "d44e93fee5f3c246", key: "f1d8d16925d09a2e9c8953f0dfeb5d8a" }
+Thu Feb 11 22:11:17.015 [conn337]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "b205ff52ae548f90", key: "b62a184d06fe19fc728122fc4599c58e" }
+Thu Feb 11 22:11:17.015 [conn338]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "3dd7f62e96cfcd73", key: "d566a80fdf66bbd845e736b929fdfff2" }
+Thu Feb 11 22:11:17.015 [conn339]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "eb787e8e5ce59e03", key: "7d0adfebc0f6851960239a9035342c70" }
+Thu Feb 11 22:12:07.255 [conn338] end connection 127.0.0.1:42762 (5 connections now open)
+Thu Feb 11 22:12:07.255 [conn336] end connection 127.0.0.1:42760 (5 connections now open)
+Thu Feb 11 22:12:07.255 [conn337] end connection 127.0.0.1:42761 (5 connections now open)
+Thu Feb 11 22:12:07.255 [conn339] end connection 127.0.0.1:42763 (5 connections now open)
+Thu Feb 11 22:12:07.256 [conn335] end connection 127.0.0.1:42759 (1 connection now open)
+Thu Feb 11 22:13:43.223 [initandlisten] connection accepted from 127.0.0.1:42765 #340 (2 connections now open)
+Thu Feb 11 22:13:43.233 [conn340] end connection 127.0.0.1:42765 (1 connection now open)
+Thu Feb 11 22:13:43.238 [initandlisten] connection accepted from 127.0.0.1:42766 #341 (2 connections now open)
+Thu Feb 11 22:13:43.239 [initandlisten] connection accepted from 127.0.0.1:42767 #342 (3 connections now open)
+Thu Feb 11 22:13:43.240 [initandlisten] connection accepted from 127.0.0.1:42768 #343 (4 connections now open)
+Thu Feb 11 22:13:43.240 [initandlisten] connection accepted from 127.0.0.1:42769 #344 (5 connections now open)
+Thu Feb 11 22:13:43.240 [initandlisten] connection accepted from 127.0.0.1:42770 #345 (6 connections now open)
+Thu Feb 11 22:13:43.247 [conn341]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "58890011329d54f", key: "18d852bdf77dc762a59dcd2b8d9af3f0" }
+Thu Feb 11 22:13:43.248 [conn342]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a5a2d0a5614ccda3", key: "962332fd8d796d0c0209232d0f58dced" }
+Thu Feb 11 22:13:43.248 [conn343]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "1cb08a15169098da", key: "ff1170072217f885103ddcdbe575e4c3" }
+Thu Feb 11 22:13:43.248 [conn344]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "33213c46dc93f32b", key: "d90bf71c1a3a1bf575d3b08d00632f67" }
+Thu Feb 11 22:13:43.249 [conn345]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "6593581649c1a8cb", key: "930d695208434ca5afb22113925d6a4d" }
+Thu Feb 11 22:13:49.045 [conn345] end connection 127.0.0.1:42770 (5 connections now open)
+Thu Feb 11 22:13:49.045 [conn342] end connection 127.0.0.1:42767 (5 connections now open)
+Thu Feb 11 22:13:49.045 [conn343] end connection 127.0.0.1:42768 (5 connections now open)
+Thu Feb 11 22:13:49.045 [conn341] end connection 127.0.0.1:42766 (5 connections now open)
+Thu Feb 11 22:13:49.045 [conn344] end connection 127.0.0.1:42769 (1 connection now open)
+Thu Feb 11 22:13:59.720 [initandlisten] connection accepted from 127.0.0.1:42772 #346 (2 connections now open)
+Thu Feb 11 22:13:59.730 [conn346] end connection 127.0.0.1:42772 (1 connection now open)
+Thu Feb 11 22:13:59.735 [initandlisten] connection accepted from 127.0.0.1:42773 #347 (2 connections now open)
+Thu Feb 11 22:13:59.736 [initandlisten] connection accepted from 127.0.0.1:42774 #348 (3 connections now open)
+Thu Feb 11 22:13:59.736 [initandlisten] connection accepted from 127.0.0.1:42775 #349 (4 connections now open)
+Thu Feb 11 22:13:59.737 [initandlisten] connection accepted from 127.0.0.1:42776 #350 (5 connections now open)
+Thu Feb 11 22:13:59.739 [initandlisten] connection accepted from 127.0.0.1:42777 #351 (6 connections now open)
+Thu Feb 11 22:13:59.744 [conn347]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "408ba41d07d5b51f", key: "264dd54fd81d67afc478d07dc0f62ced" }
+Thu Feb 11 22:13:59.744 [conn348]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "506e6c45c96e6c6d", key: "c19a1777b02435118919feec263f66cf" }
+Thu Feb 11 22:13:59.745 [conn349]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "b253f2544079473f", key: "2b1e206ba4e2237604a34706a8978ccb" }
+Thu Feb 11 22:13:59.745 [conn350]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "7d19c75a06a542c0", key: "dd128afba291be37b2c98f450bb9c0f5" }
+Thu Feb 11 22:13:59.745 [conn351]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "92762e09c93590bd", key: "aba4ca6022927752e81cc110f826ffc3" }
+Thu Feb 11 22:14:15.880 [conn350] end connection 127.0.0.1:42776 (5 connections now open)
+Thu Feb 11 22:14:15.880 [conn351] end connection 127.0.0.1:42777 (4 connections now open)
+Thu Feb 11 22:14:15.880 [conn348] end connection 127.0.0.1:42774 (3 connections now open)
+Thu Feb 11 22:14:15.880 [conn347] end connection 127.0.0.1:42773 (5 connections now open)
+Thu Feb 11 22:14:15.880 [conn349] end connection 127.0.0.1:42775 (5 connections now open)
+Thu Feb 11 22:15:25.329 [initandlisten] connection accepted from 127.0.0.1:42779 #352 (2 connections now open)
+Thu Feb 11 22:15:25.342 [conn352] end connection 127.0.0.1:42779 (1 connection now open)
+Thu Feb 11 22:15:25.346 [initandlisten] connection accepted from 127.0.0.1:42780 #353 (2 connections now open)
+Thu Feb 11 22:15:25.347 [initandlisten] connection accepted from 127.0.0.1:42781 #354 (3 connections now open)
+Thu Feb 11 22:15:25.347 [initandlisten] connection accepted from 127.0.0.1:42782 #355 (4 connections now open)
+Thu Feb 11 22:15:25.348 [initandlisten] connection accepted from 127.0.0.1:42783 #356 (5 connections now open)
+Thu Feb 11 22:15:25.348 [initandlisten] connection accepted from 127.0.0.1:42784 #357 (6 connections now open)
+Thu Feb 11 22:15:25.352 [conn353]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "281d8c12f5bdf957", key: "69371c37ec1b2c56c9188347ab2c0729" }
+Thu Feb 11 22:15:25.352 [conn354]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "5b0286e7b1bf681c", key: "424671ea650fd168c32d8744d76952d7" }
+Thu Feb 11 22:15:25.353 [conn355]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "a15939a4c808eccd", key: "e8550b254aec89b2d8080da7f9b20436" }
+Thu Feb 11 22:15:25.353 [conn356]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "2597b39901bb39bf", key: "ea3a4a9309b1fb35f25d7ae06b16347b" }
+Thu Feb 11 22:15:25.353 [conn357]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "14adc37c12246a0d", key: "4d9716f003fa1b6ed59e0e2cadb69061" }
+Thu Feb 11 22:15:41.736 [conn353] end connection 127.0.0.1:42780 (5 connections now open)
+Thu Feb 11 22:15:41.737 [conn354] end connection 127.0.0.1:42781 (5 connections now open)
+Thu Feb 11 22:15:41.737 [conn355] end connection 127.0.0.1:42782 (3 connections now open)
+Thu Feb 11 22:15:41.737 [conn356] end connection 127.0.0.1:42783 (2 connections now open)
+Thu Feb 11 22:15:41.737 [conn357] end connection 127.0.0.1:42784 (2 connections now open)
+Thu Feb 11 22:16:04.767 [initandlisten] connection accepted from 127.0.0.1:42786 #358 (2 connections now open)
+Thu Feb 11 22:16:04.778 [conn358] end connection 127.0.0.1:42786 (1 connection now open)
+Thu Feb 11 22:16:04.784 [initandlisten] connection accepted from 127.0.0.1:42787 #359 (2 connections now open)
+Thu Feb 11 22:16:04.784 [initandlisten] connection accepted from 127.0.0.1:42788 #360 (3 connections now open)
+Thu Feb 11 22:16:04.784 [initandlisten] connection accepted from 127.0.0.1:42789 #361 (4 connections now open)
+Thu Feb 11 22:16:04.785 [initandlisten] connection accepted from 127.0.0.1:42790 #362 (5 connections now open)
+Thu Feb 11 22:16:04.785 [initandlisten] connection accepted from 127.0.0.1:42791 #363 (6 connections now open)
+Thu Feb 11 22:16:04.790 [conn359]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "54a86b4aa1398d72", key: "79b5847f25fdf9870e209ad2a33e70ae" }
+Thu Feb 11 22:16:04.790 [conn360]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "aecac843088badb9", key: "c5d7143e03cb6c82a0f50868108622fc" }
+Thu Feb 11 22:16:04.790 [conn361]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "ea0f4e0728ffbe60", key: "372774675781dfd9c7fbe27878f68b80" }
+Thu Feb 11 22:16:04.790 [conn362]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "bc1235982d6a2453", key: "dac00d8a1ddf6123c512a0c376a747a2" }
+Thu Feb 11 22:16:04.791 [conn363]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "8730e120e4c4a11", key: "1f2d64d63b9cfa1aa38e275c1aaeb6df" }
+Thu Feb 11 22:16:34.993 [conn359] end connection 127.0.0.1:42787 (5 connections now open)
+Thu Feb 11 22:16:34.993 [conn360] end connection 127.0.0.1:42788 (4 connections now open)
+Thu Feb 11 22:16:34.993 [conn361] end connection 127.0.0.1:42789 (4 connections now open)
+Thu Feb 11 22:16:34.994 [conn362] end connection 127.0.0.1:42790 (2 connections now open)
+Thu Feb 11 22:16:34.994 [conn363] end connection 127.0.0.1:42791 (2 connections now open)
+Fri Feb 12 14:16:17.609 [initandlisten] connection accepted from 127.0.0.1:42793 #364 (2 connections now open)
+Fri Feb 12 14:16:17.628 [conn364] end connection 127.0.0.1:42793 (1 connection now open)
+Fri Feb 12 14:16:17.635 [initandlisten] connection accepted from 127.0.0.1:42794 #365 (2 connections now open)
+Fri Feb 12 14:16:17.636 [initandlisten] connection accepted from 127.0.0.1:42795 #366 (3 connections now open)
+Fri Feb 12 14:16:17.636 [initandlisten] connection accepted from 127.0.0.1:42796 #367 (4 connections now open)
+Fri Feb 12 14:16:17.637 [initandlisten] connection accepted from 127.0.0.1:42797 #368 (5 connections now open)
+Fri Feb 12 14:16:17.637 [initandlisten] connection accepted from 127.0.0.1:42798 #369 (6 connections now open)
+Fri Feb 12 14:16:17.642 [conn365]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "77ef339fa2db25c4", key: "a1090cfabbecd1710ce768a39028ea47" }
+Fri Feb 12 14:16:17.642 [conn366]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4bf34c9682f52b83", key: "429da633904169d46dad1dd058e5796d" }
+Fri Feb 12 14:16:17.642 [conn367]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "4c6111bb21a168e3", key: "e28851156c443729e070a6c6f3a10052" }
+Fri Feb 12 14:16:17.642 [conn368]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "90b8c2fda0b4ef28", key: "9f0ee99cf57f3eda0103c40995298f42" }
+Fri Feb 12 14:16:17.643 [conn369]  authenticate db: admin { authenticate: 1, user: "dbadmin", nonce: "7b93fadd2ec28fcd", key: "f2ef09cfe981adae2f90e948fb849d51" }
+Fri Feb 12 14:16:19.619 [conn365] end connection 127.0.0.1:42794 (5 connections now open)
+Fri Feb 12 14:16:19.619 [conn366] end connection 127.0.0.1:42795 (4 connections now open)
+Fri Feb 12 14:16:19.619 [conn367] end connection 127.0.0.1:42796 (4 connections now open)
+Fri Feb 12 14:16:19.619 [conn368] end connection 127.0.0.1:42797 (2 connections now open)
+Fri Feb 12 14:16:19.620 [conn369] end connection 127.0.0.1:42798 (1 connection now open)

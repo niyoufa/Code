@@ -3,7 +3,7 @@
 
 技术架构 ： 
 后台 ： node express 
-前台 ： angularjs html css 
+前台 ： react html css 
 数据存储 ： mongodb
 
 目录结构说明 : 
@@ -54,4 +54,11 @@ git push -u origin master
 春节期间 (网站开发) : 
 	1. 完成码农社交平台网页版功能
 	2. 准备码农社交平台app版的开发
+
+
+前端架构 : 
+1 . html搭建应用的布局,建立基本的框架UI结构
+2 . react 向html架构中填充DOM , 作为控制器和模型的角色
+3 . css编写页面显示样式
+
 

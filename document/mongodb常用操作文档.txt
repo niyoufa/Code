@@ -1,0 +1,125 @@
+1. 启动和停止MongoDB
+
+(1) 启动MongoDB 
+sudo mongod -f /etc/mongodb.conf
+或 
+sudo mongod --dbpath <dbpath> 
+
+(2) 关闭MongDB
+关闭MongDB服务进程
+
+2. shell客户端的使用
+mongo admin --username "dbadmin" --password "niyoufa"
+
+3. shell脚本
+从客户端登录 执行load(js脚本文件) 
+或 
+在终端执行 mongo dbname --eval "MongoDB脚本语句" 
+
+4. 管理用户账户
+(1) 新建一个用户
+use admin ; 
+db.addUser({user:"testUser",pwd:"test",roles:["readWrite","dbAdmin"]})
+
+(2) roles 字段
+文档操作 : read , readWrite , 
+数据库操作(用户读取和写入数据库,清理，修改，压缩，得到统计概要) : dbAdmin , 
+一般的管理操作(连接，集群，复制，列出数据库，创建数据库，删除数据库) : clusterAdmin , 
+数据库用户操作 : userAdmin 
+
+以上取值加上AnyDatabase 只能应用到 admin 数据库的用户中
+
+(3) 查看用户列表
+show users ; 
+
+5. 配置访问控制
+(1) 创建用户管理员账户(只有创建用户的权限)
+
+use admin ; 
+db.addUser({
+	user : "useradmin" , 
+	pwd : "920816" , 
+	roles : ["userAdminAnyDatabase"] 
+})
+
+(2) 重新启动MongoDB
+sudo mongod --dbpath <dbpath> --auth 
+之后通过客户端登录MongDB数据库执行操作时需要用户身份认证
+认证方式 : I . 连接数据库admin后 执行 db.auth("useradmin","920816") 
+                   II . sudo mongo admin --dbpath <dbpath> --username "useradmin" --password "920816"
+
+(3) 创建数据库管理员账户
+use admin ; 
+db.addUser({
+	user : "dbadmin" , 
+	pwd : "niyoufa" , 
+	"roles" : ["readWriteAnyDatabase" , "dbadminAnyDatabase" , "clusterAdmin"] 
+})
+
+6. 管理数据库
+(1) 查看数据库
+show dbs ; 
+
+(2) 切换数据库
+user dbname ; 
+
+(3) 创建数据库
+use newDB ; 
+db.createCollection("newCollection") ; 
+
+(4) 删除数据库
+use dbname ; 
+db.dropDatabase() ; 
+
+(5) 复制数据库
+use dbname ; 
+db.copyDatabase(origin,destination,[hostname]) ; 
+
+7. 管理集合
+
+(1) 显示数据库中的集合列表
+use dbname ; 
+show collections ; 
+
+(2) 创建集合
+use dbname ; 
+db.createCollection(name[,size,max,capped,autoIndexID]) ; 
+
+(3) 删除集合
+use dbname ; 
+coll = db.getCollection("collectionname") ; 
+coll.drop() ; 
+
+(4) 查询文档
+使用collection对象上的find(query)方法查询集合中的文档
+use dbname ; 
+coll = db.getCollection(collectionname) ; 
+coll.find() ; 
+coll.find({username:"niyoufa"}) ; 
+
+(5) 插入文档到集合中
+use dbname ; 
+coll = db.getCollection(collectionname) ; 
+coll.insert({
+	username : "niyoufa" , 
+	age : 20 
+})
+
+(6) 删除文档
+use dbname ; 
+coll = db.getCollection(collectionname) ; 
+coll.remove({username:"niyoufa"}) ; 
+coll.remove() ; 
+
+(7) 更新文档
+use dbname ; 
+coll = db.getCollection(collectionname) ; 
+coll.save(dcumentObject) ; 
+coll.update(query,update,opitons) ; 
+query : 查询字典
+update : { $inc : {count:1} , $set : {name : "New Name"} , $rename : { "nickname" : "alias"} }
+options : { upsert : false , multi : true } 
+
+8. 常见问题
+> db.copyDatabase("code","code1")
+{ "ok" : 0, "errmsg" : "unauthorized" }

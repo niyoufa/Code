@@ -1,0 +1,7 @@
+1. 安装 驱动程序
+sudo npm install mongo@1.4.2 
+sudo npm install mongoose3.8.8 
+
+2. 从Node.js连接到MongDB
+MongoClient = require("mongodb").MongoClient 
+MongoClient(Server , options)  
