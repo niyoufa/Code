@@ -28,8 +28,9 @@ server.get(/^\/page/,function(req,res){
 	}) ; 
 	path = req.path ; 
 	urlpattern = path.split("/")[2] ; 
-	response = PageView[urlpattern](req) ; 
-	res.send(response) ;
+	PageView[urlpattern](req,function(response){
+		res.send(response) ;
+	}) ; 
 }) ; 
 
 //GET请求

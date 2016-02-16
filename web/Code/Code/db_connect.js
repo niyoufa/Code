@@ -50,9 +50,8 @@ var url = "mongodb://localhost:27017/code" ;
 
 //string 
 
-
+//注销数据库
 function logout(db) {
-	//注销数据库
 	db.logout(function(err,results) {
 		if(!err) {
 			console.log("Logged out Via Client Object ...") ; 
@@ -62,7 +61,8 @@ function logout(db) {
 	}) ; 
 }
 
-function getCommetList(req,res,callback) {
+//连接数据库 
+function getMongoSession(callback){
 	MongoClient.connect(url,{
 		db : { w:1,native_parser:false } , 
 		server : {
@@ -76,24 +76,14 @@ function getCommetList(req,res,callback) {
 		if(err) {
 			console.log("Connection Failed Via Client Object") ; 
 		} else {
-			console.log("Connection Via Client Object") ; 
-			var collection = db.collection("comment",function(err,collection){
-				if(err) {
-					console.log("Collection Error !") ; 
-				} else {
-					collection.find(function(error,cursor) {
-							if(!error) {
-								cursor.toArray(function(error,items){
-									var result = items ; 
-									logout(db) ; 
-									callback(res,result) ; 
-								})
-							}
-						}) ; 
-				}
-			}); 
+			callback(db)
 		}
-	}) ; 
+	});
 }
-// getCommetList() ; 
-module.exports = getCommetList ; 
+
+
+//数据库操作模块
+var Mongo = {} ; 
+Mongo["getMongoSession"] = getMongoSession ; 
+Mongo["logout"] = logout ; 
+module.exports = Mongo ; 

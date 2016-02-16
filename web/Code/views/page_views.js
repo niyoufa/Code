@@ -3,7 +3,7 @@
 var fs = require("fs") ; 
 
 pageView = {
-	"index_page" : function index_page(req){
+	"index_page" : function index_page(req,callback){
 		var result = "" ; 
 		try {
 			fd = fs.openSync("../templates/index.html","r") ; 
@@ -22,7 +22,7 @@ pageView = {
 			console.log(e) ; 
 			return e ; 
 		}
-		return result ; 
+		callback(result) ; 
 	} , 
 }
 

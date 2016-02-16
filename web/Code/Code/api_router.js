@@ -3,7 +3,6 @@
 var url = require("url") ; 
 var UserView = require("../views/user_views") ; 
 var CommentView = require("../views/comment_views") ; 
-var PageView = require("../views/page_views") ; 
 
 function checkRequestMethod(req) {
 	return ; 
@@ -41,23 +40,6 @@ var API = {
 		}) ;
 	} , 
 
-	//评论页面
-	"comment_page" : function comment_page(req,res,params){
-		PageView.comment_page(req,res,function(res,response){
-			if ( req.query["action"].match("page") != null ) {
-				res.set({
-					"Content-Type" : "text/html" , 
-					"Content-Length" : response.length 
-				}) ; 
-				res.send(response) ; 
-			}else {
-				console.log("返回参数 : ") ; 
-				console.log(response) ; 
-				res.send(response) ; 
-			}
-		}) ; 
-	} , 
-
 	//获取评论列表
 	"get_comment_list" : function get_comment_list (req,res,params){
 		CommentView.get_comment_list(req,res,function(res,result){
@@ -80,7 +62,6 @@ var STATIC = {
 
 //路由函数
 var Router = function(req,res) {
-	debugger ; 
 	var url_part = req.param("userid") ; 
 	var params = req.query ; 
 	try {
