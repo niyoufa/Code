@@ -34,18 +34,7 @@ server.get(/^\/page/,function(req,res){
 
 //GET请求
 server.get('/code/:userid',function(req,res){
-	var response = APIRouter(req) ; 
-	if ( req.query["action"].match("page") != null ) {
-		res.set({
-			"Content-Type" : "text/html" , 
-			"Content-Length" : response.length 
-		}) ; 
-		res.send(response) ; 
-	}else {
-		console.log("返回参数 : ") ; 
-		console.log(response) ; 
-		res.send(response) ; 
-	}
+	APIRouter(req,res) ; 
 }) ; 
 
 //POST请求

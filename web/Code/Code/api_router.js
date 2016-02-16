@@ -11,32 +11,60 @@ function checkRequestMethod(req) {
 
 var API = {
 	//登陆
-	"login" : function login(req,params) {
+	"login" : function login(req,res,params) {
 		try {
 			username = params["username"] ; 
 			password = params["password"] ; 
 		}catch(e){
 			result = {"ret":"1111","info":"参数解析错误"} ; 
-			return result ; 
+			res.send(result) ; 
 		}
-		
-		return UserView.login(req,username,password) ;
+		UserView.login(req,res,username,password,function(res,result){
+			console.log("返回参数 : ") ; 
+			console.log(result) ; 
+			res.send(result) ; 
+		}) ;
 	} , 
 	//注册
-	"register" : function register(req,params) {
-		username = params["username"] ; 
-		password = params["password"] ; 
-		return UserView.register(req,username,password) ;
+	"register" : function register(req,res,params) {
+		try {
+			username = params["username"] ; 
+			password = params["password"] ; 
+		}catch(e){
+			result = {"ret":"1111","info":"参数解析错误"} ; 
+			res.send(result) ; 			
+		}
+		UserView.register(req,res,username,password,function(res,result){
+			console.log("返回参数 : ") ; 
+			console.log(result) ; 
+			res.send(result) ; 
+		}) ;
 	} , 
 
 	//评论页面
-	"comment_page" : function comment_page(req){
-		return PageView.comment_page(req) ; 
+	"comment_page" : function comment_page(req,res,params){
+		PageView.comment_page(req,res,function(res,response){
+			if ( req.query["action"].match("page") != null ) {
+				res.set({
+					"Content-Type" : "text/html" , 
+					"Content-Length" : response.length 
+				}) ; 
+				res.send(response) ; 
+			}else {
+				console.log("返回参数 : ") ; 
+				console.log(response) ; 
+				res.send(response) ; 
+			}
+		}) ; 
 	} , 
 
 	//获取评论列表
-	"get_comment_list" : function get_comment_list (req,params){
-		return CommentView.get_comment_list(req) ; 
+	"get_comment_list" : function get_comment_list (req,res,params){
+		CommentView.get_comment_list(req,res,function(res,result){
+			console.log("返回参数 : ") ; 
+			console.log(result) ; 
+			res.send(result) ; 
+		}) ; 
 	} , 
 }
 
@@ -51,7 +79,8 @@ var STATIC = {
 }
 
 //路由函数
-var Router = function(req) {
+var Router = function(req,res) {
+	debugger ; 
 	var url_part = req.param("userid") ; 
 	var params = req.query ; 
 	try {
@@ -59,17 +88,16 @@ var Router = function(req) {
 		var data = params["data"] ; 
 	}catch(e) {
 		result = {"ret":"1111","info":"参数解析错误"} ;
-		return result ; 
+		res.send(result) ; 
 	}
 	try {
 		console.log("请求方法 : " + action) ; 
 		console.log("请求参数 : ") ; 
 		console.log(data) ; 
-		result = URLPatterns[url_part][action](req,data) 
-		return result ; 
+		URLPatterns[url_part][action](req,res,data) 
 	}catch(e) {
 		result = {"ret":"1111","info":"没有匹配的路由"} ; 
-		return result ; 
+		res.send(result) ; 
 	}
 }
 

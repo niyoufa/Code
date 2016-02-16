@@ -3,6 +3,8 @@
 var mongodb = require('mongodb') ; 
 var MongoClient = mongodb.MongoClient ; 
 var Server = mongodb.Server ; 
+// var url = "mongodb://dbadmin:niyoufa@localhost:27017/admin" ; 
+var url = "mongodb://localhost:27017/code" ; 
 //object 
 // var client = new MongoClient(new Server(
 // 	'localhost' , 27017, {
@@ -60,8 +62,8 @@ function logout(db) {
 	}) ; 
 }
 
-function getCommetList() {
-	MongoClient.connect("mongodb://dbadmin:niyoufa@localhost:27017/admin",{
+function getCommetList(req,res,callback) {
+	MongoClient.connect(url,{
 		db : { w:1,native_parser:false } , 
 		server : {
 			socketOptions : { connectTimeoutMS : 500 } , 
@@ -79,22 +81,19 @@ function getCommetList() {
 				if(err) {
 					console.log("Collection Error !") ; 
 				} else {
-					var comment_list = [] ; 
 					collection.find(function(error,cursor) {
 							if(!error) {
-								cursor.each(function(error,item){
-									debugger ; 
-									if(!error) {
-										comment_list.push(item) ; 
-									}
+								cursor.toArray(function(error,items){
+									var result = items ; 
+									logout(db) ; 
+									callback(res,result) ; 
 								})
 							}
-							logout(db) ; 
 						}) ; 
 				}
 			}); 
 		}
 	}) ; 
 }
-debugger ; 
-getCommetList() ; 
+// getCommetList() ; 
+module.exports = getCommetList ; 
