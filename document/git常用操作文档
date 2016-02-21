@@ -1,0 +1,76 @@
+1. git介绍 
+Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
+GIT把内容按元数据方式存储，而SVN是按文件：所有的资源控制系统都是把文件的元信息隐藏在一个类似.svn,.cvs等的文件夹里。
+GIT的内容完整性要优于SVN：GIT的内容存储使用的是SHA-1哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。
+
+2. 安装
+(1) Debian/Ubuntu
+sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev 
+sudo apt-get install git-core 
+(2) Centos/RedHat
+yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+yum -y install git-core
+(3) Windows 
+安装包下载地址：http://msysgit.github.io/
+(4) Mac 
+在 Mac 平台上安装 Git 最容易的当属使用图形化的 Git 安装工具，下载地址为：
+http://sourceforge.net/projects/git-osx-installer/
+
+3. git配置
+Git 提供了一个叫做 git config 的工具，专门用来配置或读取相应的工作环境变量。
+git config --global user.name 查看~/.gitconfig文件中的配置
+git config user.name 查看特定配置
+git config --list 查看所有配置
+
+4. git 工作流程
+一般工作流程如下：
+	> 克隆 Git 资源作为工作目录。git clone url 
+	> 在克隆的资源上添加或修改文件。git add . 
+	> 如果其他人修改了，你可以更新资源。git pull origin 
+	> 在提交前查看修改。git status -s 
+	> 提交修改。git commit -m 'message' .  
+	> 在修改完成后，如果发现错误，可以撤回提交并再次修改并提交.
+
+5. Git 工作区、暂存区和版本库
+工作区：就是你在电脑里能看到的目录。
+暂存区：英文叫stage, 或index。一般存放在"git目录"下的index文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。
+版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
+
+工作区、版本库中的暂存区和版本库之间的关系： 
+
+图中左侧为工作区，右侧为版本库。在版本库中标记为 "index" 的区域是暂存区（stage, index），标记为 "master" 的是 master 分支所代表的目录树。
+图中我们可以看出此时 "HEAD" 实际是指向 master 分支的一个"游标"。所以图示的命令中出现 HEAD 的地方可以用 master 来替换。
+图中的 objects 标识的区域为 Git 的对象库，实际位于 ".git/objects" 目录下，里面包含了创建的各种对象及内容。
+当对工作区修改（或新增）的文件执行 "git add" 命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。
+当执行提交操作（git commit）时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。
+当执行 "git reset HEAD" 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。
+当执行 "git rm --cached <file>" 命令时，会直接从暂存区删除文件，工作区则不做出改变。
+当执行 "git checkout ." 或者 "git checkout -- <file>" 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区的改动。
+当执行 "git checkout HEAD ." 或者 "git checkout HEAD <file>" 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。
+
+6. Git 创建仓库
+(1) git ini 或 git init newrepo
+(2) git clone <repo> 或 git clone <repo> <directory> 或 git clone <repo> <directory> projectname 
+
+7. 基本操作
+(1) git add 
+(2) git status [-s]
+(3) git diff 
+尚未缓存的改动：git diff
+查看已缓存的改动： git diff --cached	
+查看已缓存的与未缓存的所有改动：git diff HEAD
+显示摘要而非整个 diff：git diff --stat 
+(4) git commit 使用 git add 命令将想要快照的内容写入缓存区， 而执行 git commit 将缓存区内容添加到仓库中。
+git commit -m 'commit description' . 
+git commit -am 'commit description' . 
+(5) git reset HEAD 取消已缓存的内容
+(6) git rm 
+默认情况下，git rm file 会将文件从缓存区和你的硬盘中（工作目录）删除。
+如果你要在工作目录中留着该文件，可以使用 git rm --cached：
+(7) git mv
+git mv README  README.md
+
+8. git分支管理
+(1) 创建分支命令：git branch (branchname)
+(2) 切换分支命令: git checkout (branchname)
+(3) 合并分支命令: git merge 
