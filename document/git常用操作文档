@@ -70,11 +70,35 @@ git commit -am 'commit description' .
 (7) git mv
 git mv README  README.md
 
-8. git分支管理
+*8. git分支管理
 (1) 创建分支命令：git branch (branchname)
 (2) 切换分支命令: git checkout (branchname)
 (3) 合并分支命令: git merge 
 (4) 列出分支基本命令：git branch
 (5) 删除分支 : git branch -d <branchname> 例如：git branch  document 
 (6) 合并分支 : git merge <branchname>
+(7) 解决冲突 : 手动解决冲突 并用git add 告诉 Git 文件冲突已经解决
+
+9. git提交历史
+git log 
+git log --oneline 
+git log --oneline --graph
+git log --reverse --oneline
+git log --author=Linus --oneline -5
+git log --oneline --before={3.weeks.ago} --after={2010-04-18} --no-merges
+
+10. git标签
+git tag -a v1.0 
+git log  --decorate 
+git tag -a v0.9 85fc7e7
+
+11. Git 远程仓库
+(1) 在github上创建一个仓库 git remote add [shortname] [url] 
+git remote add origin https://github.com/niyoufa/Code.git
+
+(2) 查看远程仓库 git remote  
+(3) 提取远程仓库 git pull origin [branch]
+(4) 推送到远程仓库 git push orign [branch]
+(5) 删除远程仓库 git remote rm [仓库名]
+
 
