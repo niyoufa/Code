@@ -74,3 +74,4 @@ git mv README  README.md
 (1) 创建分支命令：git branch (branchname)
 (2) 切换分支命令: git checkout (branchname)
 (3) 合并分支命令: git merge 
+(4) 列出分支基本命令：git branch
