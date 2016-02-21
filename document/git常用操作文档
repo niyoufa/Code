@@ -75,5 +75,6 @@ git mv README  README.md
 (2) 切换分支命令: git checkout (branchname)
 (3) 合并分支命令: git merge 
 (4) 列出分支基本命令：git branch
-(5) 删除分支 : git branch -d (branchname)
-(6) 合并分支 : git merge (branchname) 
+(5) 删除分支 : git branch -d <branchname>
+(6) 合并分支 : git merge <branchname>
+
