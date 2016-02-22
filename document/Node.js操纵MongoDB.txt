@@ -1,0 +1,160 @@
+一. MongoDB和Node.js入门
+
+1. 安装MongoDB驱动模块
+sudo npm install mongodb@1.4.2 
+sudo npm install mongoose@3.8.8 
+使用 : require("mongodb") 
+
+2. 从Node.js连接到MongoDB
+2.1 创建MongoClient对象实例，然后使用该对象来创建和管理MongoDB的连接 
+
+2.2 使用连接字符串进行连接
+
+2.3 Db对象 : 提供对数据库的访问 ,(执行连接，添加用户,访问集合)
+
+2.4 Admin对象 : 对MongoDB数据库执行某些管理职能,代表专门到admin数据库的连接, 提供了不包含在Db对象中的功能
+
+2.5 Collection对象 : 代表MongoDB的数据库集合
+
+2.6 Cursor对象 : 对MongoDB执行某些操作的返回结果
+(1) each(function(err, item) {}) ; 
+(2) toArray(function(err, items) {}) ; 
+(3) nextObject(function(err , item) {}) ; 
+(4) rewind() : 把Cursor对象重置到初始状态 
+(5) count(function(err, count) {}) 
+(6) sort(keyOrList,direction,function(err, sortedCursor) {} )  keyOrList : 指定要排序的字段 direction : 排序类型 1升序 -1降序
+(7) close()
+(8) isClosed() 
+
+2.7 访问和操作数据库
+(1) 列出数据库
+var MongoClient = require("mongodb").MongoClient ; 
+MongoClient.connect("mongodb://localhost/admin", function(err,db) {
+	var adminDB = db.admin() ; 
+	adminDB.listDatabases(function (err, databases) {
+		console.log("Before Add Database List : ") ; 
+		console.log(databases) ; 
+	} ) ; 
+}) ; 
+
+(2) 创建数据库
+var newDB = db.db("newDB") ; 
+newDB.createCollection("newCollection", function(err, collection) {
+	if(!err) {
+		console.log("New Database and Collection Created") ; 
+	}	
+} ) ; 
+
+(3) 删除数据库
+newDB.dropDatabase( function(err, results) {
+	console.log("在这里处理删除的数据库") ; 	
+} ) ; 
+
+(4) 获取服务器状态
+var adminDB = db.admin() ; 
+adminDB.serverStatus(function(err, status){
+	console.log(status) ; 
+	db.close() ; 
+}) ; 
+
+(5) 访问和操作集合
+var newDB = db.db("newDB") ; 
+newDB.collectionNames(function(err, collectionNames ){}) ;  collectionNames : [ {name : 'newDB.system.indexes'} , {name: 'newDB.newCollection' , options : {create : 'newCollection' }} ]
+或 
+var newDB = db.db("newDB") ; 
+newDB.collections(function(err, collectionList) {} )
+
+(6) 创建集合
+var newDB = db.db("newDB") ; 
+newDB.createCollection("newCollection", function(err, collection) {
+	if(!err) {
+		console.log("New Database and Collection Created") ; 
+	}	
+} ) ; 
+
+(7) 删除集合
+var myDB = db.db("myDB") ; 
+myDB.dropCollection("collectionA" , function(err,results) {}) ;
+或 
+myDB.collection("collectionB" , function(err , collB){
+	collB.drop() ; 	
+})  ; 
+(8) 获取集合信息
+var myDB = db.db("myDB") ; 
+myDB.collection("collectionB" , function(err , collB){
+	collection.stats(function(err, stats){
+		console.log("stats") ; 
+		db.close() ; 
+	})	
+})  ; 
+
+
+二. Node.js操作MongoDB文档 : 集合中插入、访问、修改、删除文档
+(1) 数据库更改选项 
+
+(2) 数据库更新运算符
+
+(3) 插入文档 
+insert(docs, [options], function(err, result) {})  docs : 单个文档对象或文档对象数组 
+function addObject(collection,object) {
+	collection.insert(object,function(err, result) {
+		if(!err) {
+			console.log("Inserted : ") ; 
+			console.log(result) ; 
+		}
+	}) ; 
+}
+
+(4) 获取文档
+find(query, [option], funciton(err, cursor){}) 
+findOne(query, [option], function(err, item){})
+
+(5) 更新文档
+update(query, update, [options], [callback]) 
+query : 该参数是一个文档，用来查询文档
+update : 该参数是一个对象 , 指定要与查询匹配的文档所做的修改(数据库更新运算符)
+options : 数据库更改选项 
+callback : function(err, results){} 
+
+(6) 原子的修改文档的集合
+findAnyModify(query, sort, update, [options], [callback]) 
+sort : [field, sort_order]对数组 sort_order 1升序 -1降序
+callback : function(err, doc){}
+
+(7) 保存文档
+save(doc, [options], [callback]) 
+callback: function(err, item){} 
+
+(8) 使用upsert插入文档 : 存在则更新，不存在则插入
+upsert : 数据库更改选项  true 
+
+(9) 删除文档
+remove([query], [options], [callback]) 
+callback : function(eff, results) {}
+
+(10) 从集合中删除单个文档
+findAnyRemove(query, sort, update, [options], [callback]) 
+callback : function(err, results){}
+
+三. Node.js访问MongoDB文档 : 用query对象限制返回的文档 
+(1) query对象
+(2) 查询option对象
+(3) 文档数量 
+count(query, [option], funciton(err, count){}) 
+
+(4) 限制结果集 : 使用options参数中的limit选项
+限制数量, 限制返回字段, 分页, 排序
+
+(5) 查找不同的字段
+distinct(key, [query], [options], callback) 
+callback : function(err, values) {} 
+
+(6) 对结果分组
+group(keys, query, initial, reduce, finalize, command, [options], callback) 
+initial : 分组结果的一部分
+reduce : function(obj,prev)   prev是由initial参数创建的对象 , obj当前文档
+finalize : function(obj)             obj 是从initial参数得到的最终obj 
+
+四. 利用Mongoose来使用结构化模式与验证
+
+五. 高级MongoDB概念

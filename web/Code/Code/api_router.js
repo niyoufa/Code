@@ -3,6 +3,7 @@
 var url = require("url") ; 
 var UserView = require("../views/user_views") ; 
 var CommentView = require("../views/comment_views") ; 
+var Status = require("../views/status") ; 
 
 function checkRequestMethod(req) {
 	return ; 
@@ -15,7 +16,9 @@ var API = {
 			username = params["username"] ; 
 			password = params["password"] ; 
 		}catch(e){
-			result = {"ret":"1111","info":"参数解析错误"} ; 
+			var result = {} ; 
+			result["ret"] = Status.UNKNOWNERR ; 
+			result["info"] = Status.getReason(result["ret"] ) ; 
 			res.send(result) ; 
 		}
 		UserView.login(req,res,username,password,function(res,result){
@@ -29,11 +32,15 @@ var API = {
 		try {
 			username = params["username"] ; 
 			password = params["password"] ; 
+			email = params["email"] ; 
+			nick = params["nick"] ; 
 		}catch(e){
-			result = {"ret":"1111","info":"参数解析错误"} ; 
+			var result = {} ; 
+			result["ret"] = Status.UNKNOWNERR ; 
+			result["info"] = Status.getReason(result["ret"] ) ; 
 			res.send(result) ; 			
 		}
-		UserView.register(req,res,username,password,function(res,result){
+		UserView.register(req,res,username,password,email,nick,function(res,result){
 			console.log("返回参数 : ") ; 
 			console.log(result) ; 
 			res.send(result) ; 
@@ -68,16 +75,21 @@ var Router = function(req,res) {
 		var action = params["action"] ; 
 		var data = params["data"] ; 
 	}catch(e) {
-		result = {"ret":"1111","info":"参数解析错误"} ;
+		var result = {} ; 
+		result["ret"] = Status.UNKNOWNERR ; 
+		result["info"] = Status.getReason(result["ret"] ) ; 
 		res.send(result) ; 
 	}
 	try {
 		console.log("请求方法 : " + action) ; 
 		console.log("请求参数 : ") ; 
+		data = JSON.parse(data) ; 
 		console.log(data) ; 
 		URLPatterns[url_part][action](req,res,data) 
 	}catch(e) {
-		result = {"ret":"1111","info":"没有匹配的路由"} ; 
+		var result = {} ; 
+		result["ret"] = Status.UNKNOWNERR ; 
+		result["info"] = Status.getReason(result["ret"] ) ; 
 		res.send(result) ; 
 	}
 }
