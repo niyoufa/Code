@@ -22,6 +22,7 @@ server.get(/^\/static/,function(req,res){
 }) ; 
 
 //html文件
+//  /page/index_page/
 server.get(/^\/page/,function(req,res){
 	res.set({
 		"Content-Type" : "text/html" 

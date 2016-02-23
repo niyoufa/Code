@@ -1,0 +1,131 @@
+body{
+	margin: 0px;
+	padding:0px;
+	background-color: #F5F5F5; 
+}
+
+.loginUnit .loginNav  img{
+	width:20px;
+	height:20px;
+	padding-top: 5px;
+}
+
+.loginUnit .loginBody img{
+	width:20px;
+	height:20px;
+}
+
+.loginUnit .loginThirdPlat img{
+	width:50px;
+	height: 50px;
+	border-radius: 30px;
+}
+
+.loginUnit .loginBody .usernameList{
+	display: none; 
+}
+
+.loginUnit .loginNav {
+	border:solid 1px;
+	border-color: #0093FD;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align: center;
+	background-color: #0093FD; 
+	padding-left:8px;
+}
+.loginUnit .loginNav .loginNavXPng {
+	float:left;
+}
+.loginUnit .loginNav .loginNavTitle {
+	float:left;
+	margin-left:95px;
+	font-size: 24px;
+	color:white;
+}
+.clear{
+	clear:both;
+}
+
+
+.loginUnit .loginBody {
+	margin-top:30px;
+	padding-left:10px;
+	padding-right:10px;
+	background-color: #F5F5F5; 
+}
+.loginUnit .loginBody .loginInput .loginInputUserName {
+	padding: 8px;
+	border-bottom:solid 1px;
+	border-color: #ECECEC ; 
+}
+.loginUnit .loginBody .loginInput .loginInputPassword {
+	padding: 8px;
+}
+.loginUnit .loginBody .loginInput{
+	background-color: white;
+	border-radius: 5px;
+	border-color: #ECECEC ; 
+}
+.loginUnit .loginBody .loginInput  input {
+	margin-left:10px;
+	border:solid 0px;
+	height:20px;
+	width:200px;
+	font-size: 18px;
+	color:#A5A5A5;
+}
+.loginUnit .loginBody .loginInput img {
+	margin-top:5px;
+}
+
+.loginUnit .loginBody .loginButton {
+	margin-top:15px;
+	text-align: center; 
+}
+
+.loginUnit .loginBody .loginButton button{
+	width:140px;
+	height: 35px;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+.loginUnit .loginBody .loginButton .register {
+	background-color: white ; 
+	color:#0093FD;
+	border-color:#0093FD;
+}
+
+.loginUnit .loginBody .loginButton .login {
+	background-color: #0093FD ; 
+	color:white;
+	border-color: #0093FD ; 
+	margin-left:10px;
+}
+
+.loginUnit .loginForgetPassword{
+	padding-left:10px;
+	padding-right:10px;
+	text-align: right;
+	margin-top:25px;
+	color:#A5A5A5;
+}
+.loginUnit .loginThirdPlat{
+	margin-left:10px;
+	margin-right:10px;
+	background-color: #F5F5F5; 
+	margin-top: 30px;
+}
+.loginUnit .loginThirdPlat .loginThirdPlatTitle {
+	text-align: center; 
+	color:#A5A5A5;
+}
+.loginUnit .loginThirdPlat .platOptionList {
+	text-align: center ; 
+	padding-top:20px;
+	margin-left: 0px;
+}
+.loginUnit .loginThirdPlat .platOptionList img{
+	margin-left: 40px;
+}
