@@ -95,7 +95,7 @@ var LoginThirdPlat = React.createClass({
 		return ( <div className="loginThirdPlat">
 			<div className="loginThirdPlatTitle"><span>使用社交账户登录 </span></div>
 			<div className="platOptionList">
-				<img src="/static/images/weixin.jpg" style={{"margin-left": "-5px"}}/>
+				<img src="/static/images/wechat.jpg" style={{"margin-left": "-5px"}}/>
 				<img src="/static/images/weibo.jpg"/>
 				<img src="/static/images/qq.jpg"/>
 			</div>
