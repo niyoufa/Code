@@ -9,7 +9,7 @@ var COLLECTIONS = require("../Code/models") ;
 var Status = require("./status") ; 
 
 var userView = {
-	"login" :  function login (req,res,username,password,callback) {
+	"login" :  function login (req,res,email,password,callback) {
 		var md5sum = crypto.createHash("md5");
 		md5sum.update(password) ; 
 		var password = md5sum.digest('hex');
@@ -19,7 +19,7 @@ var userView = {
 				if(err) {
 					console.log("Collection Error !") ; 
 				} else {
-					collection.find({username:username,password:password},function(error,cursor) {
+					collection.find({email:email,password:password},function(error,cursor) {
 							if(!error) {
 								cursor.count(function(err,count) {
 									if(count == 0) {
@@ -43,7 +43,7 @@ var userView = {
 			}); 
 		}) ; 
 	} , 
-	"register" :  function register (req,res,username,password,email,nick,callback) {
+	"register" :  function register (req,res,password,email,nick,callback) {
 		var md5sum = crypto.createHash("md5");
 		md5sum.update(password) ; 
 		var password = md5sum.digest('hex');
@@ -54,7 +54,7 @@ var userView = {
 					console.log("Collection Error !") ; 
 				} else {
 
-					collection.find({username:username},function(error,cursor) {
+					collection.find({email:email},function(error,cursor) {
 							if(!error) {
 								cursor.count(function(err,count) {
 									if(count != 0) {
@@ -70,12 +70,11 @@ var userView = {
 										result["info"] = Status.getReason(result["ret"] ) ; 
 
 										var shasum = crypto.createHash("sha1");
-										shasum.update(username);
+										shasum.update(email);
 										var user_sha1 =  shasum.digest('hex');
 
 										var user = {
 											sha1 : user_sha1 , 
-											username : username , 
 											password : password , 
 											email : email , 
 											nick : nick , 

@@ -5,7 +5,7 @@ var RegisterNav = React.createClass({displayName: "RegisterNav",
 	render : function(){
 		return (
 			React.createElement("div", {className: "registerNav"}, 
-				React.createElement("div", {className: "registerNavBack"}, React.createElement("span", null, "取消")), 
+				React.createElement("div", {className: "registerNavBack"}, React.createElement("span", {id: "registerNavBack"}, "取消")), 
 				React.createElement("div", {className: "registerNavTitle"}, "注册新手编程"), 
 				React.createElement("div", {className: "clear"})
 			) 
@@ -60,7 +60,7 @@ var RegisterStatement = React.createClass({displayName: "RegisterStatement",
 		return (
 			React.createElement("div", {className: "registerStatement"}, 
 				React.createElement("span", {className: "statementDescription"}, "点击【下一步】代表你已阅读并同意"), 
-				React.createElement("a", {href: "#", style: {"color":"red","margin-left":"2px;"}}, React.createElement("span", null, "用户使用协议"))
+				React.createElement("a", {href: "#"}, React.createElement("span", null, "用户使用协议"))
 			)
 		)
 	}

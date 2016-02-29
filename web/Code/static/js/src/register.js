@@ -16,7 +16,16 @@ var RegisterNav = React.createClass({
 //注册页面头部
 var RegisterHead = React.createClass({
 	render : function(){
-		return ( <div className="registerHead"><span>欢迎加入新手编程</span></div> ) 
+		return ( 
+			<div className="registerHead">
+				<div className="registerErrorInfo">
+					<span className="errorDescription">密码强度过低</span>
+				</div>
+				<div className="registerHeadTitle">
+					<span>欢迎加入新手编程</span>
+				</div>
+			</div> 
+		) 
 	}
 }) ; 
 
@@ -26,9 +35,16 @@ var RegisterBody = React.createClass({
 		return (
 			<div className="registerBody">
 				<div className="registerBodyInput">
-					<input type="text" placeholder="邮箱" className="emailOrPhone" /><br/>
-					<input type="password" placeholder="密码" className="" /><br/>
-					<input type="text" placeholder="昵称" className="nick" /><br/>
+					<div className="registerBodyInputEmail">
+						<input type="text" placeholder="邮箱" />
+					</div>
+					<div className="registerBodyInputPassword">
+						<input type="password" placeholder="密码" />
+					</div>
+					<div className="registerBodyInputNick">
+						<input type="text" placeholder="昵称" />
+					</div>
+					
 				</div>
 				<div className="registerBodyButton">
 					<button>下一步</button>
@@ -44,7 +60,7 @@ var RegisterStatement = React.createClass({
 		return (
 			<div className="registerStatement">
 				<span className="statementDescription">点击【下一步】代表你已阅读并同意</span>
-				<a href="#"><span>用户使用协议</span></a>
+				<a href="#" style={{"color":"red","margin-left":"2px;"}}><span>用户使用协议</span></a>
 			</div>
 		)
 	}

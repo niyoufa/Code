@@ -60,7 +60,7 @@ var RegisterStatement = React.createClass({displayName: "RegisterStatement",
 		return (
 			React.createElement("div", {className: "registerStatement"}, 
 				React.createElement("span", {className: "statementDescription"}, "点击【下一步】代表你已阅读并同意"), 
-				React.createElement("a", {href: "#", style: {"color":"red","margin-left":"2px;"}}, React.createElement("span", null, "用户使用协议"))
+				React.createElement("a", {href: "#", style: {"color":"red","margin-left":"12px;"}}, React.createElement("span", null, "用户使用协议"))
 			)
 		)
 	}

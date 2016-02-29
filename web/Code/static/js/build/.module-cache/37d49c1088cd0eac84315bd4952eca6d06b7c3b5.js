@@ -18,12 +18,7 @@ var RegisterHead = React.createClass({displayName: "RegisterHead",
 	render : function(){
 		return ( 
 			React.createElement("div", {className: "registerHead"}, 
-				React.createElement("div", {className: "registerErrorInfo"}, 
-					React.createElement("span", {className: "errorDescription"}, "密码强度过低")
-				), 
-				React.createElement("div", {className: "registerHeadTitle"}, 
-					React.createElement("span", null, "欢迎加入新手编程")
-				)
+				React.createElement("span", null, "欢迎加入新手编程")
 			) 
 		) 
 	}
@@ -35,16 +30,9 @@ var RegisterBody = React.createClass({displayName: "RegisterBody",
 		return (
 			React.createElement("div", {className: "registerBody"}, 
 				React.createElement("div", {className: "registerBodyInput"}, 
-					React.createElement("div", {className: "registerBodyInputEmail"}, 
-						React.createElement("input", {type: "text", placeholder: "邮箱"})
-					), 
-					React.createElement("div", {className: "registerBodyInputPassword"}, 
-						React.createElement("input", {type: "password", placeholder: "密码"})
-					), 
-					React.createElement("div", {className: "registerBodyInputNick"}, 
-						React.createElement("input", {type: "text", placeholder: "昵称"})
-					)
-					
+					React.createElement("input", {type: "text", placeholder: "邮箱", className: "emailOrPhone"}), React.createElement("br", null), 
+					React.createElement("input", {type: "password", placeholder: "密码", className: ""}), React.createElement("br", null), 
+					React.createElement("input", {type: "text", placeholder: "昵称", className: "nick"}), React.createElement("br", null)
 				), 
 				React.createElement("div", {className: "registerBodyButton"}, 
 					React.createElement("button", null, "下一步")
@@ -60,7 +48,7 @@ var RegisterStatement = React.createClass({displayName: "RegisterStatement",
 		return (
 			React.createElement("div", {className: "registerStatement"}, 
 				React.createElement("span", {className: "statementDescription"}, "点击【下一步】代表你已阅读并同意"), 
-				React.createElement("a", {href: "#", style: {"color":"red","margin-left":"2px;"}}, React.createElement("span", null, "用户使用协议"))
+				React.createElement("a", {href: "#"}, React.createElement("span", null, "用户使用协议"))
 			)
 		)
 	}
