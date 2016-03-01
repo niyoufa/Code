@@ -14,7 +14,7 @@ jQuery.extend({
             "action":action,
             "data":JSON.stringify(params)
         };
-        $.get(ajax_url,post_data,function(data){
+        $.post(ajax_url,post_data,function(data){
             if (data["ret"] != '0001'){
                 alert(data["info"]);
                 return;
@@ -22,6 +22,20 @@ jQuery.extend({
             var response_data = data["data"];
             return callback(response_data);
         },'json');
+    } , 
+    doGET:function(action,params,callback) {
+        var get_data = {
+             "action":action,
+            "data":JSON.stringify(params)
+        } ; 
+        $.get(ajax_url,get_data,function(data){
+             if (data["ret"] != '0001'){
+                alert(data["info"]);
+                return;
+            }
+            var response_data = data["data"];
+            return callback(response_data);
+        },"json") ; 
     }
 });
 

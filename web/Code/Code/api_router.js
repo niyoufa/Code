@@ -31,9 +31,8 @@ var API = {
 	//注册
 	"register" : function register(req,res,params) {
 		try {
-			username = params["username"] ; 
-			password = params["password"] ; 
 			email = params["email"] ; 
+			password = params["password"] ; 
 			nick = params["nick"] ; 
 		}catch(e){
 			var result = {} ; 
@@ -41,7 +40,7 @@ var API = {
 			result["info"] = Status.getReason(result["ret"] ) ; 
 			res.send(result) ; 			
 		}
-		UserView.register(req,res,username,password,email,nick,function(res,result){
+		UserView.register(req,res,password,email,nick,function(res,result){
 			console.log("返回参数 : ") ; 
 			console.log(result) ; 
 			res.send(result) ; 

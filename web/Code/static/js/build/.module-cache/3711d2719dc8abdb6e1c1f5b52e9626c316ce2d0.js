@@ -42,7 +42,7 @@ var RegisterBody = React.createClass({displayName: "RegisterBody",
 						React.createElement("input", {type: "password", placeholder: "密码"})
 					), 
 					React.createElement("div", {className: "registerBodyInputNick"}, 
-						React.createElement("input", {type: "text", placeholder: "昵称"})
+						React.createElement("input", {type: "text", placeholder: "昵称", className: "registerBodyInputNick"})
 					)
 					
 				), 
@@ -60,7 +60,7 @@ var RegisterStatement = React.createClass({displayName: "RegisterStatement",
 		return (
 			React.createElement("div", {className: "registerStatement"}, 
 				React.createElement("span", {className: "statementDescription"}, "点击【下一步】代表你已阅读并同意"), 
-				React.createElement("a", {href: "#", style: {"color":"red","margin-left":"2px;"}}, React.createElement("span", null, "用户使用协议"))
+				React.createElement("a", {href: "#"}, React.createElement("span", null, "用户使用协议"))
 			)
 		)
 	}

@@ -35,14 +35,14 @@ var RegisterBody = React.createClass({displayName: "RegisterBody",
 		return (
 			React.createElement("div", {className: "registerBody"}, 
 				React.createElement("div", {className: "registerBodyInput"}, 
-					React.createElement("div", {className: "registerBodyInputEmail"}, 
-						React.createElement("input", {type: "text", placeholder: "邮箱"})
+					React.createElement("div", null, 
+						React.createElement("input", {type: "text", placeholder: "邮箱", className: "registerBodyInputEmial"})
 					), 
-					React.createElement("div", {className: "registerBodyInputPassword"}, 
-						React.createElement("input", {type: "password", placeholder: "密码"})
+					React.createElement("div", null, 
+						React.createElement("input", {type: "password", placeholder: "密码", className: "password"})
 					), 
-					React.createElement("div", {className: "registerBodyInputNick"}, 
-						React.createElement("input", {type: "text", placeholder: "昵称"})
+					React.createElement("div", null, 
+						React.createElement("input", {type: "text", placeholder: "昵称", className: "nick"})
 					)
 					
 				), 
@@ -60,7 +60,7 @@ var RegisterStatement = React.createClass({displayName: "RegisterStatement",
 		return (
 			React.createElement("div", {className: "registerStatement"}, 
 				React.createElement("span", {className: "statementDescription"}, "点击【下一步】代表你已阅读并同意"), 
-				React.createElement("a", {href: "#", style: {"color":"red","margin-left":"2px;"}}, React.createElement("span", null, "用户使用协议"))
+				React.createElement("a", {href: "#"}, React.createElement("span", null, "用户使用协议"))
 			)
 		)
 	}
