@@ -12,6 +12,7 @@ function checkRequestMethod(req) {
 var API = {
 	//登陆
 	"login" : function login(req,res,params) {
+		debugger ; 
 		try {
 			username = params["username"] ; 
 			password = params["password"] ; 
@@ -69,6 +70,7 @@ var STATIC = {
 
 //路由函数
 var Router = function(req,res) {
+	debugger ; 
 	var url_part = req.param("userid") ; 
 	var params = req.query ; 
 	try {
@@ -84,7 +86,14 @@ var Router = function(req,res) {
 		console.log("请求方法 : " + action) ; 
 		console.log("请求参数 : ") ; 
 		data = JSON.parse(data) ; 
-		console.log(data) ; 
+		try {
+			console.log(data) ; 
+		}catch(e) {
+			debugger ; 
+			console.log(e) ; 
+		}
+		
+		debugger ;
 		URLPatterns[url_part][action](req,res,data) 
 	}catch(e) {
 		var result = {} ; 
