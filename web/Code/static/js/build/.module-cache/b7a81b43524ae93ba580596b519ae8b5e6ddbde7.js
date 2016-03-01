@@ -147,8 +147,8 @@ var BasicInfoSEXANDADDR = React.createClass({displayName: "BasicInfoSEXANDADDR",
 					React.createElement("div", {className: "address"}, React.createElement("span", null, "地址"), 
 						React.createElement("select", null, 
 							React.createElement("option", null), 
-							React.createElement("option", {value: "0"}, "南京"), 
-							React.createElement("option", {value: "1"}, "上海")
+							React.createElement("option", null, "南京"), 
+							React.createElement("option", null, "上海")
 						)
 					)
 				)

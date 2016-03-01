@@ -113,77 +113,6 @@ var RegisterPhoneValidate = React.createClass({displayName: "RegisterPhoneValida
 	}
 }) ; 
 
-// 注册成功
-
-/*完善基本信息*/
-//头像组件
-var BasicInfoAvart = React.createClass({displayName: "BasicInfoAvart",
-	render : function(){
-		return (
-			React.createElement("div", {className: "basicInfoAvart"}, 
-				React.createElement("div", {className: "basicInfoAvartTitle"}, 
-					React.createElement("span", null, "注册成功"), React.createElement("br", null), 
-					React.createElement("img", {src: "/static/images/avart_image.jpg"})
-				)
-			)
-		)
-	}
-}) ; 
-
-//填写性别地址
-var BasicInfoSEXANDADDR = React.createClass({displayName: "BasicInfoSEXANDADDR",
-	render : function() {
-		return (
-			React.createElement("div", {className: "basicInfoSEXANDADDR"}, 
-				React.createElement("div", {className: "basicInfoSEX"}, 
-					React.createElement("div", {className: "sex"}, React.createElement("span", null, "性别"), 
-						React.createElement("select", null, 
-							React.createElement("option", null), 
-							React.createElement("option", {value: "0"}, "男"), 
-							React.createElement("option", {value: "1"}, "女")
-						)
-					), 
-
-					React.createElement("div", {className: "address"}, React.createElement("span", null, "地址"), 
-						React.createElement("select", null, 
-							React.createElement("option", null), 
-							React.createElement("option", {value: "0"}, "南京"), 
-							React.createElement("option", {value: "1"}, "上海")
-						)
-					)
-				)
-			)
-		)
-	}
-}) ; 
-
-//地址组件
-
-var  RegisterBasicInfo = React.createClass({displayName: "RegisterBasicInfo",
-	render : function() {
-		return (
-			React.createElement("div", {className: "registerBasicInfo"}, 
-				React.createElement(BasicInfoAvart, null), 
-				React.createElement(BasicInfoSEXANDADDR, null), 
-				React.createElement("div", {className: "registerBasicInfoButton"}, 
-					React.createElement("button", null, "进入新手编程")
-				)
-			)
-		)
-	}
-}) ; 
-
-
-var RegisterSuccessUnit = React.createClass({displayName: "RegisterSuccessUnit",
-	render : function(){
-		return (
-			React.createElement("div", {className: "registerSuccessUnit"}, 
-				React.createElement(RegisterBasicInfo, null)
-			)
-		)
-	}
-}) ; 
-
 // 注册组件容器
 /*第一步 填写邮箱或手机号*/
 /*第二步 验证邮箱和手机号*/
@@ -208,7 +137,9 @@ var RegisterUnit = React.createClass({displayName: "RegisterUnit",
 				React.createElement(RegisterBody, null), 
 				React.createElement(RegisterStatement, null), 
 				
-				React.createElement(RegisterSuccessUnit, null)
+				React.createElement(RegisterEmailValidate, null), 
+				React.createElement(RegisterPhoneValidate, null)
+				
 			)
 		) 
 	}

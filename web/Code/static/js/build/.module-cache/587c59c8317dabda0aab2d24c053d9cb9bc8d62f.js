@@ -136,19 +136,19 @@ var BasicInfoSEXANDADDR = React.createClass({displayName: "BasicInfoSEXANDADDR",
 		return (
 			React.createElement("div", {className: "basicInfoSEXANDADDR"}, 
 				React.createElement("div", {className: "basicInfoSEX"}, 
-					React.createElement("div", {className: "sex"}, React.createElement("span", null, "性别"), 
+					React.createElement("div", {className: "sex"}, "性别", 
 						React.createElement("select", null, 
 							React.createElement("option", null), 
-							React.createElement("option", {value: "0"}, "男"), 
-							React.createElement("option", {value: "1"}, "女")
+							React.createElement("option", null, "男"), 
+							React.createElement("option", null, "女")
 						)
 					), 
 
-					React.createElement("div", {className: "address"}, React.createElement("span", null, "地址"), 
+					React.createElement("div", {className: "address"}, "地址", 
 						React.createElement("select", null, 
 							React.createElement("option", null), 
-							React.createElement("option", {value: "0"}, "南京"), 
-							React.createElement("option", {value: "1"}, "上海")
+							React.createElement("option", null, "南京"), 
+							React.createElement("option", null, "上海")
 						)
 					)
 				)
@@ -208,7 +208,9 @@ var RegisterUnit = React.createClass({displayName: "RegisterUnit",
 				React.createElement(RegisterBody, null), 
 				React.createElement(RegisterStatement, null), 
 				
-				React.createElement(RegisterSuccessUnit, null)
+				React.createElement(RegisterEmailValidate, null), 
+				React.createElement(RegisterPhoneValidate, null)
+				
 			)
 		) 
 	}

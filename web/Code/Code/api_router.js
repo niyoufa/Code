@@ -12,7 +12,6 @@ function checkRequestMethod(req) {
 var API = {
 	//登陆
 	"login" : function login(req,res,params) {
-		debugger ; 
 		try {
 			username = params["username"] ; 
 			password = params["password"] ; 
@@ -46,6 +45,24 @@ var API = {
 			res.send(result) ; 
 		}) ;
 	} , 
+	"alter_basic_info" : function alter_basic_info(req,res,params) {
+		try {
+			email = params["username"] ; 
+			password = params["password"] ; 
+			sex = params["sex"] ; 
+			address = params["address"] ;  
+		}catch(e){
+			var result = {} ; 
+			result["ret"] = Status.UNKNOWNERR ; 
+			result["info"] = Status.getReason(result["ret"] ) ; 
+			res.send(result) ; 			
+		}
+		UserView.alter_basic_info(req,res,email,password,sex,address,function(res,result){
+			console.log("返回参数 : ") ; 
+			console.log(result) ; 
+			res.send(result) ; 
+		}) ;
+	} , 
 
 	//获取评论列表
 	"get_comment_list" : function get_comment_list (req,res,params){
@@ -69,7 +86,6 @@ var STATIC = {
 
 //路由函数
 var Router = function(req,res) {
-	debugger ; 
 	var url_part = req.param("userid") ; 
 	var params = req.query ; 
 	try {
@@ -88,11 +104,9 @@ var Router = function(req,res) {
 		try {
 			console.log(data) ; 
 		}catch(e) {
-			debugger ; 
 			console.log(e) ; 
 		}
 		
-		debugger ;
 		URLPatterns[url_part][action](req,res,data) 
 	}catch(e) {
 		var result = {} ; 

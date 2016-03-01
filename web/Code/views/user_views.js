@@ -90,7 +90,46 @@ var userView = {
 				}
 			}); 
 		}) ; 
+	} , 
+	"alter_basic_info" : function alter_basic_info(req,res,email,password,sex,address,callback){
+		var md5sum = crypto.createHash("md5");
+		md5sum.update(password) ; 
+		var password = md5sum.digest('hex');
+		Mongo["getMongoSession"](function(db){
+			console.log("Connection Via Client Object") ; 
+			var collection = db.collection(COLLECTIONS["User"].tableName,function(err,collection){
+				if(err) {
+					console.log("Collection Error !") ; 
+				} else {
+					collection.find({email:email,password:password},function(error,cursor) {
+							if(!error) {
+								cursor.count(function(err,count) {
+									if(count == 0) {
+										var result = {} ; 
+										result["ret"] = Status.USERNOTEXIST ; 
+										result["info"] = Status.getReason(result["ret"] ) ; 
+										Mongo["logout"](db) ; 
+										callback(res,result) ; 
+									}
+									else {
+										collection.update({email:email},{$addToSet:{"sex":sex,"address":address}},function(err,results){
+											if(!err){
+												var result = {} ; 
+												result["ret"] = Status.OK ; 
+												result["info"] = Status.getReason(result["ret"] ) ; 
+												Mongo["logout"](db) ; 
+												callback(res,result) ; 
+											}
+										})
+									}
+								}) ; 
+							}
+						}) ; 
+				}
+			}); 
+		}) ; 
 	}
+
 }
 
 module.exports = userView ; 

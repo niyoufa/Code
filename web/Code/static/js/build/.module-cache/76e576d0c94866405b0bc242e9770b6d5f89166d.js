@@ -136,19 +136,19 @@ var BasicInfoSEXANDADDR = React.createClass({displayName: "BasicInfoSEXANDADDR",
 		return (
 			React.createElement("div", {className: "basicInfoSEXANDADDR"}, 
 				React.createElement("div", {className: "basicInfoSEX"}, 
-					React.createElement("div", {className: "sex"}, React.createElement("span", null, "性别"), 
+					React.createElement("div", {className: "sex"}, "性别", 
 						React.createElement("select", null, 
 							React.createElement("option", null), 
-							React.createElement("option", {value: "0"}, "男"), 
-							React.createElement("option", {value: "1"}, "女")
+							React.createElement("option", null, "男"), 
+							React.createElement("option", null, "女")
 						)
 					), 
 
-					React.createElement("div", {className: "address"}, React.createElement("span", null, "地址"), 
+					React.createElement("div", {className: "address"}, "地址", 
 						React.createElement("select", null, 
 							React.createElement("option", null), 
-							React.createElement("option", {value: "0"}, "南京"), 
-							React.createElement("option", {value: "1"}, "上海")
+							React.createElement("option", null, "南京"), 
+							React.createElement("option", null, "上海")
 						)
 					)
 				)
@@ -184,6 +184,13 @@ var RegisterSuccessUnit = React.createClass({displayName: "RegisterSuccessUnit",
 	}
 }) ; 
 
+ReactDOM.render(
+	React.createElement(RegisterSuccessUnit, null) , 
+	document.getElementById("register_success") 
+)
+
+
+
 // 注册组件容器
 /*第一步 填写邮箱或手机号*/
 /*第二步 验证邮箱和手机号*/
@@ -208,7 +215,9 @@ var RegisterUnit = React.createClass({displayName: "RegisterUnit",
 				React.createElement(RegisterBody, null), 
 				React.createElement(RegisterStatement, null), 
 				
-				React.createElement(RegisterSuccessUnit, null)
+				React.createElement(RegisterEmailValidate, null), 
+				React.createElement(RegisterPhoneValidate, null)
+				
 			)
 		) 
 	}

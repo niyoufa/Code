@@ -49,7 +49,7 @@ function register(){
                 $(".registerBody").hide() ; 
                 $(".registerStatement").hide() ; 
 
-                $(".registerBasicInfo").show() ; 
+                $(".registerSuccessUnit").show() ;
     });
 }
 
@@ -100,6 +100,8 @@ function sendSMSMessage() {
 }
 
 $(function(){
+    var sex_dict = {"0":"男","1":"女"} ; 
+    var address_dict = {"0":"南京","1":"北京"} ; 
 	$(".login").click(function(){
                         login() ; 
 	}) ; 
@@ -116,4 +118,41 @@ $(function(){
 	$(".loginNavXPng").click(function(){
 		window.location.href = "/page/index_page/" ; 
 	}) ; 
+                $(".basicInfoSEXANDADDR .basicInfoSEX .sex select").change(function(){
+                        var sex_id = $(".basicInfoSEXANDADDR .basicInfoSEX .sex select").val() ; 
+                        if(sex_id == "") {
+                            $(".basicInfoSEXANDADDR .basicInfoSEX .sex span").text("") ; 
+                            $(".basicInfoSEXANDADDR .basicInfoSEX .sex span").text("性别") ; 
+                        }
+                        else {
+                            $(".basicInfoSEXANDADDR .basicInfoSEX .sex span").text("") ; 
+                            $(".basicInfoSEXANDADDR .basicInfoSEX .sex span").text(sex_dict[sex_id]) ; 
+                        }
+                })
+                $(".basicInfoSEXANDADDR .basicInfoSEX .address select").change(function(){
+                        var address_id = $(".basicInfoSEXANDADDR .basicInfoSEX .address select").val() ; 
+                        if(address_id == "") {
+                            $(".basicInfoSEXANDADDR .basicInfoSEX .address span").text("") ; 
+                            $(".basicInfoSEXANDADDR .basicInfoSEX .address span").text("地址") ; 
+                        }
+                        else {
+                            $(".basicInfoSEXANDADDR .basicInfoSEX .address span").text("") ; 
+                            $(".basicInfoSEXANDADDR .basicInfoSEX .address span").text(address_dict[address_id]) ; 
+                        }
+                });
+                $(".registerBasicInfoButton button").click(function(){
+                        var username = $(".registerBodyInputEmail input").val() ;
+                        var password = $(".registerBodyInputPassword input").val() ;
+                        var sex = $(".sex select").val() ; 
+                        var address = $(".address select").val() ; 
+                        var params = {
+                            "username" : username , 
+                            "password" : password , 
+                            "sex" : sex , 
+                            "address" : address ,  
+                        }
+                        $.doGET("alter_basic_info",params,function(data){
+                                location.href = "/page/index_page/" ; 
+                        },"json") ; 
+                }) ;
 }) ; 

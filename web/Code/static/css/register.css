@@ -114,9 +114,6 @@ body{
 .registerUnit .registerEmailValidate , .registerPhoneValidate {
 	display: none;
 }
-.registerBasicInfo  {
-	display: none;
-}
 
 .registerUnit .registerEmailValidate .registerEmailValidateInput{
 	float: left ; 
@@ -132,12 +129,6 @@ body{
 .registerUnit .registerPhoneValidate .registerPhoneValidateTime{
 	float: left;
 }
-
-.registerUnit .basicInfoAvart .basicInfoAvartTitle{
-	width:300px;
-	height:100px;
-	background: url(/static/images/default.png) repeat ; 
-}
 .registerUnit .basicInfoAvart .basicInfoAvartImg img{
 	border:solid 1px;
 	border-radius: 80px;
@@ -147,11 +138,60 @@ body{
 	margin-top: -40px;
 }
 
-.registerUnit .basicInfoSEXANDADDR .basicInfoSEX input{
-	float: left;
+.registerSuccessUnit{
+	padding:1px;
+	background-color:#F5F5F5;
+	height:500px;
+	display: none;
 }
-.registerUnit .basicInfoSEXANDADDR .basicInfoSEX img{
-	float: left;
+.registerSuccessUnit .basicInfoAvart .basicInfoAvartTitle{
+	background-color: #42BC73; 
+	width:315px;
+	height:90px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 900;
+	color:white;
+	padding-top:20px;
 }
+.registerSuccessUnit .basicInfoAvart .basicInfoAvartTitle img {
+	margin-top:10px;
+	border-radius: 40px;
+	border:solid 1px;
+	width:80px;
+}
+.registerSuccessUnit .basicInfoSEXANDADDR {
+	margin:20px;
+	margin-top:80px;
+}
+.registerSuccessUnit .basicInfoSEXANDADDR .basicInfoSEX div{
+	border-bottom:solid 1px;
+	padding: 10px;
+	color:#C3C2C7;
+}
+.registerSuccessUnit .basicInfoSEXANDADDR .basicInfoSEX select{
+	width:30px;
+	border:solid 1px;
+	color: #F8F8F8;
+	background-color:#F5F5F5;
+	margin-left:190px;
+}
+.registerSuccessUnit .registerBasicInfoButton{
+	text-align: center;
+}
+.registerSuccessUnit .registerBasicInfoButton button{
+	width:180px;
+	height: 40px;
+	border-radius: 5px;
+	margin-top:50px;
+	background-color: #42BD55;
+	color:white;
+	border-color:#42BD55;
+	font-size: 15px;
+}
+
+
+
+
 
 

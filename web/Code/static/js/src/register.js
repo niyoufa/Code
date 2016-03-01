@@ -113,14 +113,18 @@ var RegisterPhoneValidate = React.createClass({
 	}
 }) ; 
 
+// 注册成功
+
 /*完善基本信息*/
 //头像组件
 var BasicInfoAvart = React.createClass({
 	render : function(){
 		return (
 			<div className="basicInfoAvart">
-				<div className="basicInfoAvartTitle"></div>
-				<div className="basicInfoAvartImg"><img src="/static/images/default.png"/></div>
+				<div className="basicInfoAvartTitle">
+					<span>注册成功</span><br />
+					<img src="/static/images/avart_image.jpg"/>
+				</div>
 			</div>
 		)
 	}
@@ -132,15 +136,22 @@ var BasicInfoSEXANDADDR = React.createClass({
 		return (
 			<div className="basicInfoSEXANDADDR">
 				<div className="basicInfoSEX">
-					<div><input type="text" placeholder="性别"/></div>
-					<div><img  src="/static/images/default.png" /></div>
-					<div className="clear"></div>
+					<div className="sex"><span>性别</span>
+						<select>
+							<option></option>
+							<option value="0">男</option>
+							<option value="1">女</option>
+						</select>
+					</div>
 
-					<div><input type="text" placeholder="地址"/></div>
-					<div><img  src="/static/images/default.png" /></div>
-					<div className="clear"></div>
+					<div className="address"><span>地址</span>
+						<select>
+							<option></option>
+							<option value="0">南京</option>
+							<option value="1">上海</option>
+						</select>
+					</div>
 				</div>
-				<div className="basicInfoADDR"></div>
 			</div>
 		)
 	}
@@ -157,6 +168,17 @@ var  RegisterBasicInfo = React.createClass({
 				<div className="registerBasicInfoButton">
 					<button>进入新手编程</button>
 				</div>
+			</div>
+		)
+	}
+}) ; 
+
+
+var RegisterSuccessUnit = React.createClass({
+	render : function(){
+		return (
+			<div className="registerSuccessUnit">
+				<RegisterBasicInfo></RegisterBasicInfo>
 			</div>
 		)
 	}
@@ -186,10 +208,7 @@ var RegisterUnit = React.createClass({
 				<RegisterBody></RegisterBody>
 				<RegisterStatement></RegisterStatement>
 				
-				<RegisterEmailValidate></RegisterEmailValidate>
-				<RegisterPhoneValidate></RegisterPhoneValidate>
-				
-				<RegisterBasicInfo></RegisterBasicInfo>
+				<RegisterSuccessUnit></RegisterSuccessUnit>
 			</div>
 		) 
 	}

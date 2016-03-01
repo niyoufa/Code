@@ -202,11 +202,7 @@ var RegisterUnit = React.createClass({displayName: "RegisterUnit",
 	render : function() {
 		return (
 			React.createElement("div", {className: "registerUnit"}, 
-				React.createElement(RegisterNav, null), 
 				
-				React.createElement(RegisterHead, null), 
-				React.createElement(RegisterBody, null), 
-				React.createElement(RegisterStatement, null), 
 				
 				React.createElement(RegisterSuccessUnit, null)
 			)
