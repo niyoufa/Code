@@ -1,0 +1,80 @@
+参考文档 ：http://www.yiibai.com/redis/redis_quick_guide.html
+
+1. 安装 
+$sudo apt-get update
+$sudo apt-get install redis-server
+配置文件 : /etc/redis/redis.conf 
+
+2. 启动
+$redis-server
+
+3. 客户端
+$sudo apt-get install redis-cli 
+$redis-cli 
+
+4. 认证
+auth requirepass ( 密码 )
+
+5. redis数据类型
+(1) 字符串 
+>set name "yiibai" 
+>get name
+
+(2) 哈希
+>hmset key username yiibai password yiibai points 200 
+>hgetall key
+
+(3) 列表 : 简单的字符串列表，排序插入顺序 , 默认插入头部 , 列表的最大长度为 2^32 - 1 元素
+>lpush tutoriallist mongodb
+>lpush tutoriallist redis
+>lrange tutoriallist 0 10 
+1)redis 
+2)mongodb 
+
+(4) 集合 : Redis的集合是字符串的无序集合。
+>sadd tutoriallist redis
+>sadd tutoriallist mongodb
+>smembers tutoriallist
+1)mongodb 
+2)redis 
+
+(5) 有序集合
+> zadd tutorials 1 redis
+> zadd tutorials 2 mongodb
+> zrange tutorials 0 10 WITHSCORES
+
+6. redis 事务
+redis 127.0.0.1:6379> MULTI
+OK
+redis 127.0.0.1:6379> SET tutorial redis
+QUEUED
+redis 127.0.0.1:6379> GET tutorial
+QUEUED
+redis 127.0.0.1:6379> INCR visitors
+QUEUED
+redis 127.0.0.1:6379> EXEC
+
+1) OK
+2) "redis"
+3) (integer) 1
+
+
+7. Redis - 脚本
+
+8. Redis - 连接
+redis 127.0.0.1:6379> AUTH "password"
+OK
+redis 127.0.0.1:6379> PING
+PONG
+
+9. Redis - 备份与还原
+(1) save  这个命令将创建dump.rdb文件在Redis目录中。
+(2) 将dump.rdb放到Redis目录 , 启动Redis服务即可( CONFIG get dir )
+
+10. 安全
+CONFIG get requirepass
+CONFIG set requirepass "yiibai"
+auth requirepass
+
+11.客户端的最大数量
+config get maxclients

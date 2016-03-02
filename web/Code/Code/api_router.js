@@ -101,11 +101,11 @@ var Router = function(req,res) {
 		console.log("请求方法 : " + action) ; 
 		console.log("请求参数 : ") ; 
 		data = JSON.parse(data) ; 
-		try {
-			console.log(data) ; 
-		}catch(e) {
-			console.log(e) ; 
-		}
+		// try {
+		// 	console.log(data) ; 
+		// }catch(e) {
+		// 	console.log(e) ; 
+		// }
 		
 		URLPatterns[url_part][action](req,res,data) 
 	}catch(e) {
