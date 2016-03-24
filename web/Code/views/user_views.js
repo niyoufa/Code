@@ -33,6 +33,8 @@ var userView = {
 										var result = {} ; 
 										result["ret"] = Status.OK ; 
 										result["info"] = Status.getReason(result["ret"] ) ; 
+										result["data"] = {}
+										result["data"]["username"] = email ; 
 										Mongo["logout"](db) ; 
 										callback(res,result) ; 
 									}

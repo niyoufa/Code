@@ -2,109 +2,60 @@
 
 var fs = require("fs") ; 
 
-pageView = {
-	"test_page" : function test_page(req,callback){
-		var result = "" ; 
-		try {
-			fd = fs.openSync("../templates/test.html","r") ; 
-			do {
-				var buf = new Buffer(1024) ; 
-				buf.fill() ; 
-				var bytes = fs.readSync(fd,buf,null,1024) ; 
-				console.log("read %dbytes",bytes) ; 
-				if (buf != "null") {
-					result += buf.toString() ; 
-				}
-			} while (bytes > 0) ; 
-			fs.closeSync(fd) ; 
-		}
-		catch(e){
-			console.log(e) ; 
-			return e ; 
-		}
-		callback(result) ; 
-	} , 
-	"index_page" : function index_page(req,callback){
-		var result = "" ; 
-		try {
-			fd = fs.openSync("../templates/index.html","r") ; 
-			do {
-				var buf = new Buffer(1024) ; 
-				buf.fill() ; 
-				var bytes = fs.readSync(fd,buf,null,1024) ; 
-				console.log("read %dbytes",bytes) ; 
-				if (buf != "null") {
-					result += buf.toString() ; 
-				}
-			} while (bytes > 0) ; 
-			fs.closeSync(fd) ; 
-		}
-		catch(e){
-			console.log(e) ; 
-			return e ; 
-		}
-		callback(result) ; 
-	} , 
-	"login_page" : function login_page(req,callback){
-		var result = "" ; 
-		try {
-			fd = fs.openSync("../templates/login.html","r") ; 
-			do {
-				var buf = new Buffer(1024) ; 
-				buf.fill() ; 
-				var bytes = fs.readSync(fd,buf,null,1024) ; 
-				console.log("read %dbytes",bytes) ; 
-				if (buf != "null") {
-					result += buf.toString() ; 
-				}
-			} while (bytes > 0) ; 
-			fs.closeSync(fd) ; 
-		}catch(e) {
-			console.log(e) ; 
-			return e ; 
-		}
-		callback(result) ; 
-	},
-	"register_page" : function login_page(req,callback){
-		var result = "" ; 
-		try {
-			fd = fs.openSync("../templates/register.html","r") ; 
-			do {
-				var buf = new Buffer(1024) ; 
-				buf.fill() ; 
-				var bytes = fs.readSync(fd,buf,null,1024) ; 
-				console.log("read %dbytes",bytes) ; 
-				if (buf != "null") {
-					result += buf.toString() ; 
-				}
-			} while (bytes > 0) ; 
-			fs.closeSync(fd) ; 
-		}catch(e) {
-			console.log(e) ; 
-			return e ; 
-		}
-		callback(result) ; 
-	},
-	"register_success" : function register_success(req,callback) {
-		var result = "" ; 
-		try{
-			fd = fs.openSync("../templates/register_success.html","r") ; 
-			do{
-				var buf = new Buffer(1024) ; 
-				buf.fill() ; 
-				var bytes = fs.readSync(fd,buf,null,1024) ;
-				console.log("read %dbytes",bytes) ; 
-				if(buf != "null" ) {
-					result += buf.toString() ; 
-				}
-			}while(bytes > 0)  ; 
-			fs.closeSync(fd) ; 
+//响应数据
+var responseCallback = function(res,file_path) {
+	var readStream = fs.createReadStream(file_path) ; 
+	readStream.on("data",function(chunk){
+		res.write( chunk.toString() ) ; 
+	}) ;
+	readStream.on("end",function(){
+		res.end() ; 
+	}) ; 
+}
 
+//请求html路由
+var pageView = {
+	"test_page" : function test_page(req,res,callback){
+		try {
+			responseCallback(res, "../templates/test.html") ; 
+		}
+		catch(e){
+			console.log(e) ; 
+			callback(e)
+		}
+	} , 
+	"home_page" : function index_page(req,res,callback){
+		try {
+			responseCallback(res , "../templates/home.html") ; 
+		}
+		catch(e){
+			console.log(e) ; 
+			callback(e) ; 
+		}
+	} , 
+	"login_page" : function login_page(req,res,callback){
+		try {
+			responseCallback(res , "../templates/login.html") ; 
+		}catch(e) {
+			console.log(e) ; 
+			callback(e) ; 
+		}
+	},
+	"register_page" : function login_page(req,res,callback){
+		try {
+			responseCallback(res , "../templates/register.html") ; 
+		}catch(e) {
+			console.log(e) ; 
+			callback(e) ; 
+		}
+	},
+	"register_success" : function register_success(req,res,callback) {
+		try{
+			responseCallback(res , "../templates/register_success.html") ; 
 		}catch(e){
 			console.log(e) ; 
-			return e ; 
+			callback(e) ; 
 		}
-		callback(result) ; 
 	}
 }
 

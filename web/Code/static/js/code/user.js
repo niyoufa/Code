@@ -80,10 +80,14 @@ function login(){
         "password" : password
     };
 
-    $.doGET('login',params,function(data){
+    $.doPost('login',params,function(data){
        console.log(data) ; 
-       window.location.href = "/page/index_page/" ; 
+       if(data.data && data.data.username) {
+            localStorage.username = data.data.username ; 
+       }
+       window.location.href = "/page/home_page/" ; 
     });
+
 }
 
 
@@ -116,7 +120,7 @@ $(function(){
                         register() ; 
                 }) ;
 	$(".loginNavXPng").click(function(){
-		window.location.href = "/page/index_page/" ; 
+		window.location.href = "/page/home_page/" ; 
 	}) ; 
                 $(".basicInfoSEXANDADDR .basicInfoSEX .sex select").change(function(){
                         var sex_id = $(".basicInfoSEXANDADDR .basicInfoSEX .sex select").val() ; 
@@ -152,7 +156,14 @@ $(function(){
                             "address" : address ,  
                         }
                         $.doGET("alter_basic_info",params,function(data){
-                                location.href = "/page/index_page/" ; 
+                                location.href = "/page/home_page/" ; 
                         },"json") ; 
                 }) ;
+}) ; 
+
+$(function(){
+    var username = localStorage.username ; 
+    if (username) {
+        $(".username").val(username) ; 
+    }
 }) ; 

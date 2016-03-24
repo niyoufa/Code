@@ -1,70 +1,55 @@
 // 全局发送ajax请求的方法，callback为回调函数
 var ajax_url = "/code/api/";
-//var ajax_url = "http://dev.xielicheng.com:8000/teamup/api/";
-var uncheck_action_list = ['login','register','check_register_code','send_message','receive_task','fast_login','init_reset_user_password',"reset_user_password_ver_code","invite_register"];
-var need_basic_auth_list = ['participate_in','activity_assign','submit_task_complete_info','comment_on'];
-var need_idno_auth_list = ['launch_topic','launch_activity','launch_assignment'];
-var image_path = "/teamup/get_image?sha1=";
-var setting_page_path = "/teamup/settings_page/?sha1=";
-var default_image_path = "/teamup/static/teamup/images/head_image.png";
-var default_head_image = "/teamup/static/images/default.jpg";
+
+//客户端请求处理
 jQuery.extend({
     doPost: function(action,params,callback) {
         var post_data = {
             "action":action,
             "data":JSON.stringify(params)
         };
-        $.post(ajax_url,post_data,function(data){
+        var promise = $.post(ajax_url,post_data) ; 
+        promise.done(function(data){
             if (data["ret"] != '0001'){
-                alert(data["info"]);
+                console.log(data) ; 
                 return;
             }
-            var response_data = data["data"];
+            var response_data = data;
             return callback(response_data);
-        },'json');
+        })  ; 
+        promise.fail(function(data){
+            console.log("网络异常") ; 
+            return ; 
+        }) ; 
+        promise.always(function(data){
+            console.log(data) ; 
+            return ;
+        }) ; 
     } , 
     doGET:function(action,params,callback) {
         var get_data = {
              "action":action,
             "data":JSON.stringify(params)
         } ; 
-        $.get(ajax_url,get_data,function(data){
-             if (data["ret"] != '0001'){
+        var promise = $.get(ajax_url,get_data) ; 
+        promise.done(function(data){
+            if (data["ret"] != '0001'){
                 alert(data["info"]);
                 return;
             }
-            var response_data = data["data"];
+            var response_data = data;
             return callback(response_data);
-        },"json") ; 
+        }) ; 
+        promise.fail(function(data){
+            console.log(data) ; 
+            return ; 
+        }) ; 
+        promise.always(function(data){
+            console.log(data) ; 
+            return ;
+        }) ; 
     }
 });
-
-// 设置用户的头像信息
-$(function(){
-    // var avarta_sha1 = sessionStorage.getItem("AVARTA_SHA1")||default_image_path;
-    // $("#user_head_image").attr("src",image_path+avarta_sha1+"&mode=1");
-    var avarta_sha1 = sessionStorage.getItem("AVARTA_SHA1")?image_path+sessionStorage.getItem("AVARTA_SHA1")+"&mode=1":default_head_image;
-    $("#user_head_image").attr("src",avarta_sha1);
-});
-
-//  处理图片加载错误
-function imageError(obj){
-    $(obj).attr("src", "");
-    $(obj).css("background-color","#ddd")
-}
-
-
-var gender_list = { 0 : "不限" , 1 : "男" , 2 : "女",3 : "其他" };
-var job_list = { 0:"学生",1:"教师",2:"程序员"};
-var education_list = ["不限","小学毕业","初中毕业","高中在读","高中毕业","大学在读","大学毕业","研究生在读","研究生毕业","博士生在读","其他"];
-var income_list = { 0 : "不限" , 1 : "0-1500" , 2 : "1500-3000" , 3 : "3000-4500" ,
-    4: "4500-7500" , 5 : "7500-10000" , 6 : "10000-15000"  , 7 : "15000+"};
-var equipment_type_list = {0 : "不限" , 1 : "安卓手机" , 2 : "苹果电脑" , 3 : "苹果手机" ,4: "Windows电脑" , 5 : "安卓平板" , 6 : "Linux"  , 7 : "IPAD"};
-var used_network_product_list = {0 : "不限" ,1 : "QQ" , 2 : "微博" , 3 : "微信" , 4 : "淘宝" ,5: "唱吧" , 6 : "酷狗音乐" , 7 : "百度搜索"  , 8 : "知乎"};
-var type_info_list = {0:"公司" , 1:"个人"};
-var payment_type_info_list = {0:"支付宝" , 1:"微信"};
-var trans_type_info_list = {0:"充值" , 1:"提现" , 2:"活动订金" , 3:"活动报名费用" , 4:"求助费用" , 5:"求助红包"};
-
 
 /*工具方法*/
 

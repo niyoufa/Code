@@ -84,7 +84,7 @@ var STATIC = {
 	
 }
 
-//路由函数
+//GET请求路由函数
 var Router = function(req,res) {
 	var url_part = req.param("userid") ; 
 	var params = req.query ; 
@@ -101,11 +101,6 @@ var Router = function(req,res) {
 		console.log("请求方法 : " + action) ; 
 		console.log("请求参数 : ") ; 
 		data = JSON.parse(data) ; 
-		// try {
-		// 	console.log(data) ; 
-		// }catch(e) {
-		// 	console.log(e) ; 
-		// }
 		
 		URLPatterns[url_part][action](req,res,data) 
 	}catch(e) {
@@ -116,4 +111,21 @@ var Router = function(req,res) {
 	}
 }
 
-module.exports = Router ; 
+//Post请求路由函数
+var PostRouter = function(req,res,action,params) {
+	try {
+		var url_part = req.originalUrl.split("/")[2] ; 
+		console.log("请求方法 : " + action) ; 
+		console.log("请求参数 : ") ; 
+		data = JSON.parse(params) ; 
+		
+		URLPatterns[url_part][action](req,res,data) 
+	}catch(e) {
+		var result = {} ; 
+		result["ret"] = Status.UNKNOWNERR ; 
+		result["info"] = Status.getReason(result["ret"] ) ; 
+		res.send(result) ; 
+	}
+}
+
+module.exports = PostRouter ; 

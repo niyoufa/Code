@@ -1,0 +1,3 @@
+#!/bin/sh
+exec nohup node /home/nyf/develop/Code/web/Code/Code/runserver.js >/dev/null 2>&1
+

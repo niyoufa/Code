@@ -51,7 +51,7 @@ var LoginBody = React.createClass({
 						<div style={{float:"left"}}>
 							<input type="text" className="username" placeholder="用户名/手机号" />
 						</div>
-						<div style={{"float":"left","margin-left":"10px"}}>
+						<div style={{"float":"left","marginLeft":"10px"}}>
 						</div>
 						<div className="clear"></div>
 					</div>
@@ -95,7 +95,7 @@ var LoginThirdPlat = React.createClass({
 		return ( <div className="loginThirdPlat">
 			<div className="loginThirdPlatTitle"><span>使用社交账户登录 </span></div>
 			<div className="platOptionList">
-				<img src="/static/images/wechat.jpg" style={{"margin-left": "-5px"}}/>
+				<img src="/static/images/wechat.jpg" style={{"marginLeft": "-5px"}}/>
 				<img src="/static/images/weibo.jpg"/>
 				<img src="/static/images/qq.jpg"/>
 			</div>

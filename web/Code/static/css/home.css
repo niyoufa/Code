@@ -1,0 +1,46 @@
+
+body {
+	margin:0px;
+	padding:0px;
+}
+
+.clear{
+	clear:both;
+}
+.homeUnit .homeTopNav .homeNavTitle {
+	float :left;
+}
+.homeUnit .homeTopNav .homeNavAddIcon{
+	float:left;
+}
+.homeUnit .homeTopNav .homeNavAddIcon img{
+	width:25px;
+	height: 25px;
+}
+
+.homeUnit .searchUnit .searchUnitBar .searchUnitBarIcon , .searchUnitBarInput , .searchUnitBarOperation {
+	float: left;
+}
+.homeUnit .searchUnit .searchUnitBar .searchUnitBarButton , .searchUnitHistroyList , .searchUnitClearHistroy{
+	display: none;
+}
+
+.homeUnit .myUnit .myLevel .mycontribution , .mylevel {
+	float: left;
+}
+
+.homeUnit .myUnit .myPublishList , .myCommentList , .myLikedList {
+	float: left;
+}
+
+.homeUnit .blog .blogTitle , .blogPublishAvart{
+	float: left;
+}
+
+.homeUnit .blogOperate , .blogSource{
+	float: left;
+}
+
+.homeUnit .codeNav .Home , .Find , .Setting{
+	float: left;
+}
