@@ -1,2 +1,0 @@
-1.  注册页面和数据渲染
-2. 后台 program terminated 问题

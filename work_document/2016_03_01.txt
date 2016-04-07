@@ -1,2 +1,0 @@
-1. 完成注册成功页面
-2. 整理 python,nodejs 操作 mongodb,redis 文档
