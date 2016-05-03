@@ -56,7 +56,6 @@ server.post('/code/:userid',function(req,res){
 		list.push(chunk) ; 
 	}) ; 
 	req.on("end" , function(){
-		// debugger ; 	
 		post = Buffer.concat(list).toString() ; 
 		//解析post请求数据
 		post = querystring.parse(post) ; 

@@ -43,7 +43,7 @@ function register(){
         "password" : password , 
         "nick" : nick , 
     };
-    $.doGET('register',params,function(data) {
+    $.doPost('register',params,function(data) {
                 $(".registerNav").hide()
                 $(".registerHead").hide() ; 
                 $(".registerBody").hide() ; 
